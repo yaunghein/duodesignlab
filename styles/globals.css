@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border leading-[1.2];
+  }
+
+  html {
+    /* adjust this */
+    @apply xl:text-[0.9vw];
+    /* @apply 2xl:text-[1vw] xl:text-[0.9vw]; */
+  }
+  img {
+    @apply object-cover max-w-full;
+  }
+
+  span {
+    @apply align-middle;
+  }
+}
+
+@layer utilities {
+  .ddl-container {
+    @apply md:px-[5.625rem];
+  }
+  .main-title {
+    @apply block text-[5.625rem] font-medium leading-[1.2];
+  }
+  .secondary-title {
+    @apply block text-[2.8125rem] font-medium leading-[1.2];
+  }
+  .text-link-size {
+    @apply text-xl;
+  }
+  .text-body {
+    @apply text-[1.75rem];
+  }
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/satoshi/Satoshi-Black.woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/satoshi/Satoshi-Bold.woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/satoshi/Satoshi-Medium.woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/satoshi/Satoshi-Regular.woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/satoshi/Satoshi-Light.woff');
+  font-weight: 300;
+  font-style: normal;
+}
