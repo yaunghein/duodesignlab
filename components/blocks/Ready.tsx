@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Link from 'next/link'
 
 // svgs
 import LinkArrow from '$svgs/LinkArrow'
 import ReadyVisualOne from '$svgs/ReadyVisualOne'
 
-const Ready: React.FC = () => {
+interface Props {
+  children: React.ReactNode
+}
+
+const Ready: React.FC<Props> = ({ children }) => {
   return (
     <section className="bg-ddl_brand">
       <div className="flex items-center justify-center h-[calc(100vh-6rem)] ddl-container">
         <div className="flex items-center gap-24 mx-auto max-w-[90rem]">
           <h2 className="sr-only">Ready?</h2>
-          <ReadyVisualOne className="max-w-xl text-ddl_offwhite" />
+          {children}
 
           <div className="flex flex-wrap items-center flex-grow gap-y-5">
             <span className="w-[20%] text-body font-normal text-ddl_offwhite">Send</span>

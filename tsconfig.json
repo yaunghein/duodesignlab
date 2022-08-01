@@ -20,7 +20,10 @@
       "$blocks/*": ["components/blocks/*"],
       "$svgs/*": ["components/svgs/*"],
       "$layouts/*": ["components/layouts/*"],
-      "$utils/*": ["utils/*"]
+      "$utils/*": ["utils/*"],
+      "$stores/*": ["stores/*"],
+      "$data/*": ["data/*"],
+      "$types/*": ["types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -4,9 +4,13 @@ import Link from 'next/link'
 // elements
 import Capibility from '$elements/Capibility'
 
-const Capibilities: React.FC = () => {
+interface Props {
+  bgColor?: 'bg-white' | 'bg-ddl_offwhite' | 'bg-ddl_brand' | 'bg-ddl_brand_light'
+}
+
+const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
   return (
-    <section className="bg-ddl_offwhite pt-28">
+    <section className={`pt-28 ${bgColor}`}>
       <div className="ddl-container">
         <div className="flex items-end">
           <h2 className="mr-auto main-title text-ddl_dark">Capibilities</h2>

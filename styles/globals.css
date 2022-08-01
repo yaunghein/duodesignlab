@@ -12,10 +12,16 @@
     @apply xl:text-[0.9vw];
     /* @apply 2xl:text-[1vw] xl:text-[0.9vw]; */
   }
+
+  #__next {
+    @apply flex flex-col min-h-screen;
+  }
+
   img {
     @apply object-cover max-w-full;
   }
 
+  /* to remove the extra space at the bottom of the Next.js Image Componant */
   span {
     @apply align-middle;
   }
@@ -26,16 +32,19 @@
     @apply md:px-[5.625rem];
   }
   .main-title {
-    @apply block text-[5.625rem] font-medium leading-[1.2];
+    @apply text-[5.625rem] font-medium leading-[1.2];
   }
   .secondary-title {
-    @apply block text-[2.8125rem] font-medium leading-[1.2];
+    @apply text-[2.8125rem] font-medium leading-[1.2];
   }
   .text-link-size {
     @apply text-xl;
   }
   .text-body {
     @apply text-[1.75rem];
+  }
+  .text-big-visual {
+    @apply block text-[11.25rem] font-medium leading-[1.2];
   }
 }
 

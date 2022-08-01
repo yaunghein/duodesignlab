@@ -1,4 +1,4 @@
-import Image, { ImageProps } from 'next/image'
+import Image from 'next/image'
 import { useState } from 'react'
 
 // utils
@@ -20,7 +20,7 @@ const BlurImage: React.FC<Props> = ({ src, alt, width, height }) => {
       alt={alt}
       width={width}
       height={height}
-      className={cn('duration-700 ease-in-out', isLoading ? 'grayscale blur-md scale-105' : 'grayscale-0 blur-0 scale-100')}
+      className={cn('duration-700 ease-in-out', isLoading ? 'blur-md' : 'blur-0 ')}
       onLoadingComplete={() => setLoading(false)}
     />
   )
