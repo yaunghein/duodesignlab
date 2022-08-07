@@ -16,9 +16,9 @@ const Work: React.FC<Props> = ({ work }) => {
     <Link href={`/works/${work.slug}`}>
       <a className="relative">
         <BlurImage src={work.image.path} alt={work.name} width={work.image.width} height={1305} />
-        <div className="absolute inset-0 flex flex-col items-center py-8 transition-opacity opacity-0 bg-ddl_brand text-ddl_offwhite px-28 hover:opacity-100">
+        <div className="absolute inset-0 flex flex-col items-center px-12 py-5 text-center transition-opacity opacity-0 lg:py-8 bg-ddl_brand text-ddl_offwhite lg:px-28 hover:opacity-100">
           <h3 className="mt-auto secondary-title">{work.name}</h3>
-          <p className="mt-auto font-normal text-link-size">{work.scope.join(', ')}</p>
+          <p className="mt-auto font-normal test-sm md:text-link-size">{work.scope.join(', ')}</p>
         </div>
       </a>
     </Link>

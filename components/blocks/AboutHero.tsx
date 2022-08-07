@@ -3,13 +3,13 @@ import React from 'react'
 const AboutHero: React.FC = () => {
   return (
     <section className="bg-ddl_brand">
-      <div className="flex pt-64 ddl-container pb-28">
-        <div className="w-1/2">
-          <h1 className="main-title text-ddl_brand_light">
+      <div className="grid grid-cols-1 pb-10 pt-44 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28">
+        <div>
+          <h1 className="text-big-visual md:main-title text-ddl_brand_light">
             <span className="block">About</span> Duo Design Lab
           </h1>
         </div>
-        <div className="grid w-1/2 gap-12">
+        <div className="grid gap-5 mt-8 lg:gap-12 lg:mt-0">
           <p className="font-normal text-body text-ddl_brand_light">
             Duo Design Lab is a multi-disciplinary, independently owned design studio.
           </p>

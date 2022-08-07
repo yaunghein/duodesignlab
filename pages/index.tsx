@@ -3,6 +3,9 @@ import Head from 'next/head'
 import { NextPageWithLayout } from './_app'
 import { GetStaticProps } from 'next'
 
+// third-parties
+import { v4 as uuid } from 'uuid'
+
 // types
 import { WorkThumbnailType } from '$types/workTypes'
 
@@ -24,7 +27,7 @@ import works from '$data/works.json'
 export const getStaticProps: GetStaticProps = async () => {
   const transformedWorksData = works.map((work) => {
     return {
-      id: new Date().getTime(),
+      id: uuid(),
       name: work.name,
       scope: work.scope,
       image: work.images[0],
@@ -52,7 +55,7 @@ const HomePage: NextPageWithLayout<Props> = ({ works }) => {
       <Capibilities bgColor="bg-ddl_offwhite" />
       <Works bgColor="bg-ddl_offwhite" title="Our Works" works={works} />
       <Ready>
-        <ReadyVisualOne className="max-w-xl text-ddl_offwhite" />
+        <ReadyVisualOne className="w-full sm:max-w-xl text-ddl_offwhite" />
       </Ready>
     </>
   )

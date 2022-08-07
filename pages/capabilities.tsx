@@ -64,30 +64,30 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
       </Head>
       <section className="relative bg-ddl_brand_light">
         {currentCapability !== 'Web Design' && (
-          <button className="absolute top-32 left-96" onClick={() => changeCapability('Web Design')}>
-            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[18rem] h-[18rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
-            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[17rem] h-[17rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
-            <div className="relative grid w-[16rem] h-[16rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+          <button className="absolute bottom-40 right-10" onClick={() => changeCapability('Web Design')}>
+            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[12rem] h-[12rem] md:w-[18rem] md:h-[18rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
+            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[11rem] h-[11rem] md:w-[17rem] md:h-[17rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
+            <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
               Web Design
             </div>
           </button>
         )}
 
         {currentCapability !== 'Web Development' && (
-          <button className="absolute top-32 right-96" onClick={() => changeCapability('Web Development')}>
-            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[21rem] h-[21rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
-            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[20rem] h-[20rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
-            <div className="relative grid w-[19rem] h-[19rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+          <button className="absolute bottom-80 left-10" onClick={() => changeCapability('Web Development')}>
+            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2  w-[14rem] h-[14rem] md:w-[21rem] md:h-[21rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
+            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[13rem] h-[13rem] md:w-[20rem] md:h-[20rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
+            <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
               Web Development
             </div>
           </button>
         )}
 
         {currentCapability !== 'Branding' && (
-          <button className="absolute transform translate-x-1/2 bottom-10 right-1/2" onClick={() => changeCapability('Branding')}>
-            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[15rem] h-[15rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
-            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[14rem] h-[14rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
-            <div className="relative grid w-[13rem] h-[13rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+          <button className="absolute bottom-10 left-10" onClick={() => changeCapability('Branding')}>
+            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[11rem] h-[11rem] md:w-[15rem] md:h-[15rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
+            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-[10rem] h-[10rem] md:w-[14rem] md:h-[14rem] rounded-full bg-ddl_brand bg-opacity-10"></div>
+            <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
               Branding
             </div>
           </button>
@@ -95,11 +95,11 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
 
         <div
           className={cn(
-            'relative flex flex-col items-center gap-20 justify-center ddl-container mix-blend-multiply pointer-events-none',
-            currentCapability ? 'h-screen' : 'h-[calc(100vh-6rem)]'
+            'relative flex flex-col items-center gap-5 lg:gap-20 justify-start md:justify-center ddl-container mix-blend-multiply pointer-events-none',
+            currentCapability ? 'h-screen' : 'h-[calc(100vh-7rem)] lg:h-[calc(100vh-6rem)]'
           )}
         >
-          <h1 className="flex items-start gap-5 main-title text-ddl_dark">
+          <h1 className="flex items-start gap-5 text-center text-big-visual lg:main-title text-ddl_dark mt-36 md:mt-0">
             We Do {currentCapability && <span className="text-ddl_brand">{currentCapability}</span>}
           </h1>
           {currentCapability && (
@@ -114,7 +114,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
         <>
           <Works bgColor="bg-white" title={`Our ${currentCapability} Works`} works={worksByCapability} />
           <Ready>
-            <ReadyVisualThree className="max-w-xl text-ddl_offwhite" />
+            <ReadyVisualThree className="w-full sm:max-w-xl text-ddl_offwhite" />
           </Ready>
         </>
       )}

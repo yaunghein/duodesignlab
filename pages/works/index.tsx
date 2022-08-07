@@ -51,7 +51,7 @@ const WorksPage: NextPageWithLayout<Props> = ({ works }) => {
       <Hero title="Our Works" />
       <WorksWithFilters works={works} />
       <Ready>
-        <ReadyVisualTwo className="max-w-xl text-ddl_offwhite" />
+        <ReadyVisualTwo className="w-full sm:max-w-xl text-ddl_offwhite" />
       </Ready>
     </>
   )

@@ -24,14 +24,14 @@ const WorksWithFilters: React.FC<Props> = ({ works }) => {
   }, [works, currentFilter])
 
   return (
-    <section className="bg-white py-28">
+    <section id="next-section" className="py-8 bg-white md:py-28">
       <div className="ddl-container">
-        <div className="flex flex-wrap gap-5">
+        <div className="flex items-center gap-5 px-5 -mx-5 overflow-scroll sm:px-0 sm:mx-0 hide-scrollbar">
           <FilterPill label="All" active={currentFilter === 'All'} setCurrentFilter={setCurrentFilter} />
           <FilterPill label="Branding" active={currentFilter === 'Branding'} setCurrentFilter={setCurrentFilter} />
           <FilterPill label="Web Development" active={currentFilter === 'Web Development'} setCurrentFilter={setCurrentFilter} />
         </div>
-        <div className="grid grid-cols-2 gap-2 mt-12">
+        <div className="grid grid-cols-1 gap-2 mt-5 lg:grid-cols-2 md:mt-12">
           {filteredWorks.map((work) => (
             <Work key={work.id} work={work} />
           ))}

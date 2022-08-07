@@ -29,23 +29,34 @@
 
 @layer utilities {
   .ddl-container {
-    @apply md:px-[5.625rem];
+    @apply px-5 md:px-[5.625rem];
   }
   .main-title {
-    @apply text-[5.625rem] font-medium leading-[1.2];
+    @apply text-[1.75rem] md:text-[2.6rem] xl:text-[5.625rem] font-medium leading-[1.2];
   }
   .secondary-title {
-    @apply text-[2.8125rem] font-medium leading-[1.2];
+    @apply text-[1.75rem] md:text-[2rem] lg:text-[2.8125rem] font-medium leading-[1.2];
   }
   .text-link-size {
     @apply text-xl;
   }
   .text-body {
-    @apply text-[1.75rem];
+    @apply text-xl md:text-[1.75rem];
   }
   .text-big-visual {
-    @apply block text-[11.25rem] font-medium leading-[1.2];
+    @apply block text-[2.8125rem] md:text-[11.25rem] font-medium leading-[1.2];
   }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @font-face {

@@ -69,7 +69,7 @@ const MemberPage: NextPageWithLayout<Props> = ({ member, works }) => {
       <MemberHero member={member} />
       <Works title="Projects" works={works} />
       <Ready>
-        <ReadyVisualTwo className="max-w-xl text-ddl_offwhite" />
+        <ReadyVisualTwo className="w-full sm:max-w-xl text-ddl_offwhite" />
       </Ready>
     </>
   )

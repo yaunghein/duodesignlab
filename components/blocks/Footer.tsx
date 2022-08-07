@@ -14,14 +14,14 @@ const Footer: React.FC = () => {
   const isBgDark = router.pathname === '/capabilities' && !currentCapability
 
   return (
-    <footer className={cn('flex h-24 mt-auto', isBgDark ? 'bg-ddl_brand' : 'bg-ddl_brand_light')}>
-      <div className="flex items-center w-full ddl-container">
-        <div className="flex items-center gap-20">
+    <footer className={cn('flex h-28 lg:h-24 mt-auto', isBgDark ? 'bg-ddl_brand' : 'bg-ddl_brand_light')}>
+      <div className="flex flex-col items-center justify-center w-full lg:flex-row ddl-container">
+        <div className="flex items-center gap-12 md:gap-20">
           <a
             href="https://www.google.com/"
             target="_blank"
             rel="noreferrer"
-            className={cn('font-normal text-link-size', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_dark')}
+            className={cn('font-normal text-sm md:text-link-size', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_dark')}
           >
             Facebook
           </a>
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             href="https://www.google.com/"
             target="_blank"
             rel="noreferrer"
-            className={cn('font-normal text-link-size', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_dark')}
+            className={cn('font-normal text-sm md:text-link-size', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_dark')}
           >
             Instagram
           </a>
@@ -37,12 +37,14 @@ const Footer: React.FC = () => {
             href="https://www.google.com/"
             target="_blank"
             rel="noreferrer"
-            className={cn('font-normal text-link-size', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_dark')}
+            className={cn('font-normal text-sm md:text-link-size', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_dark')}
           >
             LinkedIn
           </a>
         </div>
-        <span className={cn('ml-auto font-normal text-link-size', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_dark')}>
+        <span
+          className={cn('lg:ml-auto mt-5 lg:mt-0 font-normal text-sm md:text-link-size', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_dark')}
+        >
           @{new Date().getFullYear()} All Rights Reserved
         </span>
       </div>

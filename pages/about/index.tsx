@@ -50,7 +50,7 @@ const AboutPage: NextPageWithLayout<Props> = ({ members }) => {
       <Capibilities />
       <Members members={members} />
       <Ready>
-        <ReadyVisualThree className="max-w-xl text-ddl_offwhite" />
+        <ReadyVisualThree className="w-full sm:max-w-xl text-ddl_offwhite" />
       </Ready>
     </>
   )

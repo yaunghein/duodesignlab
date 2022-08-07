@@ -10,7 +10,7 @@ interface Props {
 
 const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
   return (
-    <section className={`pt-28 ${bgColor}`}>
+    <section id="next-section" className={`pt-8 md:pt-28 ${bgColor}`}>
       <div className="ddl-container">
         <div className="flex items-end">
           <h2 className="mr-auto main-title text-ddl_dark">Capibilities</h2>
@@ -19,7 +19,7 @@ const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
           </Link>
         </div>
 
-        <div className="grid gap-2 mt-12">
+        <div className="grid gap-2 mt-5 md:mt-12">
           <Capibility
             title="Branding"
             description="To effectively communicate your purpose and your business to your customers, a good brand identity is a must-have. We can craft you an effective brand identity based on what you stand for and what makes you unique."

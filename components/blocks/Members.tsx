@@ -12,11 +12,11 @@ interface Props {
 
 const Members: React.FC<Props> = ({ members }) => {
   return (
-    <section className="bg-white py-28">
+    <section className="py-8 bg-white md:py-28">
       <div className="ddl-container">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-center main-title text-ddl_dark">Founding Members</h2>
-          <div className="grid grid-cols-2 gap-2 mt-12">
+          <div className="grid grid-cols-1 gap-2 mt-5 lg:grid-cols-2 md:mt-12">
             {members.map((member) => (
               <Member key={member.id} member={member} />
             ))}

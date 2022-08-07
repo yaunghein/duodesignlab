@@ -55,22 +55,39 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
       </Head>
       <WorkHero work={work} />
       <section className="bg-white">
-        <div className="ddl-container py-28">
+        <div className="py-8 ddl-container md:py-28">
           <div className="grid gap-2">
             {work.images.map((image: ImageType) => (
               <BlurImage key={image.path} alt={`${work.name}`} src={image.path} width={image.width} height={image.height} />
             ))}
           </div>
 
-          <div className="flex items-center mt-12">
+          <div className="grid gap-5 mt-8 md:mt-12 lg:hidden">
+            <div className="flex gap-2">
+              <span className="text-base font-medium whitespace-nowrap">Live at: </span>
+              <a href={`https://${work.website}`} target="_blank" rel="noreferrer" className="text-base font-medium underline">
+                {work.website}
+              </a>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-base font-medium">Scope:</span>
+              <span className="text-base font-medium">{work.scope.join(', ')}</span>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-base font-medium">Year:</span>
+              <span className="text-base font-medium">{work.year}</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-6 mt-8 md:mt-12">
             <Link href="works/paing-mentoring-family">
-              <a className="flex items-center gap-2 mr-auto text-body text-ddl_dark">
+              <a className="flex items-center gap-2 mr-auto text-sm font-medium md:text-body text-ddl_dark">
                 <LeftArrow className="w-6 h-6" />
-                Jobby.io
+                Kyaw San Htoo Pharmacy
               </a>
             </Link>
             <Link href="works/paing-mentoring-family">
-              <a className="flex items-center gap-2 text-body text-ddl_dark">
+              <a className="flex items-center gap-2 text-sm font-medium text-right md:text-body text-ddl_dark">
                 Kyaw San Htoo Pharmacy
                 <RightArrow className="w-6 h-6 -mb-1" />
               </a>
@@ -79,7 +96,7 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
         </div>
       </section>
       <Ready>
-        <ReadyVisualOne className="max-w-xl text-ddl_offwhite" />
+        <ReadyVisualOne className="w-full sm:max-w-xl text-ddl_offwhite" />
       </Ready>
     </>
   )
