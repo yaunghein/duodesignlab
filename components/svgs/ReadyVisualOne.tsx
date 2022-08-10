@@ -1,5 +1,8 @@
 import React from 'react'
 
+// third-parties
+import { motion } from 'framer-motion'
+
 interface Props {
   className?: string
 }
@@ -7,9 +10,11 @@ interface Props {
 const ReadyVisualOne: React.FC<Props> = ({ className }) => {
   return (
     <svg viewBox="0 0 577 174" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-      <path
+      <motion.path
         d="M6.44006 131.27C9.47763 131.27 11.9401 128.808 11.9401 125.77C11.9401 122.732 9.47763 120.27 6.44006 120.27C3.4025 120.27 0.940063 122.732 0.940063 125.77C0.940063 128.808 3.4025 131.27 6.44006 131.27Z"
         fill="currentColor"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
       />
       <path
         d="M8.38 105.95C11.4176 105.95 13.88 103.488 13.88 100.45C13.88 97.4124 11.4176 94.95 8.38 94.95C5.34244 94.95 2.88 97.4124 2.88 100.45C2.88 103.488 5.34244 105.95 8.38 105.95Z"

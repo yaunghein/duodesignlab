@@ -13,7 +13,14 @@
       { "path": "/assets/works/paing-mentoring-family/3.jpg", "width": 1740, "height": 6976 },
       { "path": "/assets/works/paing-mentoring-family/4.jpg", "width": 1740, "height": 4424 },
       { "path": "/assets/works/paing-mentoring-family/5.jpg", "width": 1740, "height": 1197 }
-    ]
+    ],
+    "more": {
+      "next": null,
+      "prev": {
+        "name": "Kyaw San Htoo Pharmacy",
+        "slug": "kyawsanhtoo-pharmacy"
+      }
+    }
   },
   {
     "name": "Kyaw San Htoo Pharmacy",
@@ -31,6 +38,13 @@
       { "path": "/assets/works/kyawsanhtoo-pharmacy/5.jpg", "width": 1740, "height": 1023 },
       { "path": "/assets/works/kyawsanhtoo-pharmacy/6.jpg", "width": 1740, "height": 8158 },
       { "path": "/assets/works/kyawsanhtoo-pharmacy/7.jpg", "width": 1740, "height": 1662 }
-    ]
+    ],
+    "more": {
+      "next": {
+        "name": "Paing Mentoring Family",
+        "slug": "paing-mentoring-family"
+      },
+      "prev": null
+    }
   }
 ]

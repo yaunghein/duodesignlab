@@ -20,6 +20,16 @@ export interface WorkType {
   website: string
   owners: OwnerType[]
   images: ImageType[]
+  more: {
+    next?: {
+      name: string
+      slug: string
+    }
+    prev?: {
+      name: string
+      slug: string
+    }
+  }
 }
 
 export interface WorkThumbnailType {

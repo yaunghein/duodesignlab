@@ -1,23 +1,46 @@
 import React from 'react'
 import Link from 'next/link'
 
+// third-parties
+import { motion } from 'framer-motion'
+
 // elements
 import Capibility from '$elements/Capibility'
+
+// hooks
+import useFadeUp from '$hooks/useFadeUp'
+
+// stores
+import useCursorStore from '$stores/CursorStore'
 
 interface Props {
   bgColor?: 'bg-white' | 'bg-ddl_offwhite' | 'bg-ddl_brand' | 'bg-ddl_brand_light'
 }
 
 const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
+  const { ref, animation, variants } = useFadeUp()
+  const { changeCursorType, resetCursorType } = useCursorStore()
+
   return (
-    <section id="next-section" className={`pt-8 md:pt-28 ${bgColor}`}>
+    <motion.section
+      id="next-section"
+      className={`pt-8 md:pt-28 ${bgColor}`}
+      onMouseEnter={() => changeCursorType('normal_brand')}
+      onMouseLeave={resetCursorType}
+    >
       <div className="ddl-container">
-        <div className="flex items-end">
+        <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex items-end">
           <h2 className="mr-auto main-title text-ddl_dark">Capibilities</h2>
           <Link href="/capibilities">
-            <a className="underline text-link-size text-ddl_dark whitespace-nowrap">See All</a>
+            <motion.a
+              onMouseEnter={() => changeCursorType('hover_brand')}
+              onMouseLeave={() => changeCursorType('normal_brand')}
+              className="underline text-link-size text-ddl_dark whitespace-nowrap"
+            >
+              See All
+            </motion.a>
           </Link>
-        </div>
+        </motion.div>
 
         <div className="grid gap-2 mt-5 md:mt-12">
           <Capibility
@@ -30,7 +53,7 @@ const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

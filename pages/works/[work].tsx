@@ -4,6 +4,12 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { NextPageWithLayout } from '../_app'
 
+// third-parties
+import { motion } from 'framer-motion'
+
+// hooks
+import useFadeUp from '$hooks/useFadeUp'
+
 // types
 import { WorkType, ImageType } from '$types/workTypes'
 
@@ -24,6 +30,9 @@ import RightArrow from '$svgs/RightArrow'
 
 // data
 import works from '$data/works.json'
+
+// stores
+import useCursorStore from '$stores/CursorStore'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = works.map((work) => ({ params: { work: work.slug } }))
@@ -48,13 +57,16 @@ interface Props {
 }
 
 const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
+  const { ref, animation, variants } = useFadeUp()
+  const { changeCursorType, resetCursorType } = useCursorStore()
+
   return (
     <>
       <Head>
         <title>{`${work.name} - Duo Design Lab`}</title>
       </Head>
       <WorkHero work={work} />
-      <section className="bg-white">
+      <motion.section className="bg-white" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
         <div className="py-8 ddl-container md:py-28">
           <div className="grid gap-2">
             {work.images.map((image: ImageType) => (
@@ -63,38 +75,50 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
           </div>
 
           <div className="grid gap-5 mt-8 md:mt-12 lg:hidden">
-            <div className="flex gap-2">
+            <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex gap-2">
               <span className="text-base font-medium whitespace-nowrap">Live at: </span>
               <a href={`https://${work.website}`} target="_blank" rel="noreferrer" className="text-base font-medium underline">
                 {work.website}
               </a>
-            </div>
-            <div className="flex gap-2">
+            </motion.div>
+            <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex gap-2">
               <span className="text-base font-medium">Scope:</span>
               <span className="text-base font-medium">{work.scope.join(', ')}</span>
-            </div>
-            <div className="flex gap-2">
+            </motion.div>
+            <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex gap-2">
               <span className="text-base font-medium">Year:</span>
               <span className="text-base font-medium">{work.year}</span>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="flex items-center gap-6 mt-8 md:mt-12">
-            <Link href="works/paing-mentoring-family">
-              <a className="flex items-center gap-2 mr-auto text-sm font-medium md:text-body text-ddl_dark">
-                <LeftArrow className="w-6 h-6" />
-                Kyaw San Htoo Pharmacy
-              </a>
-            </Link>
-            <Link href="works/paing-mentoring-family">
-              <a className="flex items-center gap-2 text-sm font-medium text-right md:text-body text-ddl_dark">
-                Kyaw San Htoo Pharmacy
-                <RightArrow className="w-6 h-6 -mb-1" />
-              </a>
-            </Link>
-          </div>
+          <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex items-center gap-6 mt-8 md:mt-12">
+            {work.more.prev && (
+              <Link href={`/works/${work.more.prev.slug}`}>
+                <motion.a
+                  onMouseEnter={() => changeCursorType('hover_brand')}
+                  onMouseLeave={() => changeCursorType('normal_brand')}
+                  className="flex items-center gap-2 text-sm font-medium md:text-body text-ddl_dark"
+                >
+                  <LeftArrow className="w-6 h-6" />
+                  {work.more.prev.name}
+                </motion.a>
+              </Link>
+            )}
+            {work.more.next && (
+              <Link href={`/works/${work.more.next.slug}`}>
+                <motion.a
+                  onMouseEnter={() => changeCursorType('hover_brand')}
+                  onMouseLeave={() => changeCursorType('normal_brand')}
+                  className="flex items-center gap-2 ml-auto text-sm font-medium text-right md:text-body text-ddl_dark"
+                >
+                  {work.more.next.name}
+                  <RightArrow className="w-6 h-6 -mb-1" />
+                </motion.a>
+              </Link>
+            )}
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
       <Ready>
         <ReadyVisualOne className="w-full sm:max-w-xl text-ddl_offwhite" />
       </Ready>

@@ -1,9 +1,33 @@
 import React from 'react'
 
+// third-parties
+import { motion } from 'framer-motion'
+
 // svgs
 import ScrollArrow from '$svgs/ScrollArrow'
 
+// stores
+import useCursorStore from '$stores/CursorStore'
+
+const desktopTexts = [
+  'We are a humble boutique',
+  'web design studio, led by a group',
+  'of young people with design and',
+  'development background.',
+]
+
+const mobileTexts = [
+  'We are a humble',
+  'boutique web design',
+  'studio, led by a group of',
+  'young people with',
+  'design and development',
+  'background.',
+]
+
 const HomeHero: React.FC = () => {
+  const { changeCursorType, resetCursorType } = useCursorStore()
+
   const goToNextSection = () => {
     if (document) {
       document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })
@@ -11,7 +35,7 @@ const HomeHero: React.FC = () => {
   }
 
   return (
-    <section className="bg-ddl_brand">
+    <motion.section className="bg-ddl_brand" onMouseEnter={() => changeCursorType('normal_brand_light')} onMouseLeave={resetCursorType}>
       <div className="flex items-center h-[60vh] md:h-screen ddl-container">
         <h1 className="sr-only">
           We are a humble boutique web design studio, led by a group of young people with design and development background.
@@ -19,46 +43,42 @@ const HomeHero: React.FC = () => {
 
         {/* for desktop */}
         <div className="hidden -mb-40 md:block">
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            We are a humble boutique
-          </span>
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            web design studio, led by a group
-          </span>
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            of young people with design and
-          </span>
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            development background.
-          </span>
+          {desktopTexts.map((text, i) => (
+            <motion.span
+              key={text}
+              className="block main-title text-ddl_brand_light"
+              aria-hidden
+              initial={{ y: 64, opacity: 0 }}
+              animate={{ y: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeOut', delay: i * 0.05 } }}
+            >
+              {text}
+            </motion.span>
+          ))}
         </div>
 
         {/* for mobile */}
         <div className="-mb-[5rem] md:hidden">
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            We are a humble
-          </span>
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            boutique web design
-          </span>
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            studio, led by a group of
-          </span>
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            young people with
-          </span>
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            design and development
-          </span>
-          <span className="block main-title text-ddl_brand_light" aria-hidden>
-            background.
-          </span>
+          {mobileTexts.map((text, i) => (
+            <motion.span
+              key={text}
+              className="block main-title text-ddl_brand_light"
+              aria-hidden
+              initial={{ y: 64, opacity: 0 }}
+              animate={{ y: 0, opacity: 1, transition: { duration: 0.6, delay: i * 0.05 } }}
+            >
+              {text}
+            </motion.span>
+          ))}
         </div>
       </div>
-      <button onClick={goToNextSection}>
+      <motion.button
+        onClick={goToNextSection}
+        onMouseEnter={() => changeCursorType('hover_brand_light')}
+        onMouseLeave={() => changeCursorType('normal_brand_light')}
+      >
         <ScrollArrow className="hidden md:block w-[3.125rem] h-[3.125rem] text-ddl_brand absolute bottom-14 right-32 transform translate-x-1/2" />
-      </button>
-    </section>
+      </motion.button>
+    </motion.section>
   )
 }
 

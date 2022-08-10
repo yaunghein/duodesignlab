@@ -23,9 +23,10 @@
       "$utils/*": ["utils/*"],
       "$stores/*": ["stores/*"],
       "$data/*": ["data/*"],
-      "$types/*": ["types/*"]
+      "$types/*": ["types/*"],
+      "$hooks/*": ["hooks/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "temp.js"],
   "exclude": ["node_modules"]
 }

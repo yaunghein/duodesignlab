@@ -1,53 +1,112 @@
 import React from 'react'
 
+// third-parties
+import { motion } from 'framer-motion'
+
+// hooks
+import useFadeUp from '$hooks/useFadeUp'
+
 // types
 import { MemberType } from '$types/memberTypes'
 
 // elements
 import BlurImage from '$elements/BlurImage'
 
+// stores
+import useCursorStore from '$stores/CursorStore'
+
 interface Props {
   member: MemberType
 }
 
 const MemberHero: React.FC<Props> = ({ member }) => {
+  const { ref, animation, variants } = useFadeUp()
+  const { ref: ref2, animation: animation2, variants: variants2 } = useFadeUp(1)
+  const { ref: ref3, animation: animation3, variants: variants3 } = useFadeUp(2)
+  const { changeCursorType, resetCursorType } = useCursorStore()
+
   return (
-    <section className="bg-white text-ddl_dark">
+    <motion.section className="bg-white text-ddl_dark" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
       <div className="grid grid-cols-1 lg:grid-cols-2 pt-44 md:pt-64 ddl-container">
         <div className="-mt-7">
-          <h1 className="text-big-visual md:main-title">{member.name}</h1>
-          <div className="flex flex-col mt-5 lg:flex-row lg:mt-20">
+          <motion.h1 ref={ref} animate={animation} initial="hidden" variants={variants} className="text-big-visual md:main-title">
+            {member.name}
+          </motion.h1>
+          <motion.div
+            ref={ref2}
+            animate={animation2}
+            initial="hidden"
+            variants={variants2}
+            className="flex flex-col mt-5 lg:flex-row lg:mt-20"
+          >
             <p className="font-medium text-body whitespace-nowrap">{member.position}</p>
             <div className="my-8 lg:hidden">
               <BlurImage alt={member.name} src={member.image} width={1294} height={1528} />
             </div>
             <div className="flex flex-wrap max-w-sm lg:ml-48 lg:gap-x-12 gap-y-8">
-              <a href={`mailto:${member.email}`} className="w-full font-medium underline text-body">
+              <motion.a
+                onMouseEnter={() => changeCursorType('hover_brand')}
+                onMouseLeave={() => changeCursorType('normal_brand')}
+                href={`mailto:${member.email}`}
+                className="w-full font-medium underline text-body"
+              >
                 {member.email}
-              </a>
+              </motion.a>
               {member.linkedIn && (
-                <a href={member.linkedIn} target="_blank" rel="noreferrer" className="w-1/2 font-medium underline lg:w-auto text-body">
+                <motion.a
+                  onMouseEnter={() => changeCursorType('hover_brand')}
+                  onMouseLeave={() => changeCursorType('normal_brand')}
+                  href={member.linkedIn}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-1/2 font-medium underline lg:w-auto text-body"
+                >
                   LinkedIn
-                </a>
+                </motion.a>
               )}
               {member.github && (
-                <a href={member.github} target="_blank" rel="noreferrer" className="w-1/2 font-medium underline lg:w-auto text-body">
+                <motion.a
+                  onMouseEnter={() => changeCursorType('hover_brand')}
+                  onMouseLeave={() => changeCursorType('normal_brand')}
+                  href={member.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-1/2 font-medium underline lg:w-auto text-body"
+                >
                   GitHub
-                </a>
+                </motion.a>
               )}
               {member.facebook && (
-                <a href={member.facebook} target="_blank" rel="noreferrer" className="w-1/2 font-medium underline lg:w-auto text-body">
+                <motion.a
+                  onMouseEnter={() => changeCursorType('hover_brand')}
+                  onMouseLeave={() => changeCursorType('normal_brand')}
+                  href={member.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-1/2 font-medium underline lg:w-auto text-body"
+                >
                   Facebook
-                </a>
+                </motion.a>
               )}
               {member.instagram && (
-                <a href={member.instagram} target="_blank" rel="noreferrer" className="w-1/2 font-medium underline lg:w-auto text-body">
+                <motion.a
+                  onMouseEnter={() => changeCursorType('hover_brand')}
+                  onMouseLeave={() => changeCursorType('normal_brand')}
+                  href={member.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-1/2 font-medium underline lg:w-auto text-body"
+                >
                   Instagram
-                </a>
+                </motion.a>
               )}
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            ref={ref3}
+            animate={animation3}
+            initial="hidden"
+            variants={variants3}
             className="grid gap-6 mt-8 font-normal lg:mt-20 lg:gap-12 text-body"
             dangerouslySetInnerHTML={{ __html: member.biography }}
           />
@@ -58,7 +117,7 @@ const MemberHero: React.FC<Props> = ({ member }) => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

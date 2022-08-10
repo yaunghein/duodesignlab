@@ -2,6 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import { NextPageWithLayout } from '../_app'
 import { GetStaticProps, GetStaticPaths } from 'next'
+
+// third-parties
 import { v4 as uuid } from 'uuid'
 
 // types
