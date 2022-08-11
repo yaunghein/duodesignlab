@@ -31,9 +31,9 @@ const Navigation: React.FC = () => {
   const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { scrollDirection, scrollValue, reachBottom } = useDDLScroll()
-  const { changeCapability } = useCapabilityStore((state) => state)
-  const { menuTheme, changeMenuTheme } = useMenuStore((state) => state)
-  const { changeCursorType, resetCursorType } = useCursorStore((state) => state)
+  const { changeCapability } = useCapabilityStore()
+  const { menuTheme, changeMenuTheme } = useMenuStore()
+  const { changeCursorType, resetCursorType } = useCursorStore()
 
   const isBgLight = /\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname) || router.pathname === '/capabilities'
 

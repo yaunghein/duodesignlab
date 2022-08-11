@@ -15,13 +15,20 @@ const defaultInputs = {
 }
 
 const ContactForm: React.FC = () => {
-  const { changeCursorType } = useCursorStore()
   const [inputs, setInputs] = useState(defaultInputs)
   const [errors, setErrors] = useState({} as typeof defaultInputs)
-  const [status, setStatus] = useState({ submitted: false, submitting: false })
+  const [serverError, setServerError] = useState('')
+  const [status, setStatus] = useState({ isSubmitting: false, isSubmitted: false, senderName: '' })
+  const { changeCursorType } = useCursorStore()
+
+  const resetErrors = () => {
+    setErrors({} as typeof defaultInputs)
+    setServerError('')
+    setStatus({ isSubmitting: false, isSubmitted: false, senderName: '' })
+  }
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setErrors({} as typeof defaultInputs)
+    resetErrors()
     setInputs((prev) => ({
       ...prev,
       [e.target.id]: e.target.value,
@@ -33,7 +40,7 @@ const ContactForm: React.FC = () => {
 
     // check empty value
     for (let key of Object.keys(inputs)) {
-      if (inputs[key as keyof typeof inputs] === '') {
+      if (inputs[key as keyof typeof inputs].trim() === '') {
         errors[key as keyof typeof inputs] = `Please provide ${key}.`
       }
     }
@@ -51,10 +58,26 @@ const ContactForm: React.FC = () => {
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault()
-      setErrors({} as typeof defaultInputs)
+      resetErrors()
+
       const isValid = validateInputs()
       if (isValid) {
-        console.log(inputs)
+        setStatus((prev) => ({ ...prev, isSubmitting: true }))
+        const response = await fetch('/api/submit-brief', {
+          method: 'POST',
+          body: JSON.stringify(inputs),
+          headers: { 'content-type': 'application/json' },
+        })
+
+        if (response.ok) {
+          const data = await response.json()
+          setInputs(defaultInputs)
+          setStatus({ isSubmitting: false, isSubmitted: true, senderName: data.name })
+        } else {
+          const error = await response.json()
+          setServerError(error.message)
+          setStatus((prev) => ({ ...prev, isSubmitting: false }))
+        }
       }
     },
     [inputs, validateInputs]
@@ -69,12 +92,14 @@ const ContactForm: React.FC = () => {
       >
         <label htmlFor="name" className="font-medium text-body text-ddl_dark">
           Name
+          <span className="text-xl text-red-600">*</span>
         </label>
         <input
           type="text"
           name="name"
           id="name"
           className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          value={inputs.name}
           onChange={handleInputChange}
         />
         {errors.name && <span className="-mt-2 text-xl text-red-600">{errors.name}</span>}
@@ -87,12 +112,14 @@ const ContactForm: React.FC = () => {
       >
         <label htmlFor="email" className="font-medium text-body text-ddl_dark">
           Email
+          <span className="text-xl text-red-600">*</span>
         </label>
         <input
           type="text"
           name="email"
           id="email"
           className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          value={inputs.email}
           onChange={handleInputChange}
         />
         {errors.email && <span className="-mt-2 text-xl text-red-600">{errors.email}</span>}
@@ -105,12 +132,14 @@ const ContactForm: React.FC = () => {
       >
         <label htmlFor="company" className="font-medium text-body text-ddl_dark">
           Company Name
+          <span className="text-xl text-red-600">*</span>
         </label>
         <input
           type="text"
           name="company"
           id="company"
           className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          value={inputs.company}
           onChange={handleInputChange}
         />
         {errors.company && <span className="-mt-2 text-xl text-red-600">{errors.company}</span>}
@@ -123,11 +152,13 @@ const ContactForm: React.FC = () => {
       >
         <label htmlFor="brief" className="font-medium text-body text-ddl_dark">
           Project Brief
+          <span className="text-xl text-red-600">*</span>
         </label>
         <textarea
           name="brief"
           id="brief"
           className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium transition border-2 outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body focus:border-ddl_brand"
+          value={inputs.brief}
           onChange={handleInputChange}
         />
         {errors.brief && <span className="-mt-2 text-xl text-red-600">{errors.brief}</span>}
@@ -140,11 +171,13 @@ const ContactForm: React.FC = () => {
       >
         <label htmlFor="budget" className="font-medium text-body text-ddl_dark">
           Budget
+          <span className="text-xl text-red-600">*</span>
         </label>
         <select
           name="budget"
           id="budget"
           className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition bg-white border-2 rounded-full outline-none appearance-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          value={inputs.budget}
           onChange={handleInputChange}
         >
           <option value="">Select Budget</option>
@@ -160,9 +193,18 @@ const ContactForm: React.FC = () => {
         onMouseEnter={() => changeCursorType('hover_brand')}
         onMouseLeave={() => changeCursorType('normal_brand')}
         className="px-12 py-3 font-medium transition-colors border-2 rounded-full justify-self-end lg:justify-self-start text-ddl_offwhite bg-ddl_dark text-body border-ddl_dark"
+        disabled={status.isSubmitting}
       >
-        Send Brief
+        <div className="-mt-1">{status.isSubmitting ? 'Sending...' : 'Send Brief'}</div>
       </motion.button>
+
+      {serverError && <span className="-mt-5 text-xl text-red-600">{serverError}</span>}
+
+      {status.isSubmitted && (
+        <span className="-mt-5 text-xl text-ddl_brand">{`Thanks, ${
+          status.senderName.split(' ')[0]
+        }! You submission has been received.`}</span>
+      )}
     </form>
   )
 }

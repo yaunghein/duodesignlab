@@ -12,7 +12,7 @@ import useCursorStore from '$stores/CursorStore'
 
 const Cursor: React.FC = () => {
   const [isMousePress, setIsMousePress] = useState(false)
-  const { cursorType } = useCursorStore((state) => state)
+  const { cursorType } = useCursorStore()
   const { width } = useWindowSize()
   const mousePosition = useMousePosition()
 

@@ -84,8 +84,8 @@ const branding: Variants = {
 
 const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
   const [worksByCapability, setWorksByCapability] = useState(works)
-  const { currentCapability, changeCapability } = useCapabilityStore((state) => state)
-  const { changeCursorType, resetCursorType } = useCursorStore((state) => state)
+  const { currentCapability, changeCapability } = useCapabilityStore()
+  const { changeCursorType, resetCursorType } = useCursorStore()
   const { width } = useWindowSize()
 
   const goToNextSection = () => {

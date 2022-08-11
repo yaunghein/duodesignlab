@@ -13,8 +13,8 @@ import cn from '$utils/cn'
 
 const Footer: React.FC = () => {
   const router = useRouter()
-  const { currentCapability } = useCapabilityStore((state) => state)
-  const { changeCursorType, resetCursorType } = useCursorStore((state) => state)
+  const { currentCapability } = useCapabilityStore()
+  const { changeCursorType, resetCursorType } = useCursorStore()
 
   const isBgDark = router.pathname === '/capabilities' && !currentCapability
 
