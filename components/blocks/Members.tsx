@@ -28,7 +28,7 @@ const Members: React.FC<Props> = ({ members }) => {
       <div className="ddl-container">
         <div className="max-w-6xl mx-auto">
           <motion.h2 ref={ref} animate={animation} initial="hidden" variants={variants} className="text-center main-title text-ddl_dark">
-            Founding Members
+            Team
           </motion.h2>
           <div className="grid grid-cols-1 gap-2 mt-5 lg:grid-cols-2 md:mt-12">
             {members.map((member, i) => (

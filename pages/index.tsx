@@ -25,7 +25,7 @@ import ReadyVisualOne from '$svgs/ReadyVisualOne'
 import works from '$data/works.json'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const transformedWorksData = works.map((work) => {
+  const transformedWorksData = works.slice(0, 2).map((work) => {
     return {
       id: uuid(),
       name: work.name,
