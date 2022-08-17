@@ -68,7 +68,7 @@ const Navigation: React.FC = () => {
       style={{ transitionProperty: 'padding, transform' }}
     >
       <div className="flex items-center ddl-container">
-        <div className="hidden mr-auto md:items-center md:gap-20 md:flex">
+        <div className="hidden mr-auto lg:items-center lg:gap-20 lg:flex">
           {navLinks.map((link, i) => (
             <Link href={link.path} key={link.label}>
               <motion.a
@@ -116,7 +116,7 @@ const Navigation: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 0.1 } }}
           className={cn(
-            'ml-auto md:hidden text-link-size relative z-10 transition',
+            'ml-auto lg:hidden text-link-size relative z-10 transition',
             isMenuOpen
               ? menuTheme === 'ddl_brand'
                 ? 'text-ddl_brand_light'

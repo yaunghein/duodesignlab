@@ -51,25 +51,21 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-interface Props {
-  works: WorkThumbnailType[]
-}
-
 const webDevelopment: Variants = {
-  initial: { bottom: '0%', left: '0%' },
+  initial: { bottom: '0%', left: '20%' },
   animate: {
     bottom: ['0%', '50%', '10%', '50%', '0%'],
-    left: ['0%', '80%', '60%', '20%', '0%'],
-    transition: { duration: 60, repeat: Infinity },
+    left: ['20%', '60%', '50%', '20%', '20%'],
+    transition: { duration: 80, repeat: Infinity },
   },
 }
 
 const webDesign: Variants = {
-  initial: { bottom: '0%', right: '0%' },
+  initial: { bottom: '0%', right: '20%' },
   animate: {
     bottom: ['0%', '50%', '10%', '50%', '0%'],
-    right: ['0%', '80%', '60%', '20%', '0%'],
-    transition: { duration: 50, repeat: Infinity },
+    right: ['20%', '60%', '50%', '20%', '20%'],
+    transition: { duration: 60, repeat: Infinity },
   },
 }
 
@@ -80,6 +76,10 @@ const branding: Variants = {
     right: ['45%', '60%', '30%', '45%'],
     transition: { duration: 40, repeat: Infinity },
   },
+}
+
+interface Props {
+  works: WorkThumbnailType[]
 }
 
 const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
@@ -178,11 +178,11 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
           )}
         >
           <motion.h1
-            className="text-center text-big-visual lg:main-title text-ddl_dark mt-36 md:mt-0"
+            className="text-center text-big-visual md:main-title text-ddl_dark mt-36 md:mt-0"
             initial={{ y: 64, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
           >
-            <span>We Do</span> {/* FadeIn effect htae loh ya chin loh */}
+            <span>We Do</span> {/* FadeIn effect htae loh ya chin loh dynamically ma use tr */}
             {currentCapability === 'Web Development' && (
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
@@ -214,7 +214,27 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               </motion.span>
             )}
           </motion.h1>
-          {currentCapability && (
+          {currentCapability === 'Web Development' && (
+            <motion.p
+              className="max-w-[26.5rem] text-center text-body text-ddl_dark"
+              initial={{ y: 64, opacity: 0 }}
+              animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
+            >
+              Development To effectively communicate your purpose and your business to your customers, a good brand identity is a must-have.
+              We can craft you an effective brand identity based on what you stand for and what makes you unique.
+            </motion.p>
+          )}
+          {currentCapability === 'Web Design' && (
+            <motion.p
+              className="max-w-[26.5rem] text-center text-body text-ddl_dark"
+              initial={{ y: 64, opacity: 0 }}
+              animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
+            >
+              Design To effectively communicate your purpose and your business to your customers, a good brand identity is a must-have. We
+              can craft you an effective brand identity based on what you stand for and what makes you unique.
+            </motion.p>
+          )}
+          {currentCapability === 'Branding' && (
             <motion.p
               className="max-w-[26.5rem] text-center text-body text-ddl_dark"
               initial={{ y: 64, opacity: 0 }}
