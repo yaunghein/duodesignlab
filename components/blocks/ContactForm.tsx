@@ -157,7 +157,7 @@ const ContactForm: React.FC = () => {
         <textarea
           name="brief"
           id="brief"
-          className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium transition border-2 outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body focus:border-ddl_brand"
+          className="resize-none px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium transition border-2 outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body focus:border-ddl_brand"
           value={inputs.brief}
           onChange={handleInputChange}
         />

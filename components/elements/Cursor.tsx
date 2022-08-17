@@ -35,14 +35,14 @@ const Cursor: React.FC = () => {
       case 'normal_brand_light':
         return 'w-12 h-12 bg-ddl_brand_light border-2 border-ddl_brand_light'
       case 'hover_brand':
-        return 'w-20 h-20 border-4 2xl:border-[6px] border-ddl_brand'
+        return 'w-28 h-28 border-2 2xl:border-[4px] border-ddl_brand'
       case 'hover_brand_light':
-        return 'w-20 h-20 border-4 2xl:border-[6px] border-ddl_brand_light'
+        return 'w-28 h-28 border-2 2xl:border-[4px] border-ddl_brand_light'
       case 'bubble':
-        return 'w-20 h-20 border-4 2xl:border-[6px] border-ddl_brand_light backdrop-blur-sm text-ddl_brand_light'
+        return 'w-28 h-28 border-2 2xl:border-[4px] border-ddl_brand_light backdrop-blur-sm text-ddl_brand_light'
       case 'work':
       case 'member':
-        return 'w-32 h-32 border-4 2xl:border-[6px] border-ddl_brand_light backdrop-blur-sm text-ddl_brand_light'
+        return 'w-32 h-32 border-2 2xl:border-[4px] border-ddl_brand_light backdrop-blur-sm text-ddl_brand_light'
       default:
         return ''
     }
