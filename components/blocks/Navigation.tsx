@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import { AnimatePresence, motion } from 'framer-motion'
 
 // svgs
-import LogoWhite from '$svgs/LogoWhite'
+import LogoWhite from '$svgs/Logo'
 
 // stores
 import useCapabilityStore from '$stores/CapabilityStore'

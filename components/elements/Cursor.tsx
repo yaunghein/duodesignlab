@@ -28,12 +28,16 @@ const Cursor: React.FC = () => {
     }
   }, [])
 
+  useEffect(() => {
+    console.log(window.getSelection())
+  })
+
   const getCursorClasses = useCallback(() => {
     switch (cursorType) {
       case 'normal_brand':
-        return 'w-12 h-12 bg-ddl_brand border-2 border-ddl_brand'
+        return 'w-8 h-8 bg-ddl_brand border-2 border-ddl_brand'
       case 'normal_brand_light':
-        return 'w-12 h-12 bg-ddl_brand_light border-2 border-ddl_brand_light'
+        return 'w-8 h-8 bg-ddl_brand_light border-2 border-ddl_brand_light'
       case 'hover_brand':
         return 'w-28 h-28 border-2 2xl:border-[4px] border-ddl_brand'
       case 'hover_brand_light':
