@@ -29,7 +29,7 @@ import useCursorStore from '$stores/CursorStore'
 import cn from '$utils/cn'
 
 // data
-import works from '$data/works.json'
+import works from '$fixtures/works.json'
 
 // hooks
 import useWindowSize from '$hooks/useWindowSize'

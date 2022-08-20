@@ -26,7 +26,7 @@ const Hero: React.FC<Props> = ({ title }) => {
     <motion.section className="bg-ddl_brand" onMouseEnter={() => changeCursorType('normal_brand_light')} onMouseLeave={resetCursorType}>
       <div className="flex items-center justify-center h-[55vh] md:h-screen ddl-container">
         <motion.h1
-          className="-mb-12 text-big-visual text-ddl_brand_light md:mb-0"
+          className="-mb-12 text-center text-big-visual text-ddl_brand_light md:mb-0"
           initial={{ y: 64, opacity: 0 }}
           animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
         >

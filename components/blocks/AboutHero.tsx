@@ -15,7 +15,7 @@ const AboutHero: React.FC = () => {
   const { changeCursorType, resetCursorType } = useCursorStore()
   return (
     <motion.section className="bg-ddl_brand" onMouseEnter={() => changeCursorType('normal_brand_light')} onMouseLeave={resetCursorType}>
-      <div className="grid grid-cols-1 pb-10 pt-36 lg:pt-44 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28">
+      <div className="grid grid-cols-1 pb-10 pt-36 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28">
         <div>
           <motion.h1
             initial={{ y: 64, opacity: 0 }}
