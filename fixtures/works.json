@@ -1,5 +1,23 @@
 [
   {
+    "name": "Joby",
+    "slug": "joby",
+    "description": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",
+    "scope": ["Web Design", "Web Development"],
+    "year": "2022",
+    "website": "job-y.vercel.app",
+    "owners": ["yan-aung-hein"],
+    "images": [{ "path": "/assets/works/joby/1.jpg", "width": 1740, "height": 893 }],
+    "more": {
+      "next": null,
+      "prev": {
+        "name": "Paing Mentoring Family",
+        "slug": "paing-mentoring-family"
+      }
+    },
+    "personal": true
+  },
+  {
     "name": "Paing Mentoring Family",
     "slug": "paing-mentoring-family",
     "description": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",

@@ -24,12 +24,12 @@ const WorkHero: React.FC<Props> = ({ work }) => {
 
   return (
     <motion.section className="bg-white text-ddl_dark" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
-      <div className="grid grid-cols-1 pt-44 md:pt-64 ddl-container lg:grid-cols-2">
+      <div className="grid grid-cols-1 pt-36 lg:pt-44 md:pt-64 ddl-container lg:grid-cols-2">
         <div>
           <motion.h1
             initial={{ y: 64, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
-            className="mb-14 text-big-visual md:main-title text-ddl_brand -mt-7 lg:mb-0"
+            className="mb-14 text-big-visual md:main-title text-ddl_brand lg:-mt-7 lg:mb-0"
           >
             {work.name}
           </motion.h1>

@@ -30,6 +30,7 @@ export interface WorkType {
       slug: string
     }
   }
+  personal: boolean
 }
 
 export interface WorkThumbnailType {

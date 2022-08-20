@@ -29,7 +29,7 @@ import LeftArrow from '$svgs/LeftArrow'
 import RightArrow from '$svgs/RightArrow'
 
 // data
-import works from '$data/works.json'
+import works from '$fixtures/works.json'
 
 // stores
 import useCursorStore from '$stores/CursorStore'
@@ -99,7 +99,7 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
                   onMouseLeave={() => changeCursorType('normal_brand')}
                   className="flex items-center gap-2 text-sm font-medium md:text-body text-ddl_dark"
                 >
-                  <LeftArrow className="w-6 h-6" />
+                  <LeftArrow className="w-4 h-4 sm:w-6 sm:h-6" />
                   {work.more.prev.name}
                 </motion.a>
               </Link>
@@ -112,7 +112,7 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
                   className="flex items-center gap-2 ml-auto text-sm font-medium text-right md:text-body text-ddl_dark"
                 >
                   {work.more.next.name}
-                  <RightArrow className="w-6 h-6 -mb-1" />
+                  <RightArrow className="w-4 h-4 -mb-1 sm:w-6 sm:h-6" />
                 </motion.a>
               </Link>
             )}

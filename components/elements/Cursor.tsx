@@ -28,10 +28,6 @@ const Cursor: React.FC = () => {
     }
   }, [])
 
-  useEffect(() => {
-    console.log(window.getSelection())
-  })
-
   const getCursorClasses = useCallback(() => {
     switch (cursorType) {
       case 'normal_brand':

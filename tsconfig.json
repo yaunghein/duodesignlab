@@ -22,7 +22,7 @@
       "$layouts/*": ["components/layouts/*"],
       "$utils/*": ["utils/*"],
       "$stores/*": ["stores/*"],
-      "$data/*": ["data/*"],
+      "$fixtures/*": ["fixtures/*"],
       "$types/*": ["types/*"],
       "$hooks/*": ["hooks/*"]
     }

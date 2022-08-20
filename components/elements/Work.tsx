@@ -49,17 +49,25 @@ const Work: React.FC<Props> = ({ work, index }) => {
         </div>
 
         {/* for mobile */}
-        <motion.div
+        {/* <motion.div
           ref={ref4}
           animate={animation4}
           initial="hidden"
           variants={variants4}
           className="absolute bottom-0 flex flex-col w-full px-4 py-4 bg-opacity-75 xl:hidden bg-gradient-to-t from-ddl_brand backdrop-blur-sm text-ddl_offwhite"
+        > */}
+        <motion.div
+          ref={ref4}
+          animate={animation4}
+          initial="hidden"
+          variants={variants4}
+          className="absolute bottom-0 flex flex-col w-full px-4 py-4 pt-5 bg-opacity-75 xl:hidden text-ddl_offwhite"
+          style={{ background: 'linear-gradient(0deg, rgba(18, 16, 19, 0.6), rgba(18, 16, 19, 0.4), transparent)' }}
         >
-          <motion.h3 ref={ref2} animate={animation2} initial="hidden" variants={variants2} className="mt-auto text-2xl">
+          <motion.h3 ref={ref2} animate={animation2} initial="hidden" variants={variants2} className="mt-auto text-xl font-medium">
             {work.name}
           </motion.h3>
-          <motion.p ref={ref3} animate={animation3} initial="hidden" variants={variants3} className="mt-1 text-sm font-normal">
+          <motion.p ref={ref3} animate={animation3} initial="hidden" variants={variants3} className="mt-1 text-xs font-normal">
             {work.scope.join(', ')}
           </motion.p>
         </motion.div>

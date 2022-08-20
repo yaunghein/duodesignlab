@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply box-border leading-[1.2] !cursor-none;
+    /* @apply box-border leading-[1.2] !cursor-none; */
   }
 
   html {
@@ -36,10 +36,10 @@
     @apply text-[1.75rem] md:text-[2rem] lg:text-[2.8125rem] font-medium leading-[1.2];
   }
   .text-link-size {
-    @apply text-xl;
+    @apply text-xl leading-tight;
   }
   .text-body {
-    @apply text-xl md:text-[1.75rem];
+    @apply text-xl md:text-[1.75rem] leading-tight;
   }
   .text-big-visual {
     @apply block text-[2.8125rem] md:text-[11.25rem] font-medium leading-[1.2];

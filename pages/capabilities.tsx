@@ -70,10 +70,10 @@ const webDesign: Variants = {
 }
 
 const branding: Variants = {
-  initial: { bottom: '0%', right: '45%' },
+  initial: { bottom: '0%', right: '65%' },
   animate: {
-    bottom: ['50%', '30%', '0%', '50%'],
-    right: ['45%', '60%', '30%', '45%'],
+    bottom: ['35%', '30%', '0%', '35%'],
+    right: ['65%', '60%', '30%', '65%'],
     transition: { duration: 40, repeat: Infinity },
   },
 }
@@ -220,8 +220,9 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               initial={{ y: 64, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
             >
-              Development To effectively communicate your purpose and your business to your customers, a good brand identity is a must-have.
-              We can craft you an effective brand identity based on what you stand for and what makes you unique.
+              No search engine loves slow and old-fashioned websites. We’re sure you won’t either. Here in Duo Design Lab, we build fast and
+              modern Jamstack websites which align with your business needs as well. Looking for an example? You are browsing one of the
+              examples right now…
             </motion.p>
           )}
           {currentCapability === 'Web Design' && (
@@ -230,8 +231,8 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               initial={{ y: 64, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
             >
-              Design To effectively communicate your purpose and your business to your customers, a good brand identity is a must-have. We
-              can craft you an effective brand identity based on what you stand for and what makes you unique.
+              We believe that every business has their own unique audiences and unique audiences call for unique design. We create all our
+              design scratch based on your business needs and audiences.
             </motion.p>
           )}
           {currentCapability === 'Branding' && (
@@ -240,8 +241,8 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               initial={{ y: 64, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
             >
-              To effectively communicate your purpose and your business to your customers, a good brand identity is a must-have. We can
-              craft you an effective brand identity based on what you stand for and what makes you unique.
+              To effectively communicate your purpose and your business to your customers,a good brand identity is a must-have. We can craft
+              you an effective brand identity based on what you stand for and what makes you unique.
             </motion.p>
           )}
         </div>

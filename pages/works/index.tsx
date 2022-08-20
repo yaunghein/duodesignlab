@@ -21,18 +21,20 @@ import Ready from '$blocks/Ready'
 import ReadyVisualTwo from '$svgs/ReadyVisualTwo'
 
 // data
-import works from '$data/works.json'
+import works from '$fixtures/works.json'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const transformedWorksData = works.map((work) => {
-    return {
-      id: uuid(),
-      name: work.name,
-      scope: work.scope,
-      image: work.images[0],
-      slug: work.slug,
-    }
-  })
+  const transformedWorksData = works
+    .filter((work) => !work.personal)
+    .map((work) => {
+      return {
+        id: uuid(),
+        name: work.name,
+        scope: work.scope,
+        image: work.images[0],
+        slug: work.slug,
+      }
+    })
   return {
     props: {
       works: transformedWorksData,

@@ -22,8 +22,8 @@ import Ready from '$blocks/Ready'
 import ReadyVisualTwo from '$svgs/ReadyVisualTwo'
 
 // data
-import works from '$data/works.json'
-import members from '$data/members.json'
+import works from '$fixtures/works.json'
+import members from '$fixtures/members.json'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = members.map((member) => ({ params: { member: member.slug } }))

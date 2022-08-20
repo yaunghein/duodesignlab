@@ -22,7 +22,7 @@ import Ready from '$blocks/Ready'
 import ReadyVisualThree from '$svgs/ReadyVisualThree'
 
 // data
-import members from '$data/members.json'
+import members from '$fixtures/members.json'
 
 export const getStaticProps: GetStaticProps = async () => {
   const transformedMembersData = members.map((member) => {

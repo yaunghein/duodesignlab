@@ -7,16 +7,15 @@ import { motion } from 'framer-motion'
 import useCursorStore from '$stores/CursorStore'
 
 const p = [
-  'Duo Design Lab is a multi-disciplinary, independently owned design studio.',
-  'Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.',
-  'Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.',
+  'We are a boutique web design studio based in Yangon, Myanmar. We create high performing websites that are safe and easy to maintain. We also make sure that the websites we created are aligned with the client business needs as well as the audience’s.',
+  'As a team of young and passionate professional, we are open-minded meaning, we are not afraid to experiment different things and learn from the feedback of anyone on the team. Although we are young, we understand the importance of commitment and responsibility. As our team is working remotely, commitment is a crucial value to keep things running and get the job done.',
 ]
 
 const AboutHero: React.FC = () => {
   const { changeCursorType, resetCursorType } = useCursorStore()
   return (
     <motion.section className="bg-ddl_brand" onMouseEnter={() => changeCursorType('normal_brand_light')} onMouseLeave={resetCursorType}>
-      <div className="grid grid-cols-1 pb-10 pt-44 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28">
+      <div className="grid grid-cols-1 pb-10 pt-36 lg:pt-44 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28">
         <div>
           <motion.h1
             initial={{ y: 64, opacity: 0 }}
