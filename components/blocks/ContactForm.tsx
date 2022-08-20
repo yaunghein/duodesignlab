@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 // third-parties
 import { motion, AnimatePresence } from 'framer-motion'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 // stores
 import useCursorStore from '$stores/CursorStore'
@@ -37,6 +38,7 @@ const ContactForm: React.FC = () => {
   const [status, setStatus] = useState({ isSubmitting: false, isSubmitted: false, senderName: '' })
   const { changeCursorType } = useCursorStore()
   const currencyMenuRef = useClickOutside(() => setIsCurrencyMenuOpen(false))
+  const recaptchaRef = useRef<any>()
 
   const resetErrorsAndStatus = () => {
     setErrors({} as typeof defaultInputs)
@@ -83,7 +85,12 @@ const ContactForm: React.FC = () => {
       e.preventDefault()
       resetErrorsAndStatus()
 
-      const formData = { ...inputs, budget: `${inputs.budget} ${currency.type}` }
+      const formData = {
+        ...inputs,
+        budget: `${inputs.budget} ${currency.type}`,
+        recaptureValue: recaptchaRef.current?.getValue(),
+      }
+
       const isValid = validateInputs()
       if (isValid) {
         setStatus((prev) => ({ ...prev, isSubmitting: true }))
@@ -97,6 +104,7 @@ const ContactForm: React.FC = () => {
           const data = await response.json()
           setInputs(defaultInputs)
           setStatus({ isSubmitting: false, isSubmitted: true, senderName: data.name })
+          recaptchaRef.current?.reset()
         } else {
           const error = await response.json()
           setServerError(error.message)
@@ -246,6 +254,10 @@ const ContactForm: React.FC = () => {
         {errors.budget && <span className="block w-full text-xl text-red-600">{errors.budget}</span>}
       </motion.div>
 
+      <div className="flex items-center justify-end mt-2 !cursor-pointer lg:block">
+        <ReCAPTCHA ref={recaptchaRef} size="normal" sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string} />
+      </div>
+
       <motion.button
         onMouseEnter={() => changeCursorType('hover_brand')}
         onMouseLeave={() => changeCursorType('normal_brand')}
@@ -255,10 +267,10 @@ const ContactForm: React.FC = () => {
         {status.isSubmitting ? 'Sending...' : 'Send Brief'}
       </motion.button>
 
-      {serverError && <span className="-mt-5 text-xl text-red-600">{serverError}</span>}
+      {serverError && <span className="block -mt-1 text-base text-right text-red-600 sm:text-xl lg:text-left lg:-mt-5">{serverError}</span>}
 
       {status.isSubmitted && (
-        <span className="block -mt-1 text-xl text-right lg:text-left lg:-mt-5 text-ddl_brand">
+        <span className="block -mt-1 text-base text-right sm:text-xl lg:text-left lg:-mt-5 text-ddl_brand">
           {`Thanks, ${status.senderName.split(' ')[0]}! You submission has been received.`}
         </span>
       )}

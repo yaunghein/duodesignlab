@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    /* @apply box-border leading-[1.2] !cursor-none; */
+    @apply box-border leading-[1.2] !cursor-none;
   }
 
   html {
