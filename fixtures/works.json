@@ -72,7 +72,7 @@
     "name": "APM Help",
     "slug": "apm-help",
     "description": "<p>APM Help is your go-to place for property management accounting and maintenance experts. Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies - they got you cover. They also offer 30-minute FREE consultation.</p><p>We, proudly, designed and development a fully responsive and modern-looking  business website for AMP Help using Webflow. Unlike WordPress, Webflow Hosting is strong- the website still performs pretty fast even with over 12 pages, and over 100 blog posts. Again, with the help of easy-to-use Webflow CMS, they can update the content, and maintain blogs post quickly whenever they want without relying on any developer.</p>",
-    "scope": ["Web Design", "Web Development"],
+    "scope": ["Web Development", "Web Design"],
     "year": "2021",
     "website": "www.apmhelp.com",
     "owners": ["yan-aung-hein"],

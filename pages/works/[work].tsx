@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -57,6 +57,7 @@ interface Props {
 }
 
 const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
+  const [isShowMore, setIsShowMore] = useState(false)
   const { ref, animation, variants } = useFadeUp()
   const { changeCursorType, resetCursorType } = useCursorStore()
 
@@ -65,7 +66,7 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
       <Head>
         <title>{`${work.name} - Duo Design Lab`}</title>
       </Head>
-      <WorkHero work={work} />
+      <WorkHero work={work} isShowMore={isShowMore} setIsShowMore={setIsShowMore} />
       <motion.section className="bg-white" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
         <div className="py-8 ddl-container md:py-28">
           <div className="grid gap-2">
@@ -74,20 +75,20 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
             ))}
           </div>
 
-          <div className="grid gap-5 mt-8 md:mt-12 lg:hidden">
+          <div className="grid gap-5 mt-8 font-medium md:mt-12 lg:hidden text-body">
             <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex gap-2">
-              <span className="text-base font-medium whitespace-nowrap">Live at: </span>
-              <a href={`https://${work.website}`} target="_blank" rel="noreferrer" className="text-base font-medium underline">
+              <span className="whitespace-nowrap">Live at: </span>
+              <a href={`https://${work.website}`} target="_blank" rel="noreferrer" className="underline">
                 {work.website}
               </a>
             </motion.div>
             <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex gap-2">
-              <span className="text-base font-medium">Scope:</span>
-              <span className="text-base font-medium">{work.scope.join(', ')}</span>
+              <span>Scope:</span>
+              <span>{work.scope.join(', ')}</span>
             </motion.div>
             <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex gap-2">
-              <span className="text-base font-medium">Year:</span>
-              <span className="text-base font-medium">{work.year}</span>
+              <span>Year:</span>
+              <span>{work.year}</span>
             </motion.div>
           </div>
 
@@ -95,6 +96,7 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
             {work.more.prev && (
               <Link href={`/works/${work.more.prev.slug}`}>
                 <motion.a
+                  onClick={() => setIsShowMore(false)}
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
                   className="flex items-center gap-2 text-sm font-medium md:text-body text-ddl_dark"
@@ -107,6 +109,7 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
             {work.more.next && (
               <Link href={`/works/${work.more.next.slug}`}>
                 <motion.a
+                  onClick={() => setIsShowMore(false)}
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
                   className="flex items-center gap-2 ml-auto text-sm font-medium text-right md:text-body text-ddl_dark"
