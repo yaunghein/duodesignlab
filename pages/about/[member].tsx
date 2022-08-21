@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         id: uuid(),
         name: work.name,
         scope: work.scope,
-        image: work.images[0],
+        image: work.thumbnail,
         slug: work.slug,
       }
     })
