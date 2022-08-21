@@ -131,11 +131,11 @@ const ContactForm: React.FC = () => {
           type="text"
           name="name"
           id="name"
-          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium  border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.name}
           onChange={handleInputChange}
         />
-        {errors.name && <span className="-mt-2 text-xl text-red-600">{errors.name}</span>}
+        {errors.name && <span className="-mt-1 text-base text-red-600 sm:-mt-2 sm:text-xl">{errors.name}</span>}
       </motion.div>
 
       <motion.div
@@ -151,11 +151,11 @@ const ContactForm: React.FC = () => {
           type="text"
           name="email"
           id="email"
-          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.email}
           onChange={handleInputChange}
         />
-        {errors.email && <span className="-mt-2 text-xl text-red-600">{errors.email}</span>}
+        {errors.email && <span className="-mt-1 text-base text-red-600 sm:-mt-2 sm:text-xl">{errors.email}</span>}
       </motion.div>
 
       <motion.div
@@ -171,11 +171,11 @@ const ContactForm: React.FC = () => {
           type="text"
           name="company"
           id="company"
-          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.company}
           onChange={handleInputChange}
         />
-        {errors.company && <span className="-mt-2 text-xl text-red-600">{errors.company}</span>}
+        {errors.company && <span className="-mt-1 text-base text-red-600 sm:-mt-2 sm:text-xl">{errors.company}</span>}
       </motion.div>
 
       <motion.div
@@ -190,39 +190,39 @@ const ContactForm: React.FC = () => {
         <textarea
           name="brief"
           id="brief"
-          className="resize-none px-6 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium transition border-2 outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body focus:border-ddl_brand"
+          className="resize-none px-6 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium border-[0.175rem] outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.brief}
           onChange={handleInputChange}
         />
-        {errors.brief && <span className="-mt-2 text-xl text-red-600">{errors.brief}</span>}
+        {errors.brief && <span className="-mt-1 text-base text-red-600 sm:-mt-2 sm:text-xl">{errors.brief}</span>}
       </motion.div>
 
       <motion.div
-        className="flex flex-wrap items-center"
+        className="flex flex-wrap items-center gap-2 lg:gap-5"
         onMouseEnter={() => changeCursorType('hover_brand')}
         onMouseLeave={() => changeCursorType('normal_brand')}
       >
-        <div className="flex flex-col w-3/4 gap-2 lg:gap-5">
-          <label htmlFor="budget" className="font-medium text-body text-ddl_dark">
+        <div className="flex w-full">
+          <label htmlFor="budget" className="w-3/4 font-medium text-body text-ddl_dark">
             Budget
             <span className="text-xl text-red-600">*</span>
           </label>
+          <label htmlFor="budget" className="w-1/4 font-medium text-body text-ddl_dark">
+            Currency
+          </label>
+        </div>
+        <div ref={currencyMenuRef} className="relative flex w-full">
           <input
             type="text"
             name="budget"
             id="budget"
-            className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full rounded-r-none outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+            className="w-3/4 px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-[0.175rem] rounded-full rounded-r-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
             value={inputs.budget}
             onChange={handleInputChange}
           />
-        </div>
-        <div ref={currencyMenuRef} className="relative flex flex-col w-1/4 gap-2 -mb-1 md:mb-[0.5px] lg:gap-5">
-          <label htmlFor="budget" className="font-medium text-body text-ddl_dark">
-            Currency
-          </label>
           <div
             role="button"
-            className="select-none lg:-mb-[1px] grid place-items-center lg:pb-[0.2rem] font-medium transition border-2 border-l-0 rounded-full rounded-l-none outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+            className="w-1/4 select-none lg:-mb-[0.5px] grid place-items-center lg:pb-[0.2rem] font-medium transition border-[0.175rem] border-l-0 rounded-full rounded-l-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
             onClick={() => setIsCurrencyMenuOpen(!isCurrencyMenuOpen)}
           >
             {currency.type}
@@ -230,7 +230,7 @@ const ContactForm: React.FC = () => {
           <AnimatePresence>
             {isCurrencyMenuOpen && (
               <motion.div
-                className="absolute z-10 right-0 grid w-[150%] xl:w-full gap-2 sm:gap-4 p-4 sm:p-5 bg-white border-2 bottom-[3.8rem] sm:bottom-[unset] sm:top-[7.4rem] rounded-3xl border-ddl_dark"
+                className="absolute z-10 right-0 grid w-36 xl:w-1/4 gap-2 sm:gap-4 p-4 sm:p-5 bg-white border-[0.175rem] bottom-[3.8rem] sm:bottom-[unset] sm:top-16 rounded-3xl border-ddl_dark"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1, transition: { duration: 0.1, ease: 'easeOut' } }}
                 exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.1, ease: 'easeOut' } }}
@@ -252,14 +252,14 @@ const ContactForm: React.FC = () => {
           </AnimatePresence>
         </div>
 
-        {errors.budget && <span className="block w-full text-xl text-red-600">{errors.budget}</span>}
+        {errors.budget && <span className="w-full -mt-1 text-base text-red-600 sm:-mt-2 sm:text-xl">{errors.budget}</span>}
       </motion.div>
 
       <div className="flex flex-col items-end justify-between lg:items-center lg:flex-row">
         <motion.button
           onMouseEnter={() => changeCursorType('hover_brand')}
           onMouseLeave={() => changeCursorType('normal_brand')}
-          className="px-12 py-3 mt-2 font-medium transition-colors border-2 rounded-full whitespace-nowrap lg:mt-0 text-ddl_offwhite bg-ddl_dark text-body border-ddl_dark"
+          className="px-12 py-3 mt-2 font-medium transition-colors border-[0.175rem] rounded-full whitespace-nowrap lg:mt-0 text-ddl_offwhite bg-ddl_dark text-body border-ddl_dark"
           disabled={status.isSubmitting}
         >
           {status.isSubmitting ? 'Sending...' : 'Send Brief'}
