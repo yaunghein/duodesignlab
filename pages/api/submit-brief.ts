@@ -20,7 +20,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       const response = await validateCaptcha(req.body.recaptureValue)
       if (!response.success) {
-        return res.status(400).json({ message: 'Please verify you are not a robot.' })
+        return res.status(400).json({
+          message:
+            'Google reCaptcha defines you as a bot. If you are really trying to contact us, let us know by phone (+95 996 232 3716) or by email (duodesignlab.mm@gmail.com).',
+        })
       }
     } catch (error: any) {
       return res.status(500).json({ message: error.message })

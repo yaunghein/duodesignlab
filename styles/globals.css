@@ -57,6 +57,10 @@
   scrollbar-width: none; /* Firefox */
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 @font-face {
   font-family: 'Satoshi';
   src: url('../fonts/satoshi/Satoshi-Black.woff');

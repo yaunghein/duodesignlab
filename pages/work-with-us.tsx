@@ -67,7 +67,13 @@ const WorkWithUs: NextPageWithLayout = () => {
               </div>
             </div>
           </motion.div>
-          <motion.div ref={ref2} animate={animation2} initial="hidden" variants={variants2} className="mt-20 lg:mt-0">
+          <motion.div
+            ref={ref2}
+            animate={animation2}
+            initial="hidden"
+            variants={variants2}
+            className="mt-20 -mb-4 overflow-hidden lg:-mb-12 lg:mt-0"
+          >
             <h2 className="mb-5 lg:mb-20 secondary-title text-ddl_dark">Write Brief</h2>
             <ContactForm />
           </motion.div>

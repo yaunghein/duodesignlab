@@ -85,15 +85,16 @@ const ContactForm: React.FC = () => {
       e.preventDefault()
       resetErrorsAndStatus()
 
-      const formData = {
-        ...inputs,
-        budget: `${inputs.budget} ${currency.type}`,
-        recaptureValue: recaptchaRef.current?.getValue(),
-      }
-
       const isValid = validateInputs()
       if (isValid) {
         setStatus((prev) => ({ ...prev, isSubmitting: true }))
+
+        const formData = {
+          ...inputs,
+          budget: `${inputs.budget} ${currency.type}`,
+          recaptureValue: await recaptchaRef.current.executeAsync(),
+        }
+
         const response = await fetch('/api/submit-brief', {
           method: 'POST',
           body: JSON.stringify(formData),
@@ -215,7 +216,7 @@ const ContactForm: React.FC = () => {
             onChange={handleInputChange}
           />
         </div>
-        <div ref={currencyMenuRef} className="relative flex flex-col w-1/4 gap-2 -mb-1 md:mb-0 lg:gap-5">
+        <div ref={currencyMenuRef} className="relative flex flex-col w-1/4 gap-2 -mb-1 md:mb-[0.5px] lg:gap-5">
           <label htmlFor="budget" className="font-medium text-body text-ddl_dark">
             Currency
           </label>
@@ -229,7 +230,7 @@ const ContactForm: React.FC = () => {
           <AnimatePresence>
             {isCurrencyMenuOpen && (
               <motion.div
-                className="absolute right-0 grid w-[150%] xl:w-full gap-2 sm:gap-4 p-4 sm:p-5 bg-white border-2 bottom-16 sm:bottom-[unset] sm:top-32 rounded-3xl border-ddl_dark"
+                className="absolute z-10 right-0 grid w-[150%] xl:w-full gap-2 sm:gap-4 p-4 sm:p-5 bg-white border-2 bottom-[3.8rem] sm:bottom-[unset] sm:top-[7.4rem] rounded-3xl border-ddl_dark"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1, transition: { duration: 0.1, ease: 'easeOut' } }}
                 exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.1, ease: 'easeOut' } }}
@@ -254,18 +255,22 @@ const ContactForm: React.FC = () => {
         {errors.budget && <span className="block w-full text-xl text-red-600">{errors.budget}</span>}
       </motion.div>
 
-      <div className="flex items-center justify-end mt-2 !cursor-pointer lg:block">
-        <ReCAPTCHA ref={recaptchaRef} size="normal" sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string} />
-      </div>
+      <div className="flex flex-col items-end justify-between lg:items-center lg:flex-row">
+        <motion.button
+          onMouseEnter={() => changeCursorType('hover_brand')}
+          onMouseLeave={() => changeCursorType('normal_brand')}
+          className="px-12 py-3 mt-2 font-medium transition-colors border-2 rounded-full whitespace-nowrap lg:mt-0 text-ddl_offwhite bg-ddl_dark text-body border-ddl_dark"
+          disabled={status.isSubmitting}
+        >
+          {status.isSubmitting ? 'Sending...' : 'Send Brief'}
+        </motion.button>
 
-      <motion.button
-        onMouseEnter={() => changeCursorType('hover_brand')}
-        onMouseLeave={() => changeCursorType('normal_brand')}
-        className="px-12 py-3 mt-2 font-medium transition-colors border-2 rounded-full lg:mt-0 justify-self-end lg:justify-self-start text-ddl_offwhite bg-ddl_dark text-body border-ddl_dark"
-        disabled={status.isSubmitting}
-      >
-        {status.isSubmitting ? 'Sending...' : 'Send Brief'}
-      </motion.button>
+        <p className="max-w-xs mt-4 text-xs text-right opacity-50 lg:mt-0 lg:max-w-sm lg:text-base text-ddl_dark">
+          This form is protected by reCAPTCHA and the Google
+          <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+          <a href="https://policies.google.com/terms"> Terms of Service</a> apply.
+        </p>
+      </div>
 
       {serverError && <span className="block -mt-1 text-base text-right text-red-600 sm:text-xl lg:text-left lg:-mt-5">{serverError}</span>}
 
@@ -274,6 +279,8 @@ const ContactForm: React.FC = () => {
           {`Thanks, ${status.senderName.split(' ')[0]}! You submission has been received.`}
         </span>
       )}
+
+      <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string} />
     </form>
   )
 }
