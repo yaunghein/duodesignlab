@@ -131,7 +131,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="name"
           id="name"
-          className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
           value={inputs.name}
           onChange={handleInputChange}
         />
@@ -151,7 +151,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="email"
           id="email"
-          className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
           value={inputs.email}
           onChange={handleInputChange}
         />
@@ -171,7 +171,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="company"
           id="company"
-          className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
           value={inputs.company}
           onChange={handleInputChange}
         />
@@ -190,7 +190,7 @@ const ContactForm: React.FC = () => {
         <textarea
           name="brief"
           id="brief"
-          className="resize-none px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium transition border-2 outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body focus:border-ddl_brand"
+          className="resize-none px-6 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium transition border-2 outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body focus:border-ddl_brand"
           value={inputs.brief}
           onChange={handleInputChange}
         />
@@ -211,7 +211,7 @@ const ContactForm: React.FC = () => {
             type="text"
             name="budget"
             id="budget"
-            className="px-6 lg:px-12 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full rounded-r-none outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
+            className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-2 rounded-full rounded-r-none outline-none text-ddl_dark border-ddl_dark h-14 text-body focus:border-ddl_brand"
             value={inputs.budget}
             onChange={handleInputChange}
           />

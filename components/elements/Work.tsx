@@ -40,7 +40,7 @@ const Work: React.FC<Props> = ({ work, index }) => {
         onMouseEnter={() => changeCursorType('work')}
         onMouseLeave={() => changeCursorType('normal_brand')}
       >
-        <BlurImage src={work.image.path} alt={work.name} width={work.image.width} height={1305} />
+        <BlurImage src={work.image} alt={work.name} width={1296} height={980} />
 
         {/* for desktop */}
         <div className="absolute inset-0 flex-col items-center hidden px-12 py-5 transition-opacity opacity-0 text-centerm hover:opacity-100 xl:flex lg:py-8 bg-ddl_brand bg-opacity-90 backdrop-blur-md text-ddl_offwhite lg:px-28">
@@ -49,13 +49,6 @@ const Work: React.FC<Props> = ({ work, index }) => {
         </div>
 
         {/* for mobile */}
-        {/* <motion.div
-          ref={ref4}
-          animate={animation4}
-          initial="hidden"
-          variants={variants4}
-          className="absolute bottom-0 flex flex-col w-full px-4 py-4 bg-opacity-75 xl:hidden bg-gradient-to-t from-ddl_brand backdrop-blur-sm text-ddl_offwhite"
-        > */}
         <motion.div
           ref={ref4}
           animate={animation4}

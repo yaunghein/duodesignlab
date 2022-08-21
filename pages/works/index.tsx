@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
         id: uuid(),
         name: work.name,
         scope: work.scope,
-        image: work.images[0],
+        image: work.thumbnail,
         slug: work.slug,
       }
     })
@@ -51,6 +51,15 @@ const WorksPage: NextPageWithLayout<Props> = ({ works }) => {
     <>
       <Head>
         <title>Works - Duo Design Lab</title>
+        <meta
+          content="No search engine loves slow and old-fashioned websites. We’re sure you won’t either. Here in Duo Design Lab, we build fast and modern Jamstack websites which align with your business needs as well. Explore some of our projects and see if we can make an awesome project together."
+          name="description"
+        />
+        <meta content="Works - Duo Design Lab" property="og:title" />
+        <meta
+          content="No search engine loves slow and old-fashioned websites. We’re sure you won’t either. Here in Duo Design Lab, we build fast and modern Jamstack websites which align with your business needs as well. Explore some of our projects and see if we can make an awesome project together."
+          property="og:description"
+        />
       </Head>
       <Hero title="Our Works" />
       <WorksWithFilters works={works} />

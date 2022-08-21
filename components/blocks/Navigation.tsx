@@ -179,7 +179,7 @@ const Navigation: React.FC = () => {
                 ))}
               </div>
               <motion.div
-                className={cn('relative self-center mt-auto', scrollValue > 0 ? 'mb-[4.5rem]' : 'mb-24')}
+                className={cn('relative self-center mt-auto', reachBottom ? 'mb-6' : 'mb-[4.5rem]')}
                 initial={{ opacity: 0, y: 32 }}
                 animate={{ opacity: 1, y: 0, transition: { duration: 0.6, type: 'spring', delay: 0.2 } }}
                 exit={{ opacity: 0, y: -32, transition: { duration: 0.6, type: 'spring', delay: 0.2 } }}

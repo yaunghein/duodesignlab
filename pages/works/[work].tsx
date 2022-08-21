@@ -65,6 +65,9 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
     <>
       <Head>
         <title>{`${work.name} - Duo Design Lab`}</title>
+        <meta content={work.description} name="description" />
+        <meta content={`${work.name} - Duo Design Lab`} property="og:title" />
+        <meta content={work.description} property="og:description" />
       </Head>
       <WorkHero work={work} isShowMore={isShowMore} setIsShowMore={setIsShowMore} />
       <motion.section className="bg-white" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>

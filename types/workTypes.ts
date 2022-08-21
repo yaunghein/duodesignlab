@@ -19,6 +19,7 @@ export interface WorkType {
   year: string
   website: string
   owners: OwnerType[]
+  thumbnail: string
   images: ImageType[]
   more: {
     next?: {
@@ -37,6 +38,6 @@ export interface WorkThumbnailType {
   id: string
   name: string
   scope: WorkScopeType[]
-  image: ImageType
+  image: string
   slug: string
 }

@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async () => {
         id: uuid(),
         name: work.name,
         scope: work.scope,
-        image: work.images[0],
+        image: work.thumbnail,
         slug: work.slug,
       }
     })
@@ -53,6 +53,15 @@ const HomePage: NextPageWithLayout<Props> = ({ works }) => {
     <>
       <Head>
         <title>Home - Duo Design Lab</title>
+        <meta
+          content="We are a humble boutiqueweb design studio, led by a groupof young people with design anddevelopment background."
+          name="description"
+        />
+        <meta content="Home - Duo Design Lab" property="og:title" />
+        <meta
+          content="We are a humble boutiqueweb design studio, led by a groupof young people with design anddevelopment background."
+          property="og:description"
+        />
       </Head>
       <HomeHero />
       <Capibilities bgColor="bg-ddl_offwhite" />

@@ -3,11 +3,12 @@
     "name": "Joby",
     "slug": "joby",
     "description": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",
-    "scope": ["Web Design", "Web Development", "Concept"],
+    "scope": ["Web Development", "Web Design", "Concept"],
     "year": "2022",
     "website": "job-y.vercel.app",
     "owners": ["yan-aung-hein"],
-    "images": [{ "path": "/assets/works/joby/1.jpg", "width": 1740, "height": 893 }],
+    "thumbnail": "/assets/works/joby/thumbnail.jpg",
+    "images": [],
     "more": {
       "next": null,
       "prev": {
@@ -21,12 +22,12 @@
     "name": "Paing Mentoring Family",
     "slug": "paing-mentoring-family",
     "description": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",
-    "scope": ["Web Design", "Web Development"],
+    "scope": ["Web Development", "Web Design"],
     "year": "2022",
     "website": "www.paingmentoringfamily.com",
     "owners": ["aung-pyae-kyaw", "yan-aung-hein"],
+    "thumbnail": "/assets/works/paing-mentoring-family/thumbnail.jpg",
     "images": [
-      { "path": "/assets/works/paing-mentoring-family/1.jpg", "width": 1740, "height": 893 },
       { "path": "/assets/works/paing-mentoring-family/2.jpg", "width": 1740, "height": 5200 },
       { "path": "/assets/works/paing-mentoring-family/3.jpg", "width": 1740, "height": 6976 },
       { "path": "/assets/works/paing-mentoring-family/4.jpg", "width": 1740, "height": 4424 },
@@ -41,6 +42,27 @@
     }
   },
   {
+    "name": "APM Help",
+    "slug": "apm-help",
+    "description": "<p>APM Help is your go-to place for property management accounting and maintenance experts. Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies - they got you cover. They also offer 30-minute FREE consultation.</p><p>We, proudly, designed and development a fully responsive and modern-looking  business website for AMP Help using Webflow. Unlike WordPress, Webflow Hosting is strong- the website still performs pretty fast even with over 12 pages, and over 100 blog posts. Again, with the help of easy-to-use Webflow CMS, they can update the content, and maintain blogs post quickly whenever they want without relying on any developer.</p>",
+    "scope": ["Web Development", "Web Design"],
+    "year": "2021",
+    "website": "www.apmhelp.com",
+    "owners": ["yan-aung-hein"],
+    "thumbnail": "/assets/works/apm-help/thumbnail.jpg",
+    "images": [],
+    "more": {
+      "next": {
+        "name": "Paing Mentoring Family",
+        "slug": "paing-mentoring-family"
+      },
+      "prev": {
+        "name": "Kyaw San Htoo Pharmacy",
+        "slug": "kyawsanhtoo-pharmacy"
+      }
+    }
+  },
+  {
     "name": "Kyaw San Htoo Pharmacy",
     "slug": "kyawsanhtoo-pharmacy",
     "description": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",
@@ -48,8 +70,8 @@
     "year": "2021",
     "website": "kyawsanhtoo-pharmacy.vercel.app",
     "owners": ["aung-pyae-kyaw", "yan-aung-hein"],
+    "thumbnail": "/assets/works/kyawsanhtoo-pharmacy/thumbnail.jpg",
     "images": [
-      { "path": "/assets/works/kyawsanhtoo-pharmacy/1.jpg", "width": 1740, "height": 1305 },
       { "path": "/assets/works/kyawsanhtoo-pharmacy/2.jpg", "width": 1740, "height": 580 },
       { "path": "/assets/works/kyawsanhtoo-pharmacy/3.jpg", "width": 1740, "height": 386 },
       { "path": "/assets/works/kyawsanhtoo-pharmacy/4.jpg", "width": 1740, "height": 699 },
@@ -59,28 +81,8 @@
     ],
     "more": {
       "next": {
-        "name": "Paing Mentoring Family",
-        "slug": "paing-mentoring-family"
-      },
-      "prev": {
         "name": "APM Help",
         "slug": "apm-help"
-      }
-    }
-  },
-  {
-    "name": "APM Help",
-    "slug": "apm-help",
-    "description": "<p>APM Help is your go-to place for property management accounting and maintenance experts. Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies - they got you cover. They also offer 30-minute FREE consultation.</p><p>We, proudly, designed and development a fully responsive and modern-looking  business website for AMP Help using Webflow. Unlike WordPress, Webflow Hosting is strong- the website still performs pretty fast even with over 12 pages, and over 100 blog posts. Again, with the help of easy-to-use Webflow CMS, they can update the content, and maintain blogs post quickly whenever they want without relying on any developer.</p>",
-    "scope": ["Web Development", "Web Design"],
-    "year": "2021",
-    "website": "www.apmhelp.com",
-    "owners": ["yan-aung-hein"],
-    "images": [{ "path": "/assets/works/apm-help/1.jpg", "width": 1740, "height": 1740 }],
-    "more": {
-      "next": {
-        "name": "Kyaw San Htoo Pharmacy",
-        "slug": "kyawsanhtoo-pharmacy"
       },
       "prev": null
     }

@@ -27,6 +27,15 @@ const WorkWithUs: NextPageWithLayout = () => {
     <>
       <Head>
         <title>Work With Us - Duo Design Lab</title>
+        <meta
+          content="We are a boutique web design studio based in Yangon, Myanmar. We create high performing websites that are safe and easy to maintain. We also make sure that the websites we created are aligned with the client business needs as well as the audience’s."
+          name="description"
+        />
+        <meta content="Work With Us - Duo Design Lab" property="og:title" />
+        <meta
+          content="We are a boutique web design studio based in Yangon, Myanmar. We create high performing websites that are safe and easy to maintain. We also make sure that the websites we created are aligned with the client business needs as well as the audience’s."
+          property="og:description"
+        />
       </Head>
       <Hero title="Start A Project" />
       <motion.section

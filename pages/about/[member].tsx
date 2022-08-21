@@ -67,6 +67,9 @@ const MemberPage: NextPageWithLayout<Props> = ({ member, works }) => {
     <>
       <Head>
         <title>{`${member.name} - Duo Design Lab`}</title>
+        <meta content={member.biography} name="description" />
+        <meta content={`${member.name} - Duo Design Lab`} property="og:title" />
+        <meta content={member.biography} property="og:description" />
       </Head>
       <MemberHero member={member} />
       <Works title="Projects" works={works} />

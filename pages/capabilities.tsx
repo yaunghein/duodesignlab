@@ -35,15 +35,17 @@ import works from '$fixtures/works.json'
 import useWindowSize from '$hooks/useWindowSize'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const transformedWorksData = works.map((work) => {
-    return {
-      id: uuid(),
-      name: work.name,
-      scope: work.scope,
-      image: work.images[0],
-      slug: work.slug,
-    }
-  })
+  const transformedWorksData = works
+    .filter((work) => !work.personal)
+    .map((work) => {
+      return {
+        id: uuid(),
+        name: work.name,
+        scope: work.scope,
+        image: work.thumbnail,
+        slug: work.slug,
+      }
+    })
   return {
     props: {
       works: transformedWorksData,
@@ -96,7 +98,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
 
   useEffect(() => {
     if (currentCapability) {
-      const worksDataByCapability = works.filter((works) => works.scope.includes(currentCapability))
+      const worksDataByCapability = works.filter((work) => work.scope.includes(currentCapability))
       setWorksByCapability(worksDataByCapability)
     }
   }, [works, currentCapability])
@@ -105,6 +107,15 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
     <>
       <Head>
         <title>Capabilities - Duo Design Lab</title>
+        <meta
+          content="Here in Duo Design Lab, we create authentic brands, and build fast and modern Jamstack websites which align with your business needs as well. Explore some of our projects and see if we can make an awesome project together."
+          name="description"
+        />
+        <meta content="Capabilities - Duo Design Lab" property="og:title" />
+        <meta
+          content="Here in Duo Design Lab, we create authentic brands, and build fast and modern Jamstack websites which align with your business needs as well. Explore some of our projects and see if we can make an awesome project together."
+          property="og:description"
+        />
       </Head>
       <motion.section
         onMouseEnter={() => changeCursorType('normal_brand')}
@@ -173,7 +184,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
 
         <div
           className={cn(
-            'relative flex flex-col items-center gap-5 lg:gap-20 justify-start md:justify-center ddl-container mix-blend-multiply pointer-events-none',
+            'relative flex flex-col items-center gap-5 lg:gap-16 justify-start md:justify-center ddl-container mix-blend-multiply pointer-events-none',
             currentCapability ? 'h-screen' : 'h-[calc(100vh-7rem)] lg:h-[calc(100vh-6rem)]'
           )}
         >
@@ -216,7 +227,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
           </motion.h1>
           {currentCapability === 'Web Development' && (
             <motion.p
-              className="max-w-[26.5rem] text-center text-body text-ddl_dark"
+              className="max-w-[34rem] text-center text-body text-ddl_dark"
               initial={{ y: 64, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
             >
