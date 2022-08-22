@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 // third-parties
 import { motion } from 'framer-motion'
@@ -13,6 +14,7 @@ import BlurImage from '$elements/BlurImage'
 // hooks
 import useFadeUp from '$hooks/useFadeUp'
 import useFadeIn from '$hooks/useFadeIn'
+import useTexture from '$hooks/useTexture'
 
 // stores
 import useCursorStore from '$stores/CursorStore'
@@ -43,9 +45,10 @@ const Work: React.FC<Props> = ({ work, index }) => {
         <BlurImage src={work.image} alt={work.name} width={1296} height={980} />
 
         {/* for desktop */}
-        <div className="absolute inset-0 flex-col items-center hidden px-12 py-5 transition-opacity opacity-0 text-centerm hover:opacity-100 xl:flex lg:py-8 bg-ddl_brand bg-opacity-90 backdrop-blur-md text-ddl_offwhite lg:px-28">
-          <h3 className="mt-auto secondary-title">{work.name}</h3>
-          <p className="mt-auto text-sm font-normal md:text-link-size">{work.scope.join(', ')}</p>
+        <div className="absolute inset-0 flex-col items-center hidden px-12 py-5 transition-opacity opacity-0 text-centerm hover:opacity-100 xl:flex lg:py-8 bg-ddl_brand text-ddl_offwhite lg:px-28">
+          <Image alt="" src={useTexture()} layout="fill" className="opacity-20" />
+          <h3 className="relative mt-auto secondary-title">{work.name}</h3>
+          <p className="relative mt-auto text-sm font-normal md:text-link-size">{work.scope.join(', ')}</p>
         </div>
 
         {/* for mobile */}

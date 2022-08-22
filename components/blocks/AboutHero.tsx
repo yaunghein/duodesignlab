@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 // third-parties
 import { motion } from 'framer-motion'
@@ -6,16 +7,26 @@ import { motion } from 'framer-motion'
 // stores
 import useCursorStore from '$stores/CursorStore'
 
+// hooks
+import useTexture from '$hooks/useTexture'
+
 const p = [
   'We are a boutique web design studio based in Yangon, Myanmar. We create high performing websites that are safe and easy to maintain. We also make sure that the websites we created are aligned with the client business needs as well as the audience’s.',
   'As a team of young and passionate professional, we are open-minded meaning, we are not afraid to experiment different things and learn from the feedback of anyone on the team. Although we are young, we understand the importance of commitment and responsibility. As our team is working remotely, commitment is a crucial value to keep things running and get the job done.',
+  'See below what values we can add to your business.',
 ]
 
 const AboutHero: React.FC = () => {
   const { changeCursorType, resetCursorType } = useCursorStore()
   return (
-    <motion.section className="bg-ddl_brand" onMouseEnter={() => changeCursorType('normal_brand_light')} onMouseLeave={resetCursorType}>
-      <div className="grid grid-cols-1 pb-10 pt-36 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28">
+    <motion.section
+      className="relative bg-ddl_brand"
+      onMouseEnter={() => changeCursorType('normal_brand_light')}
+      onMouseLeave={resetCursorType}
+    >
+      <Image alt="" src={useTexture()} layout="fill" />
+
+      <div className="relative grid grid-cols-1 pb-10 pt-36 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28">
         <div>
           <motion.h1
             initial={{ y: 64, opacity: 0 }}

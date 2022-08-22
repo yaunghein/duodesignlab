@@ -18,6 +18,7 @@ import cn from '$utils/cn'
 
 // hooks
 import useDDLScroll from '$hooks/useDDLScroll'
+import useWindowSize from '$hooks/useWindowSize'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -30,17 +31,21 @@ const navLinks = [
 const Navigation: React.FC = () => {
   const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { scrollDirection, scrollValue, reachBottom } = useDDLScroll()
-  const { changeCapability } = useCapabilityStore()
+  const { scrollDirection, scrollValue, isReachBottom } = useDDLScroll()
+  const { currentCapability, changeCapability } = useCapabilityStore()
   const { menuTheme, changeMenuTheme } = useMenuStore()
   const { changeCursorType, resetCursorType } = useCursorStore()
+  const { width } = useWindowSize()
 
-  const isBgLight = /\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname) || router.pathname === '/capabilities'
+  const isBgLight =
+    (width < 1024
+      ? /\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname)
+      : !isReachBottom && (/\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname))) ||
+    (currentCapability ? router.pathname === '/capabilities' && !isReachBottom : router.pathname === '/capabilities')
 
   const handleClick = (label: string) => label === 'Capabilities' && changeCapability(null)
 
   const handleMenuTheme = (currentTheme: MenuThemeType) => {
-    console.log('reach')
     if (currentTheme === 'ddl_brand') return changeMenuTheme('ddl_brand_light')
     if (currentTheme === 'ddl_brand_light') return changeMenuTheme('white')
     if (currentTheme === 'white') return changeMenuTheme('ddl_brand')
@@ -56,9 +61,13 @@ const Navigation: React.FC = () => {
       onMouseLeave={resetCursorType}
       className={cn(
         'fixed top-0 z-50 w-full transform duration-700 ease-out',
-        scrollDirection === 'down' && !reachBottom ? '-translate-y-full' : '',
-        scrollValue > 0
-          ? isBgLight
+        scrollValue > 1 && scrollDirection === 'down' && !isReachBottom ? '-translate-y-full' : '',
+        scrollValue > (width > 1023 ? 240 : 120)
+          ? isReachBottom && width > 1023
+            ? router.pathname === '/work-with-us'
+              ? 'bg-ddl_brand bg-opacity-90 backdrop-blur-md py-4'
+              : 'py-4'
+            : isBgLight
             ? router.pathname === '/capabilities'
               ? 'bg-ddl_brand_light bg-opacity-70 backdrop-blur-md py-4'
               : 'bg-white bg-opacity-70 backdrop-blur-md py-4'
@@ -179,7 +188,7 @@ const Navigation: React.FC = () => {
                 ))}
               </div>
               <motion.div
-                className={cn('relative self-center mt-auto', reachBottom ? 'mb-6' : 'mb-[4.5rem]')}
+                className={cn('relative self-center mt-auto', isReachBottom ? 'mb-6' : 'mb-[4.5rem]')}
                 initial={{ opacity: 0, y: 32 }}
                 animate={{ opacity: 1, y: 0, transition: { duration: 0.6, type: 'spring', delay: 0.2 } }}
                 exit={{ opacity: 0, y: -32, transition: { duration: 0.6, type: 'spring', delay: 0.2 } }}

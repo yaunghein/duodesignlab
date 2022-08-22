@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 // third-parties
 import { motion } from 'framer-motion'
@@ -8,6 +9,9 @@ import ScrollArrow from '$svgs/ScrollArrow'
 
 // stores
 import useCursorStore from '$stores/CursorStore'
+
+// hooks
+import useTexture from '$hooks/useTexture'
 
 interface Props {
   title: string
@@ -23,8 +27,14 @@ const Hero: React.FC<Props> = ({ title }) => {
   }
 
   return (
-    <motion.section className="bg-ddl_brand" onMouseEnter={() => changeCursorType('normal_brand_light')} onMouseLeave={resetCursorType}>
-      <div className="flex items-center justify-center h-[55vh] md:h-screen ddl-container">
+    <motion.section
+      className="relative bg-ddl_brand"
+      onMouseEnter={() => changeCursorType('normal_brand_light')}
+      onMouseLeave={resetCursorType}
+    >
+      <Image alt="" src={useTexture()} layout="fill" />
+
+      <div className="relative flex items-center justify-center h-[55vh] md:h-screen ddl-container">
         <motion.h1
           className="-mb-12 text-center text-big-visual text-ddl_brand_light md:mb-0"
           initial={{ y: 64, opacity: 0 }}

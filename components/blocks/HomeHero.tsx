@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 // third-parties
 import { motion } from 'framer-motion'
@@ -8,6 +9,9 @@ import ScrollArrow from '$svgs/ScrollArrow'
 
 // stores
 import useCursorStore from '$stores/CursorStore'
+
+// hooks
+import useTexture from '$hooks/useTexture'
 
 const desktopTexts = [
   'We are a humble boutique',
@@ -35,8 +39,14 @@ const HomeHero: React.FC = () => {
   }
 
   return (
-    <motion.section className="bg-ddl_brand" onMouseEnter={() => changeCursorType('normal_brand_light')} onMouseLeave={resetCursorType}>
-      <div className="flex items-center h-[60vh] md:h-screen ddl-container">
+    <motion.section
+      className="relative bg-ddl_brand"
+      onMouseEnter={() => changeCursorType('normal_brand_light')}
+      onMouseLeave={resetCursorType}
+    >
+      <Image alt="" src={useTexture()} layout="fill" />
+
+      <div className="relative flex items-center h-[60vh] md:h-screen ddl-container">
         <h1 className="sr-only">
           We are a humble boutique web design studio, led by a group of young people with design and development background.
         </h1>

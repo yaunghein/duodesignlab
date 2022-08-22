@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 // third-parties
 import { motion } from 'framer-motion'
@@ -9,6 +10,7 @@ import useCapabilityStore, { CapabilityTypes } from '$stores/CapabilityStore'
 
 // hooks
 import useFadeUp from '$hooks/useFadeUp'
+import useTexture from '$hooks/useTexture'
 
 // stores
 import useCursorStore from '$stores/CursorStore'
@@ -31,17 +33,18 @@ const Capibility: React.FC<Props> = ({ title, description }) => {
       animate={animation}
       initial="hidden"
       variants={variants}
-      className="flex flex-col px-4 py-5 lg:flex-row md:px-12 md:py-12 bg-ddl_brand"
+      className="relative flex flex-col px-4 py-5 lg:flex-row md:px-12 md:py-12 bg-ddl_brand"
       onMouseEnter={() => changeCursorType('normal_brand_light')}
       onMouseLeave={() => changeCursorType('normal_brand')}
     >
-      <div className="flex-1">
+      <Image alt="" src={useTexture()} layout="fill" className="opacity-20" />
+      <div className="relative flex-1">
         <h3 className="font-bold text-body text-ddl_offwhite whitespace-nowrap">{title}</h3>
       </div>
-      <div className="flex-1 my-12 lg:my-0">
+      <div className="relative flex-1 my-12 lg:my-0">
         <p className="font-normal text-body text-ddl_offwhite lg:max-w-[26rem]">{description}</p>
       </div>
-      <div className="flex items-start flex-1 lg:justify-end">
+      <div className="relative flex items-start flex-1 lg:justify-end">
         <Link href="/capabilities">
           <motion.a
             className="text-body text-ddl_offwhite font-medium px-16 sm:px-[4.5rem] py-2 sm:py-3 border-2 border-ddl_offwhite rounded-full"

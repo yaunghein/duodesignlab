@@ -230,7 +230,7 @@ const ContactForm: React.FC = () => {
           <AnimatePresence>
             {isCurrencyMenuOpen && (
               <motion.div
-                className="absolute z-10 right-0 grid w-36 xl:w-1/4 gap-2 sm:gap-4 p-4 sm:p-5 bg-white border-[0.175rem] bottom-[3.8rem] sm:bottom-[unset] sm:top-16 rounded-3xl border-ddl_dark"
+                className="absolute z-10 right-0 grid w-36 xl:w-1/4 gap-2 sm:gap-4 p-4 sm:p-5 bg-white border-[0.175rem] bottom-[3.5rem] sm:bottom-[unset] sm:top-16 rounded-3xl border-ddl_dark"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1, transition: { duration: 0.1, ease: 'easeOut' } }}
                 exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.1, ease: 'easeOut' } }}

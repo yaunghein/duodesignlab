@@ -103,6 +103,12 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
     }
   }, [works, currentCapability])
 
+  useEffect(() => {
+    if (window) {
+      window.scrollTo(0, 1)
+    }
+  }, [currentCapability])
+
   return (
     <>
       <Head>

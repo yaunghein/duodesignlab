@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 // third-parties
 import { motion } from 'framer-motion'
@@ -9,6 +10,7 @@ import LinkArrow from '$svgs/LinkArrow'
 
 // hooks
 import useFadeUp from '$hooks/useFadeUp'
+import useTexture from '$hooks/useTexture'
 
 // stores
 import useCursorStore from '$stores/CursorStore'
@@ -23,9 +25,15 @@ const Ready: React.FC<Props> = ({ children }) => {
   const { changeCursorType, resetCursorType } = useCursorStore()
 
   return (
-    <motion.section className="bg-ddl_brand" onMouseEnter={() => changeCursorType('normal_brand_light')} onMouseLeave={resetCursorType}>
-      <div className="flex items-center justify-center h-[60vh] lg:h-[calc(100vh-6rem)] ddl-container">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 mx-auto max-w-[90rem]">
+    <motion.section
+      className="relative bg-ddl_brand"
+      onMouseEnter={() => changeCursorType('normal_brand_light')}
+      onMouseLeave={resetCursorType}
+    >
+      <Image alt="" src={useTexture()} layout="fill" />
+
+      <div className="relative flex items-center justify-center h-[60vh] lg:h-[calc(100vh-6rem)] ddl-container">
+        <div className="flex flex-col xl:flex-row items-center gap-12 lg:gap-24 mx-auto max-w-[90rem]">
           <h2 className="sr-only">Ready?</h2>
           <motion.div ref={ref} animate={animation} initial="hidden" variants={variants}>
             {children}
