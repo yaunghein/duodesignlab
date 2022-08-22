@@ -71,7 +71,7 @@ const HomeHero: React.FC = () => {
         </div>
 
         {/* for mobile */}
-        <div className="-mb-[5rem] md:hidden">
+        <div className="-mb-[4rem] md:hidden">
           {mobileTexts.map((text, i) => (
             <motion.span
               key={text}

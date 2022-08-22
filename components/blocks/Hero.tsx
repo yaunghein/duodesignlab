@@ -43,7 +43,7 @@ const Hero: React.FC<Props> = ({ title }) => {
         style={{ opacity: `${1 - scrollTrackByElement}` }}
       >
         <motion.h1
-          className="-mb-12 text-center text-big-visual text-ddl_brand_light md:mb-0"
+          className="text-center text-big-visual text-ddl_brand_light"
           initial={{ y: 64, opacity: 0 }}
           animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
         >

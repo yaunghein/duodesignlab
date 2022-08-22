@@ -31,7 +31,7 @@ const AboutHero: React.FC = () => {
       <Image alt="" src={useTexture()} layout="fill" />
 
       <div
-        className="relative grid items-center h-screen grid-cols-1 pb-10 pt-36 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28"
+        className="relative grid items-center h-screen grid-cols-1 pb-10 pt-28 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28"
         style={{ opacity: `${1 - scrollTrackByElement}` }}
       >
         <div>
