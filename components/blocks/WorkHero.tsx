@@ -40,14 +40,14 @@ const WorkHero: React.FC<Props> = ({ work, isShowMore, setIsShowMore }) => {
         </div>
         <div>
           <motion.div
-            className="relative overflow-hidden"
+            className="relative overflow-hidden lg:overflow-visible"
             initial={{ height: width < 1024 ? '10rem' : 'auto' }}
             animate={{ height: width < 1024 ? (isShowMore ? 'auto' : '10rem') : 'auto', transition: { duration: 0.4, type: 'spring' } }}
           >
             <motion.div
               initial={{ y: 64, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.4, delay: 0.1 } }}
-              className="grid gap-6 font-normal lg:gap-12 text-body"
+              className="grid gap-6 mb-[2px] font-normal lg:gap-12 text-body"
               dangerouslySetInnerHTML={{ __html: work.description }}
             />
             <AnimatePresence>

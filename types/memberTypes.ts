@@ -8,6 +8,7 @@ export interface MemberType {
   github?: string
   facebook?: string
   instagram?: string
+  behance?: string
   biography: string
   image: string
 }

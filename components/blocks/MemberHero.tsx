@@ -100,6 +100,18 @@ const MemberHero: React.FC<Props> = ({ member }) => {
                   Instagram
                 </motion.a>
               )}
+              {member.behance && (
+                <motion.a
+                  onMouseEnter={() => changeCursorType('hover_brand')}
+                  onMouseLeave={() => changeCursorType('normal_brand')}
+                  href={member.behance}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-1/2 font-medium underline lg:w-auto text-body"
+                >
+                  Behance
+                </motion.a>
+              )}
             </div>
           </motion.div>
           <motion.div
@@ -107,7 +119,7 @@ const MemberHero: React.FC<Props> = ({ member }) => {
             animate={animation3}
             initial="hidden"
             variants={variants3}
-            className="grid gap-6 mt-8 font-normal lg:mt-20 lg:gap-12 text-body"
+            className="grid gap-6 mt-8 font-normal lg:mt-20 lg:gap-12 text-body mb-[2px]"
             dangerouslySetInnerHTML={{ __html: member.biography }}
           />
         </div>

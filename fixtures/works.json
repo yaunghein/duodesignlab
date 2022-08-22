@@ -2,7 +2,7 @@
   {
     "name": "Joby",
     "slug": "joby",
-    "description": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",
+    "description": "<p>Joby is a web app that can help you track your applied jobs, and record your career timeline. Although I am a frontend developer, it is always good to know other fields, is't it? That is why I gave the backend world a try. Joby is my first ever app handling both frontend and backend on my own using SvelteKit, Tailwind, Express and MongoDB.</p>",
     "scope": ["Web Development", "Web Design", "Concept"],
     "year": "2022",
     "website": "job-y.vercel.app",
@@ -21,7 +21,7 @@
   {
     "name": "Paing Mentoring Family",
     "slug": "paing-mentoring-family",
-    "description": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",
+    "description": "<p>Ko Aung Myo Paing is a venture capitalist and financial advisor. His mission is to help families achieve financial freedom by sharing his experiences and knowledge as a family advisor.</p><p>The goal of this project is to develop a credible website that reflects the mission of Ko Aung Myo Paing. The website needs to showcase the experiences of Ko Aung Myo Paing, Catalog his webinars and function as a blog.</p><p>Within 2 months, we defined the brand image of Ko Aung Myo Paing, designed and developed the website using Figma, Adobe Suite, Webflow and Webflow CMS.</p>",
     "scope": ["Web Development", "Web Design"],
     "year": "2022",
     "website": "www.paingmentoringfamily.com",
@@ -44,7 +44,7 @@
   {
     "name": "APM Help",
     "slug": "apm-help",
-    "description": "<p>APM Help is your go-to place for property management accounting and maintenance experts. Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies - they got you cover. They also offer 30-minute FREE consultation.</p><p>We, proudly, designed and development a fully responsive and modern-looking  business website for AMP Help using Webflow. Unlike WordPress, Webflow Hosting is strong- the website still performs pretty fast even with over 12 pages, and over 100 blog posts. Again, with the help of easy-to-use Webflow CMS, they can update the content, and maintain blogs post quickly whenever they want without relying on any developer.</p>",
+    "description": "<p>APM Help is your go-to place for property management accounting and maintenance experts. Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies - they got you cover. They also offer 30-minute FREE consultation.</p><p>We, proudly, designed and development a fully responsive and modern-looking  business website for AMP Help using Webflow. Unlike WordPress, Webflow Hosting is pretty strong - the website still performs well even with over 12 pages, and over hundreds of blog posts. Again, with the help of easy-to-use Webflow CMS, they can update the content, and maintain blogs post quickly whenever they want without relying on any developer.</p>",
     "scope": ["Web Development", "Web Design"],
     "year": "2021",
     "website": "www.apmhelp.com",
@@ -65,7 +65,7 @@
   {
     "name": "Kyaw San Htoo Pharmacy",
     "slug": "kyawsanhtoo-pharmacy",
-    "description": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",
+    "description": "<p>Kyaw San Htoo is a pharmacy that has been running for over a decade in Pathein.</p><p>We designed a reliable logo which stands out among the competitions. For the next part, we designed a website that can provide accurate information about medicines, ensure availability for the customers and offer a contentful and representative digital experience for the residents of Pathein.</p><p>We collaborated with Bro <a target='_blank' href='https://www.linkedin.com/in/ye-min-htun-464622175/'>Ye Min Htun</a>, who is current working as a ux designer @ <a target='_blank' href='https://www.codigo.co/'>Codigo</a>.</p>",
     "scope": ["Branding", "Web Design", "Web Development"],
     "year": "2021",
     "website": "kyawsanhtoo-pharmacy.vercel.app",

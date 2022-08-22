@@ -2,25 +2,25 @@
   {
     "name": "Aung Pyae Kyaw",
     "slug": "aung-pyae-kyaw",
-    "position": "Co-founder",
-    "email": "aungpyawkyaw@gmail.com",
-    "linkedIn": "https://www.google.com/",
-    "github": "https://www.google.com/",
-    "facebook": "https://www.google.com/",
-    "instagram": "https://www.google.com/",
-    "biography": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",
+    "position": "Designer",
+    "email": "aungpyawkyaw200@gmail.com",
+    "linkedIn": "https://www.linkedin.com/in/aung-pyae-kyaw-2346aa16b/",
+    "facebook": "https://www.facebook.com/profile.php?id=100067643666481",
+    "instagram": "https://www.instagram.com/kyaw.aungpyae/",
+    "behance": "https://www.behance.net/aungpyaekyd258",
+    "biography": "<p>He is a self taught graphic designer, with an interest in all things related to design. He started his design journey as a volunteer graphic designer at his college making graphics for different events.</p><p>He is, now, working as a graphic designer @ <a target='_blank' href='https://citizensid.com/'>Citizens Interior Design Studio</a>, working on branding, social media, environmental graphics, furniture, accessories, textiles etc.</p><p>During the pandemic in 2020, he started Duo Design Lab with his friend, Yan Aung Hein, as a little blog on Facebook sharing a variety of contents and resources for designers. In September 2022, Yan Aung and he co-founded Duo Design Lab as a boutique web design studio.</p>",
     "image": "/assets/members/aung-pyae-kyaw.jpg"
   },
   {
     "name": "Yan Aung Hein",
     "slug": "yan-aung-hein",
-    "position": "Co-founder",
+    "position": "Developer",
     "email": "yanaunghein311@gmail.com",
-    "linkedIn": "https://www.google.com/",
-    "github": "https://www.google.com/",
-    "facebook": "https://www.google.com/",
-    "instagram": "https://www.google.com/",
-    "biography": "<p>Yan Aung Hein is currently acting as a co-founder at Duo Design Lab, a boutique web design studio.</p><p>Our work encompasses graphics and identity, strategy and positioning, products and packaging, exhibitions and installations, websites and digital experiences, advertising and communications, data visualizations and typefaces, sound and motion. Our 23 partners are all practicing designers, and whether working collaboratively or independently, they do so in friendship.</p><p>Our structure is unique. We are the only major design studio where the owners of the business are the creators of the work and serve as the primary contact for every client. This reflects our conviction that great design cannot happen without passion, intelligence and — above all — personal commitment, and is demonstrated by a portfolio that spans five decades, many industries, and clients of every size.</p>",
+    "linkedIn": "https://www.linkedin.com/in/yanaunghein/",
+    "github": "https://github.com/yaunghein/",
+    "facebook": "https://www.facebook.com/yaunghein311/",
+    "behance": "https://www.behance.net/yanaunghein1",
+    "biography": "<p>He is a table-tennis player and a self taught web developer. As an ui/ux enthusiast, he is passionate, especially, in frontend development crafting user-interfaces to make the web beautiful and valuable to business. He started his web development journey by building websites with <a target='_blank' href='https://webflow.com/'>Webflow</a>, a no-code tool for web development.</p><p>He is, now, working as a frontend developer @ <a target='_blank' href='https://www.apmhelp.com/'>APM Help</a> taking part in Webflow and SvelteKit projects.</p><p>During the pandemic in 2020, he started Duo Design Lab with his friend, Aung Pyaw Kyaw, as a little blog on Facebook sharing a variety of contents and resources for designers. In 2022, Aung Pyae and he co-founded Duo Design Lab as a boutique web design studio.</p>",
     "image": "/assets/members/yan-aung-hein.jpg"
   }
 ]
