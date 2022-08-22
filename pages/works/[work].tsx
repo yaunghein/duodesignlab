@@ -95,7 +95,7 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
             </motion.div>
           </div>
 
-          <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex items-center gap-6 mt-8 md:mt-12">
+          <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex items-center gap-6 mt-20 md:mt-12">
             {work.more.prev && (
               <Link href={`/works/${work.more.prev.slug}`}>
                 <motion.a
