@@ -62,21 +62,23 @@ const Navigation: React.FC = () => {
       onMouseEnter={() => (isBgLight ? changeCursorType('normal_brand') : changeCursorType('normal_brand_light'))}
       onMouseLeave={resetCursorType}
       className={cn(
-        'fixed top-0 z-50 w-full transform duration-700 ease-out',
-        scrollValue > height - 400 && scrollDirection === 'down' && !isReachBottom ? '-translate-y-full' : '',
+        'fixed top-0 z-50 w-full transform duration-200 ease-out',
+        scrollValue > height - 400 && scrollDirection === 'down' && !isReachBottom
+          ? 'opacity-0 pointer-events-none'
+          : 'opacity-100 pointer-events-auto',
         scrollValue > (isShortNavTransitionPage ? 1 : width > 1023 ? height : 500)
           ? isReachBottom && width > 1023
             ? router.pathname === '/work-with-us'
               ? 'bg-ddl_brand bg-opacity-90 backdrop-blur-md py-4'
               : 'py-4'
             : isBgLight
-            ? router.pathname === '/capabilities'
+            ? router.pathname === '/capabilities' && scrollDirection === 'up'
               ? 'bg-ddl_brand_light bg-opacity-70 backdrop-blur-md py-4'
               : 'bg-white bg-opacity-70 backdrop-blur-md py-4'
             : 'bg-ddl_brand bg-opacity-90 backdrop-blur-md py-4'
-          : 'py-12 md:py-14'
+          : 'py-4'
       )}
-      style={{ transitionProperty: 'padding, transform' }}
+      style={{ transitionProperty: 'padding, opacity' }}
     >
       <div className="flex items-center ddl-container">
         <div className="hidden mr-auto lg:items-center lg:gap-20 lg:flex">

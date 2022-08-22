@@ -28,7 +28,7 @@ const WorkHero: React.FC<Props> = ({ work, isShowMore, setIsShowMore }) => {
 
   return (
     <motion.section className="bg-white text-ddl_dark" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
-      <div className="grid grid-cols-1 pt-36 md:pt-64 ddl-container lg:grid-cols-2">
+      <div className="grid grid-cols-1 pt-28 md:pt-64 ddl-container lg:grid-cols-2">
         <div>
           <motion.h1
             initial={{ y: 64, opacity: 0 }}
