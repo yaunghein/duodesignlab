@@ -35,13 +35,15 @@ const Navigation: React.FC = () => {
   const { currentCapability, changeCapability } = useCapabilityStore()
   const { menuTheme, changeMenuTheme } = useMenuStore()
   const { changeCursorType, resetCursorType } = useCursorStore()
-  const { width } = useWindowSize()
+  const { width, height } = useWindowSize()
 
   const isBgLight =
     (width < 1024
       ? /\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname)
       : !isReachBottom && (/\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname))) ||
     (currentCapability ? router.pathname === '/capabilities' && !isReachBottom : router.pathname === '/capabilities')
+
+  const isShortNavTransitionPage = /\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname)
 
   const handleClick = (label: string) => label === 'Capabilities' && changeCapability(null)
 
@@ -61,8 +63,8 @@ const Navigation: React.FC = () => {
       onMouseLeave={resetCursorType}
       className={cn(
         'fixed top-0 z-50 w-full transform duration-700 ease-out',
-        scrollValue > 1 && scrollDirection === 'down' && !isReachBottom ? '-translate-y-full' : '',
-        scrollValue > (width > 1023 ? 240 : 120)
+        scrollValue > height - 400 && scrollDirection === 'down' && !isReachBottom ? '-translate-y-full' : '',
+        scrollValue > (isShortNavTransitionPage ? 1 : width > 1023 ? height : 500)
           ? isReachBottom && width > 1023
             ? router.pathname === '/work-with-us'
               ? 'bg-ddl_brand bg-opacity-90 backdrop-blur-md py-4'

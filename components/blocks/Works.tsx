@@ -29,7 +29,7 @@ const Works: React.FC<Props> = ({ bgColor = 'bg-white', title, works }) => {
   return (
     <motion.section
       id="next-section"
-      className={`py-8 md:py-28 ${bgColor}`}
+      className={`relative py-8 md:py-28 ${bgColor}`}
       onMouseEnter={() => changeCursorType('normal_brand')}
       onMouseLeave={resetCursorType}
     >

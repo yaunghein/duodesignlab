@@ -24,7 +24,11 @@ const Members: React.FC<Props> = ({ members }) => {
   const { changeCursorType, resetCursorType } = useCursorStore()
 
   return (
-    <motion.section className="py-8 bg-white md:py-28" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
+    <motion.section
+      className="relative py-8 bg-white md:py-28"
+      onMouseEnter={() => changeCursorType('normal_brand')}
+      onMouseLeave={resetCursorType}
+    >
       <div className="ddl-container">
         <div className="max-w-6xl mx-auto">
           <motion.h2 ref={ref} animate={animation} initial="hidden" variants={variants} className="text-center main-title text-ddl_dark">

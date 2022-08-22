@@ -40,7 +40,7 @@ const WorkWithUs: NextPageWithLayout = () => {
       <Hero title="Start A Project" />
       <motion.section
         id="next-section"
-        className="py-8 bg-white md:py-28"
+        className="relative py-8 bg-white md:py-28"
         onMouseEnter={() => changeCursorType('normal_brand')}
         onMouseLeave={resetCursorType}
       >

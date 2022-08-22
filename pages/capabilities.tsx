@@ -33,6 +33,7 @@ import works from '$fixtures/works.json'
 
 // hooks
 import useWindowSize from '$hooks/useWindowSize'
+import useDDLScroll from '$hooks/useDDLScroll'
 
 export const getStaticProps: GetStaticProps = async () => {
   const transformedWorksData = works
@@ -89,6 +90,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
   const { currentCapability, changeCapability } = useCapabilityStore()
   const { changeCursorType, resetCursorType } = useCursorStore()
   const { width } = useWindowSize()
+  const { ref, scrollTrackByElement } = useDDLScroll()
 
   const goToNextSection = () => {
     if (document) {
@@ -120,9 +122,11 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
         />
       </Head>
       <motion.section
+        ref={ref}
         onMouseEnter={() => changeCursorType('normal_brand')}
         onMouseLeave={resetCursorType}
-        className="relative overflow-hidden bg-ddl_brand_light"
+        className="sticky top-0 overflow-hidden transition-transform duration-300 ease-out bg-ddl_brand_light"
+        style={{ transform: `translateY(-${scrollTrackByElement * 150}px)` }}
       >
         {currentCapability !== 'Web Development' && width > 639 && (
           <motion.button
@@ -130,6 +134,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             initial="initial"
             animate="animate"
             className="absolute group bottom-64 left-10"
+            style={{ opacity: `${1 - scrollTrackByElement}` }}
             onClick={() => changeCapability('Web Development')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
@@ -150,6 +155,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             initial="initial"
             animate="animate"
             className="absolute group bottom-32 right-10"
+            style={{ opacity: `${1 - scrollTrackByElement}` }}
             onClick={() => changeCapability('Web Design')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
@@ -170,6 +176,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             initial="initial"
             animate="animate"
             className="absolute group bottom-10 right-52"
+            style={{ opacity: `${1 - scrollTrackByElement}` }}
             onClick={() => changeCapability('Branding')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
@@ -225,6 +232,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             'relative flex items-start md:items-center justify-center ddl-container mix-blend-multiply pointer-events-none',
             currentCapability ? 'h-screen' : 'h-[calc(100vh-7rem)] lg:h-[calc(100vh-6rem)]'
           )}
+          style={{ opacity: `${1 - scrollTrackByElement}` }}
         >
           <div
             className={cn(
@@ -358,6 +366,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
           </motion.button>
         )}
       </motion.section>
+
       {currentCapability && (
         <>
           <Works bgColor="bg-white" title={`Our ${currentCapability} Works`} works={worksByCapability} />

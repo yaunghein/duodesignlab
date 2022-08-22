@@ -24,7 +24,7 @@ const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
   return (
     <motion.section
       id="next-section"
-      className={`pt-8 md:pt-28 ${bgColor}`}
+      className={`relative pt-8 md:pt-28 ${bgColor}`}
       onMouseEnter={() => changeCursorType('normal_brand')}
       onMouseLeave={resetCursorType}
     >

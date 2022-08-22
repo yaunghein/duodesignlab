@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
     <motion.footer
       onMouseEnter={() => (isBgDark ? changeCursorType('normal_brand_light') : changeCursorType('normal_brand'))}
       onMouseLeave={resetCursorType}
-      className={cn('flex h-28 lg:h-24 mt-auto', isBgDark ? 'bg-ddl_brand' : 'bg-ddl_brand_light')}
+      className={cn('relative flex h-28 lg:h-24 mt-auto', isBgDark ? 'bg-ddl_brand' : 'bg-ddl_brand_light')}
     >
       <div className="flex flex-col items-center justify-center w-full lg:flex-row ddl-container">
         <div className={cn('flex items-center gap-12 md:gap-20', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_brand')}>
