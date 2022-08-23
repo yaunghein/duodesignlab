@@ -44,7 +44,7 @@
   {
     "name": "APM Help",
     "slug": "apm-help",
-    "description": "<p>APM Help is your go-to place for property management accounting and maintenance experts. Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies - they got you cover. They also offer 30-minute FREE consultation.</p><p>We, proudly, designed and development a fully responsive and modern-looking  business website for AMP Help using Webflow. Unlike WordPress, Webflow Hosting is pretty strong - the website still performs well even with over 12 pages, and over hundreds of blog posts. Again, with the help of easy-to-use Webflow CMS, they can update the content, and maintain blogs post quickly whenever they want without relying on any developer.</p>",
+    "description": "<p>APM Help is your go-to place for property management accounting and maintenance experts. Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies - they got you cover. They also offer 30-minute FREE consultation.</p><p>We, proudly, designed and development a fully responsive and modern-looking  business website for AMP Help using Webflow. Unlike WordPress, Webflow Hosting is pretty strong - the website still performs well even with over 12 pages, and over hundreds of blog posts. Again, with the help of easy-to-use Webflow CMS, they can update the content, and maintain blogs post quickly whenever they want without relying on any developer.</p><p>And special thanks to <a target='_blank' href='https://www.linkedin.com/in/hh-lynn-naing-7040b372/' class='underline'>Ma Htet Htet Lynn Naing</a> who is taking part in current rebranding process for new logo, colors, and layout designs.</p>",
     "scope": ["Web Development", "Web Design"],
     "year": "2021",
     "website": "www.apmhelp.com",
@@ -65,7 +65,7 @@
   {
     "name": "Kyaw San Htoo Pharmacy",
     "slug": "kyawsanhtoo-pharmacy",
-    "description": "<p>Kyaw San Htoo is a pharmacy that has been running for over a decade in Pathein.</p><p>We designed a reliable logo which stands out among the competitions. For the next part, we designed a website that can provide accurate information about medicines, ensure availability for the customers and offer a contentful and representative digital experience for the residents of Pathein.</p><p>We collaborated with Bro <a target='_blank' href='https://www.linkedin.com/in/ye-min-htun-464622175/'>Ye Min Htun</a>, who is current working as a ux designer @ <a target='_blank' href='https://www.codigo.co/'>Codigo</a>.</p>",
+    "description": "<p>Kyaw San Htoo is a pharmacy that has been running for over a decade in Pathein.</p><p>We designed a reliable logo which stands out among the competitions. For the next part, we designed a website that can provide accurate information about medicines, ensure availability for the customers and offer a contentful and representative digital experience for the residents of Pathein.</p><p>We also collaborated with Bro <a target='_blank' href='https://www.linkedin.com/in/ye-min-htun-464622175/' class='underline'>Ye Min Htun</a>, who is current working as a ux designer @ <a target='_blank' href='https://www.codigo.co/' class='underline'>Codigo</a>.</p>",
     "scope": ["Branding", "Web Design", "Web Development"],
     "year": "2021",
     "website": "kyawsanhtoo-pharmacy.vercel.app",

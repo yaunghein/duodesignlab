@@ -33,7 +33,7 @@ const Ready: React.FC<Props> = ({ children }) => {
       <Image alt="" src={useTexture()} layout="fill" />
 
       <div className="relative flex items-center justify-center h-[60vh] lg:h-[calc(100vh-6rem)] ddl-container">
-        <div className="flex flex-col xl:flex-row items-center gap-12 lg:gap-24 mx-auto max-w-[90rem]">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 mx-auto max-w-[90rem]">
           <h2 className="sr-only">Ready?</h2>
           <motion.div ref={ref} animate={animation} initial="hidden" variants={variants}>
             {children}

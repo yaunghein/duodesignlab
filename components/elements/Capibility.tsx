@@ -10,7 +10,6 @@ import useCapabilityStore, { CapabilityTypes } from '$stores/CapabilityStore'
 
 // hooks
 import useFadeUp from '$hooks/useFadeUp'
-import useTexture from '$hooks/useTexture'
 
 // stores
 import useCursorStore from '$stores/CursorStore'
@@ -37,7 +36,6 @@ const Capibility: React.FC<Props> = ({ title, description }) => {
       onMouseEnter={() => changeCursorType('normal_brand_light')}
       onMouseLeave={() => changeCursorType('normal_brand')}
     >
-      <Image alt="" src={useTexture()} layout="fill" className="opacity-20" />
       <div className="relative flex-1">
         <h3 className="font-bold text-body text-ddl_offwhite whitespace-nowrap">{title}</h3>
       </div>

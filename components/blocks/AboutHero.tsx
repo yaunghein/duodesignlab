@@ -40,7 +40,7 @@ const AboutHero: React.FC = () => {
             animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
             className="mt-0 lg:-mt-56 text-big-visual md:main-title text-ddl_brand_light"
           >
-            <span className="block">About</span> Duo Design Lab
+            <span className="sm:block">About</span> Duo Design Lab
           </motion.h1>
         </div>
         <div className="grid gap-5 lg:gap-12">

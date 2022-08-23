@@ -117,7 +117,7 @@ const ContactForm: React.FC = () => {
   )
 
   return (
-    <form className="grid gap-5 lg:gap-12" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
       <motion.div
         className="grid gap-2 lg:gap-5"
         onMouseEnter={() => changeCursorType('hover_brand')}
@@ -131,7 +131,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="name"
           id="name"
-          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium  border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
+          className="w-full px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium  border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.name}
           onChange={handleInputChange}
         />
@@ -151,7 +151,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="email"
           id="email"
-          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
+          className="w-full px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.email}
           onChange={handleInputChange}
         />
@@ -171,7 +171,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="company"
           id="company"
-          className="px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
+          className="w-full px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.company}
           onChange={handleInputChange}
         />
@@ -190,7 +190,7 @@ const ContactForm: React.FC = () => {
         <textarea
           name="brief"
           id="brief"
-          className="resize-none px-6 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium border-[0.175rem] outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
+          className="w-full resize-none px-6 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium border-[0.175rem] outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.brief}
           onChange={handleInputChange}
         />
@@ -207,7 +207,7 @@ const ContactForm: React.FC = () => {
             Budget
             <span className="text-xl text-red-600">*</span>
           </label>
-          <label htmlFor="budget" className="w-1/4 font-medium text-body text-ddl_dark">
+          <label htmlFor="budget" className="w-[30%] sm:w-1/4 font-medium text-body text-ddl_dark">
             Currency
           </label>
         </div>
@@ -222,7 +222,7 @@ const ContactForm: React.FC = () => {
           />
           <div
             role="button"
-            className="w-1/4 select-none lg:-mb-[0.5px] grid place-items-center lg:pb-[0.2rem] font-medium transition border-[0.175rem] border-l-0 rounded-full rounded-l-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
+            className="w-[30%] sm:w-1/4 select-none lg:-mb-[0.5px] grid place-items-center lg:pb-[0.2rem] font-medium transition border-[0.175rem] border-l-0 rounded-full rounded-l-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
             onClick={() => setIsCurrencyMenuOpen(!isCurrencyMenuOpen)}
           >
             {currency.type}

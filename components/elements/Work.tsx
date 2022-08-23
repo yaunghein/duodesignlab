@@ -60,10 +60,16 @@ const Work: React.FC<Props> = ({ work, index }) => {
           className="absolute bottom-0 flex flex-col w-full px-4 py-4 pt-5 bg-opacity-75 xl:hidden text-ddl_offwhite"
           style={{ background: 'linear-gradient(0deg, rgba(18, 16, 19, 0.6), rgba(18, 16, 19, 0.4), transparent)' }}
         >
-          <motion.h3 ref={ref2} animate={animation2} initial="hidden" variants={variants2} className="mt-auto text-xl font-medium">
+          <motion.h3
+            ref={ref2}
+            animate={animation2}
+            initial="hidden"
+            variants={variants2}
+            className="mt-auto text-xl font-medium sm:text-2xl"
+          >
             {work.name}
           </motion.h3>
-          <motion.p ref={ref3} animate={animation3} initial="hidden" variants={variants3} className="mt-1 text-xs font-normal">
+          <motion.p ref={ref3} animate={animation3} initial="hidden" variants={variants3} className="mt-1 text-xs font-normal sm:text-sm">
             {work.scope.join(', ')}
           </motion.p>
         </motion.div>

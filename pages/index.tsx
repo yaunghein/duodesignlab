@@ -54,12 +54,12 @@ const HomePage: NextPageWithLayout<Props> = ({ works }) => {
       <Head>
         <title>Home - Duo Design Lab</title>
         <meta
-          content="We are a humble boutiqueweb design studio, led by a groupof young people with design anddevelopment background."
+          content="We are a humble boutique web design studio, led by a group of young people with design and development background."
           name="description"
         />
         <meta content="Home - Duo Design Lab" property="og:title" />
         <meta
-          content="We are a humble boutiqueweb design studio, led by a groupof young people with design anddevelopment background."
+          content="We are a humble boutique web design studio, led by a group of young people with design and development background."
           property="og:description"
         />
       </Head>

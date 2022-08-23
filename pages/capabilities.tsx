@@ -192,39 +192,37 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
         )}
 
         {!currentCapability && width <= 639 && (
-          <button onClick={() => changeCapability('Web Development')} className="absolute group bottom-64 left-10">
-            <div>
-              <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2  w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
-              <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-              <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
-                Web Development
+          <div className="absolute bottom-0 transform -translate-x-1/2 left-1/2 w-80 h-80">
+            <button onClick={() => changeCapability('Web Development')} className="absolute left-0 group bottom-64">
+              <div>
+                <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2  w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
+                <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
+                <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+                  Web Development
+                </div>
               </div>
-            </div>
-          </button>
-        )}
+            </button>
 
-        {!currentCapability && width <= 639 && (
-          <button onClick={() => changeCapability('Web Design')} className="absolute group bottom-32 right-10">
-            <div>
-              <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
-              <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition"></div>
-              <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
-                Web Design
+            <button onClick={() => changeCapability('Web Design')} className="absolute right-0 group bottom-[7.5rem]">
+              <div>
+                <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
+                <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition"></div>
+                <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+                  Web Design
+                </div>
               </div>
-            </div>
-          </button>
-        )}
+            </button>
 
-        {!currentCapability && width <= 639 && (
-          <button onClick={() => changeCapability('Branding')} className="absolute group bottom-10 right-52">
-            <div>
-              <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
-              <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-              <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
-                Branding
+            <button onClick={() => changeCapability('Branding')} className="absolute group bottom-10 right-44">
+              <div>
+                <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
+                <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
+                <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+                  Branding
+                </div>
               </div>
-            </div>
-          </button>
+            </button>
+          </div>
         )}
 
         <div
@@ -236,7 +234,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
         >
           <div
             className={cn(
-              currentCapability ? 'mt-48' : 'mt-36',
+              currentCapability ? 'mt-48' : 'mt-32',
               'flex flex-col items-center justify-center gap-8 lg:gap-16 md:mt-0 transition-all'
             )}
           >
