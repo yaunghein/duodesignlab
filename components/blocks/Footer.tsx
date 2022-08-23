@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           <motion.a
             onMouseEnter={() => (isBgDark ? changeCursorType('hover_brand_light') : changeCursorType('hover_brand'))}
             onMouseLeave={() => (isBgDark ? changeCursorType('normal_brand_light') : changeCursorType('normal_brand'))}
-            href="https://www.google.com/"
+            href="https://www.facebook.com/duodesignlab/"
             target="_blank"
             rel="noreferrer"
             className="text-sm font-normal md:text-link-size"
@@ -39,22 +39,22 @@ const Footer: React.FC = () => {
           <motion.a
             onMouseEnter={() => (isBgDark ? changeCursorType('hover_brand_light') : changeCursorType('hover_brand'))}
             onMouseLeave={() => (isBgDark ? changeCursorType('normal_brand_light') : changeCursorType('normal_brand'))}
-            href="https://www.google.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-normal md:text-link-size"
-          >
-            Instagram
-          </motion.a>
-          <motion.a
-            onMouseEnter={() => (isBgDark ? changeCursorType('hover_brand_light') : changeCursorType('hover_brand'))}
-            onMouseLeave={() => (isBgDark ? changeCursorType('normal_brand_light') : changeCursorType('normal_brand'))}
-            href="https://www.google.com/"
+            href=""
             target="_blank"
             rel="noreferrer"
             className="text-sm font-normal md:text-link-size"
           >
             LinkedIn
+          </motion.a>
+          <motion.a
+            onMouseEnter={() => (isBgDark ? changeCursorType('hover_brand_light') : changeCursorType('hover_brand'))}
+            onMouseLeave={() => (isBgDark ? changeCursorType('normal_brand_light') : changeCursorType('normal_brand'))}
+            href="https://www.behance.net/duodesignlab"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-normal md:text-link-size"
+          >
+            Behance
           </motion.a>
         </div>
         <span

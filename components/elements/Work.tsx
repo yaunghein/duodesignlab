@@ -45,7 +45,7 @@ const Work: React.FC<Props> = ({ work, index }) => {
         <BlurImage src={work.image} alt={work.name} width={1296} height={980} />
 
         {/* for desktop */}
-        <div className="absolute inset-0 flex-col items-center hidden px-12 py-5 transition-opacity opacity-0 text-centerm hover:opacity-100 xl:flex lg:py-8 bg-ddl_brand text-ddl_offwhite lg:px-28">
+        <div className="absolute inset-0 flex-col items-center hidden px-12 py-5 transition-opacity opacity-0 text-centerm hover:opacity-100 lg:flex lg:py-8 bg-ddl_brand text-ddl_offwhite lg:px-28">
           <Image alt="" src={useTexture()} layout="fill" className="opacity-20" />
           <h3 className="relative mt-auto secondary-title">{work.name}</h3>
           <p className="relative mt-auto text-sm font-normal md:text-link-size">{work.scope.join(', ')}</p>
@@ -57,7 +57,7 @@ const Work: React.FC<Props> = ({ work, index }) => {
           animate={animation4}
           initial="hidden"
           variants={variants4}
-          className="absolute bottom-0 flex flex-col w-full px-4 py-4 pt-5 bg-opacity-75 xl:hidden text-ddl_offwhite"
+          className="absolute bottom-0 flex flex-col w-full px-4 py-4 pt-5 bg-opacity-75 lg:hidden text-ddl_offwhite"
           style={{ background: 'linear-gradient(0deg, rgba(18, 16, 19, 0.6), rgba(18, 16, 19, 0.4), transparent)' }}
         >
           <motion.h3
@@ -65,7 +65,7 @@ const Work: React.FC<Props> = ({ work, index }) => {
             animate={animation2}
             initial="hidden"
             variants={variants2}
-            className="mt-auto text-xl font-medium sm:text-2xl"
+            className="mt-auto text-xl font-normal sm:text-2xl"
           >
             {work.name}
           </motion.h3>

@@ -142,7 +142,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.4, type: 'spring' }}>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2  w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-              <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+              <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                 Web Development
               </div>
             </motion.div>
@@ -163,7 +163,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.4, type: 'spring', delay: 0.05 }}>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition"></div>
-              <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+              <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                 Web Design
               </div>
             </motion.div>
@@ -184,7 +184,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.4, type: 'spring', delay: 0.1 }}>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-              <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+              <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                 Branding
               </div>
             </motion.div>
@@ -197,7 +197,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               <div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2  w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-                <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+                <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                   Web Development
                 </div>
               </div>
@@ -207,7 +207,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               <div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition"></div>
-                <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+                <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                   Web Design
                 </div>
               </div>
@@ -217,7 +217,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               <div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-                <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+                <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                   Branding
                 </div>
               </div>
@@ -321,7 +321,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.2 }}
-                  className="py-3 text-sm font-medium transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
+                  className="py-3 text-sm font-normal transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
                   onClick={() => changeCapability('Branding')}
                 >
                   Branding
@@ -332,7 +332,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.2 }}
-                  className="py-3 text-sm font-medium transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
+                  className="py-3 text-sm font-normal transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
                   onClick={() => changeCapability('Web Design')}
                 >
                   Web Design
@@ -343,7 +343,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.2 }}
-                  className="py-3 text-sm font-medium transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
+                  className="py-3 text-sm font-normal transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
                   onClick={() => changeCapability('Web Development')}
                 >
                   Web Development

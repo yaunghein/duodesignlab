@@ -117,13 +117,13 @@ const ContactForm: React.FC = () => {
   )
 
   return (
-    <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-5 lg:gap-12" onSubmit={handleSubmit}>
       <motion.div
         className="grid gap-2 lg:gap-5"
         onMouseEnter={() => changeCursorType('hover_brand')}
         onMouseLeave={() => changeCursorType('normal_brand')}
       >
-        <label htmlFor="name" className="font-medium text-body text-ddl_dark">
+        <label htmlFor="name" className="font-normal text-body text-ddl_dark">
           Name
           <span className="text-xl text-red-600">*</span>
         </label>
@@ -131,7 +131,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="name"
           id="name"
-          className="w-full px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium  border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
+          className="w-full px-6 pb-[0.1rem] lg:pb-[0.3rem] font-normal  border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.name}
           onChange={handleInputChange}
         />
@@ -143,7 +143,7 @@ const ContactForm: React.FC = () => {
         onMouseEnter={() => changeCursorType('hover_brand')}
         onMouseLeave={() => changeCursorType('normal_brand')}
       >
-        <label htmlFor="email" className="font-medium text-body text-ddl_dark">
+        <label htmlFor="email" className="font-normal text-body text-ddl_dark">
           Email
           <span className="text-xl text-red-600">*</span>
         </label>
@@ -151,7 +151,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="email"
           id="email"
-          className="w-full px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
+          className="w-full px-6 pb-[0.1rem] lg:pb-[0.3rem] font-normal border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.email}
           onChange={handleInputChange}
         />
@@ -163,7 +163,7 @@ const ContactForm: React.FC = () => {
         onMouseEnter={() => changeCursorType('hover_brand')}
         onMouseLeave={() => changeCursorType('normal_brand')}
       >
-        <label htmlFor="company" className="font-medium text-body text-ddl_dark">
+        <label htmlFor="company" className="font-normal text-body text-ddl_dark">
           Company Name
           <span className="text-xl text-red-600">*</span>
         </label>
@@ -171,7 +171,7 @@ const ContactForm: React.FC = () => {
           type="text"
           name="company"
           id="company"
-          className="w-full px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
+          className="w-full px-6 pb-[0.1rem] lg:pb-[0.3rem] font-normal border-[0.175rem] rounded-full outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.company}
           onChange={handleInputChange}
         />
@@ -183,14 +183,14 @@ const ContactForm: React.FC = () => {
         onMouseEnter={() => changeCursorType('hover_brand')}
         onMouseLeave={() => changeCursorType('normal_brand')}
       >
-        <label htmlFor="brief" className="font-medium text-body text-ddl_dark">
+        <label htmlFor="brief" className="font-normal text-body text-ddl_dark">
           Project Brief
           <span className="text-xl text-red-600">*</span>
         </label>
         <textarea
           name="brief"
           id="brief"
-          className="w-full resize-none px-6 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-medium border-[0.175rem] outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
+          className="w-full resize-none px-6 pb-[0.1rem] lg:pb-[0.3rem] pt-2 font-normal border-[0.175rem] outline-none rounded-3xl text-ddl_dark border-ddl_dark h-60 text-body transition-colors focus:bg-ddl_brand focus:bg-opacity-[0.03]"
           value={inputs.brief}
           onChange={handleInputChange}
         />
@@ -203,11 +203,11 @@ const ContactForm: React.FC = () => {
         onMouseLeave={() => changeCursorType('normal_brand')}
       >
         <div className="flex w-full">
-          <label htmlFor="budget" className="w-3/4 font-medium text-body text-ddl_dark">
+          <label htmlFor="budget" className="w-3/4 font-normal text-body text-ddl_dark">
             Budget
             <span className="text-xl text-red-600">*</span>
           </label>
-          <label htmlFor="budget" className="w-[30%] sm:w-1/4 font-medium text-body text-ddl_dark">
+          <label htmlFor="budget" className="w-[30%] sm:w-1/4 font-normal text-body text-ddl_dark">
             Currency
           </label>
         </div>
@@ -216,13 +216,13 @@ const ContactForm: React.FC = () => {
             type="text"
             name="budget"
             id="budget"
-            className="w-3/4 px-6 pb-[0.1rem] lg:pb-[0.3rem] font-medium transition border-[0.175rem] rounded-full rounded-r-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
+            className="w-3/4 px-6 pb-[0.1rem] lg:pb-[0.3rem] font-normal transition border-[0.175rem] rounded-full rounded-r-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
             value={inputs.budget}
             onChange={handleInputChange}
           />
           <div
             role="button"
-            className="w-[30%] sm:w-1/4 select-none lg:-mb-[0.5px] grid place-items-center lg:pb-[0.2rem] font-medium transition border-[0.175rem] border-l-0 rounded-full rounded-l-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
+            className="w-[30%] sm:w-1/4 select-none lg:-mb-[0.5px] grid place-items-center lg:pb-[0.2rem] font-normal transition border-[0.175rem] border-l-0 rounded-full rounded-l-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
             onClick={() => setIsCurrencyMenuOpen(!isCurrencyMenuOpen)}
           >
             {currency.type}
@@ -230,7 +230,7 @@ const ContactForm: React.FC = () => {
           <AnimatePresence>
             {isCurrencyMenuOpen && (
               <motion.div
-                className="absolute z-10 right-0 grid w-36 xl:w-1/4 gap-2 sm:gap-4 p-4 sm:p-5 bg-white border-[0.175rem] bottom-[3.5rem] sm:bottom-[unset] sm:top-16 rounded-3xl border-ddl_dark"
+                className="absolute z-10 right-0 grid w-36 lg:w-1/4 gap-2 sm:gap-4 p-4 sm:p-5 bg-white border-[0.175rem] bottom-[3.3rem] sm:bottom-[unset] sm:top-16 rounded-3xl border-ddl_dark"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1, transition: { duration: 0.1, ease: 'easeOut' } }}
                 exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.1, ease: 'easeOut' } }}
@@ -259,7 +259,7 @@ const ContactForm: React.FC = () => {
         <motion.button
           onMouseEnter={() => changeCursorType('hover_brand')}
           onMouseLeave={() => changeCursorType('normal_brand')}
-          className="px-12 py-3 mt-2 font-medium transition-colors border-[0.175rem] rounded-full whitespace-nowrap lg:mt-0 text-ddl_offwhite bg-ddl_dark text-body border-ddl_dark"
+          className="px-12 py-3 mt-2 font-normal transition-colors border-[0.175rem] rounded-full whitespace-nowrap lg:mt-0 text-ddl_offwhite bg-ddl_dark text-body border-ddl_dark"
           disabled={status.isSubmitting}
         >
           {status.isSubmitting ? 'Sending...' : 'Send Brief'}

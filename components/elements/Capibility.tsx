@@ -37,7 +37,7 @@ const Capibility: React.FC<Props> = ({ title, description }) => {
       onMouseLeave={() => changeCursorType('normal_brand')}
     >
       <div className="relative flex-1">
-        <h3 className="font-bold text-body text-ddl_offwhite whitespace-nowrap">{title}</h3>
+        <h3 className="font-normal text-body text-ddl_offwhite whitespace-nowrap">{title}</h3>
       </div>
       <div className="relative flex-1 my-12 lg:my-0">
         <p className="font-normal text-body text-ddl_offwhite lg:max-w-[26rem]">{description}</p>
@@ -45,7 +45,7 @@ const Capibility: React.FC<Props> = ({ title, description }) => {
       <div className="relative flex items-start flex-1 lg:justify-end">
         <Link href="/capabilities">
           <motion.a
-            className="text-body text-ddl_offwhite font-medium px-16 sm:px-[4.5rem] py-2 sm:py-3 border-2 border-ddl_offwhite rounded-full"
+            className="text-body text-ddl_offwhite font-normal px-16 sm:px-[4.5rem] py-2 sm:py-3 border-2 border-ddl_offwhite rounded-full"
             onClick={() => handleClick(title)}
             onMouseEnter={() => changeCursorType('hover_brand_light')}
             onMouseLeave={() => changeCursorType('normal_brand_light')}

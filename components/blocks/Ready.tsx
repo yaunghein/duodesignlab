@@ -35,11 +35,11 @@ const Ready: React.FC<Props> = ({ children }) => {
       <div className="relative flex items-center justify-center h-[60vh] lg:h-[calc(100vh-6rem)] ddl-container">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 mx-auto max-w-[90rem]">
           <h2 className="sr-only">Ready?</h2>
-          <motion.div ref={ref} animate={animation} initial="hidden" variants={variants}>
+          <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="w-full lg:w-[40rem]">
             {children}
           </motion.div>
 
-          <motion.div ref={ref2} animate={animation2} initial="hidden" variants={variants2} className="flex flex-col gap-7 lg:gap-12">
+          <motion.div ref={ref2} animate={animation2} initial="hidden" variants={variants2} className="flex flex-col gap-7 lg:gap-7">
             <div className="flex items-center gap-5 lg:gap-12">
               <span className="font-normal text-body text-ddl_offwhite">Send</span>
               <div className="flex items-center gap-5 lg:gap-12">
@@ -49,7 +49,7 @@ const Ready: React.FC<Props> = ({ children }) => {
                     onMouseEnter={() => changeCursorType('hover_brand_light')}
                     onMouseLeave={() => changeCursorType('normal_brand_light')}
                   >
-                    <span className="font-bold text-body text-ddl_offwhite">Brief</span>
+                    <span className="font-normal text-body text-ddl_offwhite">Brief</span>
                     <LinkArrow className="-mb-1 w-9 h-9 text-ddl_offwhite" />
                   </motion.a>
                 </Link>
@@ -59,7 +59,7 @@ const Ready: React.FC<Props> = ({ children }) => {
                   onMouseEnter={() => changeCursorType('hover_brand_light')}
                   onMouseLeave={() => changeCursorType('normal_brand_light')}
                 >
-                  <span className="font-bold text-body text-ddl_offwhite">Email</span>
+                  <span className="font-normal text-body text-ddl_offwhite">Email</span>
                   <LinkArrow className="-mb-1 w-9 h-9 text-ddl_offwhite" />
                 </motion.a>
               </div>
@@ -74,7 +74,7 @@ const Ready: React.FC<Props> = ({ children }) => {
                   onMouseEnter={() => changeCursorType('hover_brand_light')}
                   onMouseLeave={() => changeCursorType('normal_brand_light')}
                 >
-                  <span className="font-bold text-body text-ddl_offwhite whitespace-nowrap">+959 123 456 789</span>
+                  <span className="font-normal text-body text-ddl_offwhite whitespace-nowrap">+959 123 456 789</span>
                 </motion.a>
                 <motion.a
                   href="tel:+959 123 456 789"
@@ -82,7 +82,7 @@ const Ready: React.FC<Props> = ({ children }) => {
                   onMouseEnter={() => changeCursorType('hover_brand_light')}
                   onMouseLeave={() => changeCursorType('normal_brand_light')}
                 >
-                  <span className="font-bold text-body text-ddl_offwhite whitespace-nowrap">+959 123 456 789</span>
+                  <span className="font-normal text-body text-ddl_offwhite whitespace-nowrap">+959 123 456 789</span>
                 </motion.a>
               </div>
             </div>
