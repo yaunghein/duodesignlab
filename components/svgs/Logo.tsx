@@ -10,7 +10,7 @@ interface Props {
 const Logo: React.FC<Props> = ({ className }) => {
   const [track, setTrack] = useState({ x: 0, y: 0 })
   const ref = useRef<SVGSVGElement>(null)
-  const mousePosition = useMousePosition()
+  const { mousePosition } = useMousePosition()
 
   useEffect(() => {
     if (ref.current) {

@@ -34,6 +34,7 @@ import works from '$fixtures/works.json'
 // hooks
 import useWindowSize from '$hooks/useWindowSize'
 import useDDLScroll from '$hooks/useDDLScroll'
+import useMousePosition from '$hooks/useMousePosition'
 
 export const getStaticProps: GetStaticProps = async () => {
   const transformedWorksData = works
@@ -54,43 +55,17 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-const webDevelopment: Variants = {
-  initial: { bottom: '0%', left: '20%' },
-  animate: {
-    bottom: ['0%', '50%', '10%', '50%', '0%'],
-    left: ['20%', '60%', '50%', '20%', '20%'],
-    transition: { duration: 80, repeat: Infinity },
-  },
-}
-
-const webDesign: Variants = {
-  initial: { bottom: '0%', right: '20%' },
-  animate: {
-    bottom: ['0%', '50%', '10%', '50%', '0%'],
-    right: ['20%', '60%', '50%', '20%', '20%'],
-    transition: { duration: 60, repeat: Infinity },
-  },
-}
-
-const branding: Variants = {
-  initial: { bottom: '0%', right: '65%' },
-  animate: {
-    bottom: ['35%', '30%', '0%', '35%'],
-    right: ['65%', '60%', '30%', '65%'],
-    transition: { duration: 40, repeat: Infinity },
-  },
-}
-
 interface Props {
   works: WorkThumbnailType[]
 }
 
 const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
+  const { width } = useWindowSize()
   const [worksByCapability, setWorksByCapability] = useState(works)
   const { currentCapability, changeCapability } = useCapabilityStore()
   const { changeCursorType, resetCursorType } = useCursorStore()
-  const { width } = useWindowSize()
   const { ref, scrollTrackByElement } = useDDLScroll()
+  const { mouseTrack } = useMousePosition()
 
   const goToNextSection = () => {
     if (document) {
@@ -130,19 +105,16 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
       >
         {currentCapability !== 'Web Development' && width > 639 && (
           <motion.button
-            variants={webDevelopment}
-            initial="initial"
-            animate="animate"
-            className="absolute group bottom-64 left-10"
-            style={{ opacity: `${1 - scrollTrackByElement}` }}
             onClick={() => changeCapability('Web Development')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
+            className="absolute group bottom-16 left-20 lg:left-96"
+            style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translate(${20 - mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)` }}
           >
             <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.4, type: 'spring' }}>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2  w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-              <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+              <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                 Web Development
               </div>
             </motion.div>
@@ -151,19 +123,16 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
 
         {currentCapability !== 'Web Design' && width > 639 && (
           <motion.button
-            variants={webDesign}
-            initial="initial"
-            animate="animate"
-            className="absolute group bottom-32 right-10"
-            style={{ opacity: `${1 - scrollTrackByElement}` }}
             onClick={() => changeCapability('Web Design')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
+            className="absolute group bottom-48 lg:bottom-32 right-16 lg:right-[32rem]"
+            style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translate(${mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)` }}
           >
             <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.4, type: 'spring', delay: 0.05 }}>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition"></div>
-              <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+              <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                 Web Design
               </div>
             </motion.div>
@@ -172,19 +141,16 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
 
         {currentCapability !== 'Branding' && width > 639 && (
           <motion.button
-            variants={branding}
-            initial="initial"
-            animate="animate"
-            className="absolute group bottom-10 right-52"
-            style={{ opacity: `${1 - scrollTrackByElement}` }}
             onClick={() => changeCapability('Branding')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
+            className="absolute group top-56 lg:top-28 left-[24rem] lg:left-[38rem]"
+            style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translate(${mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)` }}
           >
             <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.4, type: 'spring', delay: 0.1 }}>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-              <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+              <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                 Branding
               </div>
             </motion.div>
@@ -192,36 +158,54 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
         )}
 
         {!currentCapability && width <= 639 && (
-          <div className="absolute bottom-0 transform -translate-x-1/2 left-1/2 w-80 h-80">
-            <button onClick={() => changeCapability('Web Development')} className="absolute left-0 group bottom-64">
+          <div className="absolute bottom-0 transform -translate-x-1/2 left-1/2 w-80">
+            <motion.button
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, type: 'spring' }}
+              onClick={() => changeCapability('Web Development')}
+              className="absolute left-0 group bottom-64"
+            >
               <div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2  w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-                <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+                <div className="relative grid w-48 h-48 md:w-[19rem] md:h-[19rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                   Web Development
                 </div>
               </div>
-            </button>
+            </motion.button>
 
-            <button onClick={() => changeCapability('Web Design')} className="absolute right-0 group bottom-[7.5rem]">
+            <motion.button
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, type: 'spring', delay: 0.1 }}
+              onClick={() => changeCapability('Web Design')}
+              className="absolute right-0 group bottom-[7.5rem]"
+            >
               <div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition"></div>
-                <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+                <div className="relative grid w-40 h-40 md:w-[16rem] md:h-[16rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                   Web Design
                 </div>
               </div>
-            </button>
+            </motion.button>
 
-            <button onClick={() => changeCapability('Branding')} className="absolute group bottom-10 right-44">
+            <motion.button
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, type: 'spring', delay: 0.2 }}
+              onClick={() => changeCapability('Branding')}
+              className="absolute group bottom-10 right-44"
+            >
               <div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
-                <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-medium rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
+                <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
                   Branding
                 </div>
               </div>
-            </button>
+            </motion.button>
           </div>
         )}
 
@@ -278,7 +262,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
 
             {currentCapability === 'Web Development' && (
               <motion.p
-                className="max-w-[34rem] text-center text-body text-ddl_dark"
+                className="max-w-[34rem] text-center text-body text-ddl_dark px-5 lg:px-0"
                 initial={{ y: 64, opacity: 0 }}
                 animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
               >
@@ -321,7 +305,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.2 }}
-                  className="py-3 text-sm font-medium transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
+                  className="py-3 text-sm font-normal transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
                   onClick={() => changeCapability('Branding')}
                 >
                   Branding
@@ -332,7 +316,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.2 }}
-                  className="py-3 text-sm font-medium transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
+                  className="py-3 text-sm font-normal transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
                   onClick={() => changeCapability('Web Design')}
                 >
                   Web Design
@@ -343,7 +327,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.2 }}
-                  className="py-3 text-sm font-medium transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
+                  className="py-3 text-sm font-normal transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
                   onClick={() => changeCapability('Web Development')}
                 >
                   Web Development

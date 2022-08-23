@@ -53,7 +53,7 @@ const WorkWithUs: NextPageWithLayout = () => {
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
                   href="mailto:contact@duodesignlab.com"
-                  className="w-full font-medium underline text-body text-ddl_dark"
+                  className="w-full font-normal underline text-body text-ddl_dark"
                 >
                   contact@duodesignlab.com
                 </motion.a>
@@ -61,7 +61,7 @@ const WorkWithUs: NextPageWithLayout = () => {
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
                   href="tel:09123456789"
-                  className="mr-12 font-medium lg:mr-auto text-body text-ddl_dark"
+                  className="mr-12 font-normal lg:mr-auto text-body text-ddl_dark"
                 >
                   09 123 456 789
                 </motion.a>
@@ -69,14 +69,20 @@ const WorkWithUs: NextPageWithLayout = () => {
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
                   href="tel:09123456789"
-                  className="font-medium text-body text-ddl_dark"
+                  className="font-normal text-body text-ddl_dark"
                 >
                   09 123 456 789
                 </motion.a>
               </div>
             </div>
           </motion.div>
-          <motion.div ref={ref2} animate={animation2} initial="hidden" variants={variants2} className="mt-20 -mb-4 lg:-mb-12 lg:mt-0">
+          <motion.div
+            ref={ref2}
+            animate={animation2}
+            initial="hidden"
+            variants={variants2}
+            className="mt-20 -mb-4 overflow-hidden lg:-mb-12 lg:mt-0"
+          >
             <h2 className="mb-5 lg:mb-20 secondary-title text-ddl_dark">Write Brief</h2>
             <ContactForm />
           </motion.div>

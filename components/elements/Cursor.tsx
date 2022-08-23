@@ -14,7 +14,7 @@ const Cursor: React.FC = () => {
   const [isMousePress, setIsMousePress] = useState(false)
   const { cursorType } = useCursorStore()
   const { width } = useWindowSize()
-  const mousePosition = useMousePosition()
+  const { mousePosition } = useMousePosition()
 
   // to have a scale effect on cursor when click
   useEffect(() => {
@@ -76,7 +76,7 @@ const Cursor: React.FC = () => {
 
   return (
     <div
-      className="fixed z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      className="fixed z-50 hidden transform -translate-x-1/2 -translate-y-1/2 pointer-events-none lg:block"
       style={{
         left: mousePosition.x,
         top: mousePosition.y,
