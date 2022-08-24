@@ -67,11 +67,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
   const { ref, scrollTrackByElement } = useDDLScroll()
   const { mouseTrack } = useMousePosition()
 
-  const goToNextSection = () => {
-    if (document) {
-      document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  const goToNextSection = () => document && document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })
 
   useEffect(() => {
     if (currentCapability) {
@@ -108,8 +104,18 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             onClick={() => changeCapability('Web Development')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
-            className="absolute group bottom-16 left-20 lg:left-96"
-            style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translate(${20 - mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)` }}
+            className={cn(
+              'absolute group',
+              currentCapability === 'Branding'
+                ? 'bottom-[45rem] lg:bottom-[30rem] right-20 lg:right-40'
+                : currentCapability === 'Web Design'
+                ? 'bottom-[45rem] lg:bottom-32 right-20 lg:right-64'
+                : 'bottom-[32rem] lg:bottom-72 right-20 lg:right-96'
+            )}
+            style={{
+              opacity: `${1 - scrollTrackByElement}`,
+              transform: `translate(${20 - mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)`,
+            }}
           >
             <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.4, type: 'spring' }}>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2  w-48 h-48 md:w-[19rem] md:h-[19rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
@@ -126,8 +132,16 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             onClick={() => changeCapability('Web Design')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
-            className="absolute group bottom-48 lg:bottom-32 right-16 lg:right-[32rem]"
-            style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translate(${mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)` }}
+            className={cn(
+              'absolute group',
+              currentCapability === 'Branding' ? 'bottom-40 lg:bottom-28 left-20 lg:left-[20rem]' : '',
+              currentCapability === 'Web Development' ? 'bottom-[50rem] lg:bottom-[14rem] left-96 lg:left-[75rem]' : '',
+              !currentCapability ? 'bottom-[36rem] lg:bottom-[24rem] left-24 lg:left-[24rem]' : ''
+            )}
+            style={{
+              opacity: `${1 - scrollTrackByElement}`,
+              transform: `translate(${mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)`,
+            }}
           >
             <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.4, type: 'spring', delay: 0.05 }}>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-40 h-40 md:w-[16rem] md:h-[16rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
@@ -144,8 +158,18 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             onClick={() => changeCapability('Branding')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
-            className="absolute group top-56 lg:top-28 left-[24rem] lg:left-[38rem]"
-            style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translate(${mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)` }}
+            className={cn(
+              'absolute group',
+              currentCapability === 'Web Development'
+                ? 'bottom-40 lg:bottom-28 left-40 lg:left-[20rem]'
+                : currentCapability === 'Web Design'
+                ? 'bottom-40 lg:bottom-[35rem] left-40 lg:left-[16rem]'
+                : 'bottom-56 lg:bottom-28 left-40 lg:left-[32rem]'
+            )}
+            style={{
+              opacity: `${1 - scrollTrackByElement}`,
+              transform: `translate(${20 - mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)`,
+            }}
           >
             <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.4, type: 'spring', delay: 0.1 }}>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
@@ -218,7 +242,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
         >
           <div
             className={cn(
-              currentCapability ? 'mt-48' : 'mt-32',
+              currentCapability ? 'mt-48 lg:-mb-20' : 'mt-32',
               'flex flex-col items-center justify-center gap-8 lg:gap-16 md:mt-0 transition-all'
             )}
           >

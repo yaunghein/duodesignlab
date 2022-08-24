@@ -2,13 +2,19 @@
   {
     "name": "Joby",
     "slug": "joby",
-    "description": "<p>Joby is a web app that can help you track your applied jobs, and record your career timeline. Although I am a frontend developer, it is always good to know other fields, is't it? That is why I gave the backend world a try. Joby is my first ever app handling both frontend and backend on my own using SvelteKit, Tailwind, Express and MongoDB.</p>",
+    "description": "<p>Joby is a web app that can help you track your applied jobs, and record your career timeline. Although I am a frontend developer, it is always good to know other fields, isn't it? That is why I gave the backend world a try. Joby is my first ever app handling both frontend and backend on my own using SvelteKit, Tailwind, Express and MongoDB.</p>",
     "scope": ["Web Development", "Web Design", "Concept"],
     "year": "2022",
     "website": "job-y.vercel.app",
     "owners": ["yan-aung-hein"],
     "thumbnail": "/assets/works/joby/thumbnail.jpg",
-    "images": [],
+    "images": [
+      { "path": "/assets/works/joby/thumbnail.jpg", "width": 3480, "height": 2400 },
+      { "path": "/assets/works/joby/1.svg", "width": 1440, "height": 793 },
+      { "path": "/assets/works/joby/2.svg", "width": 1440, "height": 896 },
+      { "path": "/assets/works/joby/3.svg", "width": 1440, "height": 896 },
+      { "path": "/assets/works/joby/4.svg", "width": 1440, "height": 896 }
+    ],
     "more": {
       "next": null,
       "prev": {
@@ -50,7 +56,7 @@
     "website": "www.apmhelp.com",
     "owners": ["yan-aung-hein"],
     "thumbnail": "/assets/works/apm-help/thumbnail.jpg",
-    "images": [],
+    "images": [{ "path": "/assets/works/apm-help/1.png", "width": 1920, "height": 9412 }],
     "more": {
       "next": {
         "name": "Paing Mentoring Family",

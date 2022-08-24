@@ -153,13 +153,13 @@ const Navigation: React.FC = () => {
                   initial={{ width: '0%' }}
                   animate={{ width: '100%', transition: { duration: 0.3 } }}
                   exit={{ width: '0%', transition: { duration: 0.3, delay: 0.4 } }}
-                  className={cn('absolute left-0 top-0 w-full h-1/2', `bg-${menuTheme}`)}
+                  className={cn('absolute left-0 top-0 w-full h-[50.2%]', `bg-${menuTheme}`)}
                 ></motion.div>
                 <motion.div
                   initial={{ width: '0%' }}
                   animate={{ width: '100%', transition: { duration: 0.3 } }}
                   exit={{ width: '0%', transition: { duration: 0.3, delay: 0.4 } }}
-                  className={cn('absolute right-0 bottom-0 w-full h-1/2', `bg-${menuTheme}`)}
+                  className={cn('absolute right-0 bottom-0 w-full h-[50.2%]', `bg-${menuTheme}`)}
                 ></motion.div>
               </div>
               <div className="grid gap-8 mt-auto">

@@ -74,7 +74,9 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
         <div className="py-8 ddl-container md:py-28">
           <div className="grid gap-2">
             {work.images.map((image: ImageType) => (
-              <BlurImage key={image.path} alt={`${work.name}`} src={image.path} width={image.width} height={image.height} />
+              <div key={image.path} className="border border-ddl_brand border-opacity-5">
+                <BlurImage alt={`${work.name}`} src={image.path} width={image.width} height={image.height} />
+              </div>
             ))}
           </div>
 

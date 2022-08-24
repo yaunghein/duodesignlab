@@ -52,7 +52,7 @@ const Works: React.FC<Props> = ({ bgColor = 'bg-white', title, works }) => {
           ))}
         </div>
         <Link href="/works">
-          <a className="block mt-5 text-center underline sm:hidden text-link-size text-ddl_dark whitespace-nowrap">See All</a>
+          <a className="block mt-5 -ml-1 text-center underline sm:hidden text-link-size text-ddl_dark whitespace-nowrap">See All</a>
         </Link>
       </div>
     </motion.section>

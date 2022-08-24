@@ -23,7 +23,7 @@ const FilterPill: React.FC<Props> = ({ label, active, setCurrentFilter }) => {
   return (
     <motion.button
       className={cn(
-        'px-12 py-3 border-2 rounded-full text-body border-ddl_dark font-medium transition-colors whitespace-nowrap',
+        'px-7 sm:px-12 py-3 border-2 rounded-full text-sm sm:text-body border-ddl_dark font-medium transition-colors whitespace-nowrap',
         active ? 'bg-ddl_dark text-ddl_offwhite' : 'text-ddl_dark'
       )}
       onClick={() => setCurrentFilter(label)}
