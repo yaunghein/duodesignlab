@@ -34,6 +34,7 @@ const FoundingMember: React.FC<Props> = ({ member, index }) => {
   return (
     <Link href={`/about/${member.slug}`}>
       <motion.a
+        aria-label={`get to know more about ${member.name}`}
         ref={ref}
         animate={animation}
         initial="hidden"

@@ -45,6 +45,7 @@ const Capibility: React.FC<Props> = ({ title, description }) => {
       <div className="relative flex items-start flex-1 lg:justify-end">
         <Link href="/capabilities">
           <motion.a
+            aria-label={`learn more about ${title}`}
             className="text-body text-ddl_offwhite font-normal px-16 sm:px-[4.5rem] py-2 sm:py-3 border-2 border-ddl_offwhite rounded-full"
             onClick={() => handleClick(title)}
             onMouseEnter={() => changeCursorType('hover_brand_light')}

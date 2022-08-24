@@ -126,6 +126,7 @@ const Navigation: React.FC = () => {
 
         {/* mobile menu */}
         <motion.button
+          aria-label="menu"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 0.1 } }}
           className={cn(

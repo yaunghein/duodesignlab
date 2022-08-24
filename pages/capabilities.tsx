@@ -363,6 +363,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
 
         {currentCapability && (
           <motion.button
+            aria-label="scroll down"
             className="absolute transform -translate-x-1/2 bottom-14 left-1/2"
             onClick={goToNextSection}
             onMouseEnter={() => changeCursorType('hover_brand')}

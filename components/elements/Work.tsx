@@ -34,6 +34,7 @@ const Work: React.FC<Props> = ({ work, index }) => {
   return (
     <Link href={`/works/${work.slug}`}>
       <motion.a
+        aria-label={`See more about ${work.name}`}
         ref={ref}
         animate={animation}
         initial="hidden"

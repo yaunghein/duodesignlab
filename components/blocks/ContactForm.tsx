@@ -222,6 +222,7 @@ const ContactForm: React.FC = () => {
           />
           <div
             role="button"
+            aria-label="choose currency"
             className="w-[30%] sm:w-1/4 select-none lg:-mb-[0.5px] grid place-items-center lg:pb-[0.2rem] font-normal transition border-[0.175rem] border-l-0 rounded-full rounded-l-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
             onClick={() => setIsCurrencyMenuOpen(!isCurrencyMenuOpen)}
           >
@@ -238,6 +239,7 @@ const ContactForm: React.FC = () => {
                 {currencies.map((currency) => (
                   <motion.div
                     role="button"
+                    aria-label={`select ${currency.type}`}
                     key={currency.type}
                     className="flex items-center gap-3 text-lg sm:gap-4 sm:text-2xl text-ddl_dark"
                     whileHover={{ x: 6, transition: { ease: 'easeOut', duration: 0.2 } }}
@@ -257,6 +259,7 @@ const ContactForm: React.FC = () => {
 
       <div className="flex flex-col items-end justify-between lg:items-center lg:flex-row">
         <motion.button
+          aria-label="send brief"
           onMouseEnter={() => changeCursorType('hover_brand')}
           onMouseLeave={() => changeCursorType('normal_brand')}
           className="px-12 py-3 mt-2 font-normal transition-colors border-[0.175rem] rounded-full whitespace-nowrap lg:mt-0 text-ddl_offwhite bg-ddl_dark text-body border-ddl_dark"

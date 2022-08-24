@@ -51,6 +51,7 @@ const Hero: React.FC<Props> = ({ title }) => {
         </motion.h1>
       </div>
       <motion.button
+        aria-label="scroll down"
         onClick={goToNextSection}
         onMouseEnter={() => changeCursorType('hover_brand_light')}
         onMouseLeave={() => changeCursorType('normal_brand_light')}

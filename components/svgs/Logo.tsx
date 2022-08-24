@@ -31,7 +31,14 @@ const Logo: React.FC<Props> = ({ className }) => {
   }, [mousePosition])
 
   return (
-    <svg ref={ref} viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <svg
+      aria-label="Duo Design Lab Logo"
+      ref={ref}
+      viewBox="0 0 90 90"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
       <path
         d="M45 0C20.1857 0 0 20.1857 0 45C0 69.8143 20.1857 90 45 90C69.8143 90 90 69.8143 90 45C90 20.1857 69.8143 0 45 0ZM45.0334 85.2094C22.8253 85.2094 4.824 67.2094 4.824 45C4.824 22.7906 22.824 4.79057 45.0334 4.79057C67.2429 4.79057 85.2429 22.7931 85.2429 45C85.2429 67.2069 67.2429 85.2094 45.0334 85.2094Z"
         fill="currentColor"

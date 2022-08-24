@@ -22,6 +22,7 @@ const FilterPill: React.FC<Props> = ({ label, active, setCurrentFilter }) => {
   const { changeCursorType } = useCursorStore()
   return (
     <motion.button
+      aria-label={label}
       className={cn(
         'px-7 sm:px-12 py-3 border-2 rounded-full text-sm sm:text-body border-ddl_dark font-medium transition-colors whitespace-nowrap',
         active ? 'bg-ddl_dark text-ddl_offwhite' : 'text-ddl_dark'
