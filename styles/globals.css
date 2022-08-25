@@ -61,6 +61,22 @@
   visibility: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #cedfd7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(18, 71, 52, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(18, 71, 52, 0.8);
+}
+
 @font-face {
   font-family: 'Satoshi';
   src: url('../fonts/satoshi/Satoshi-Black.woff');

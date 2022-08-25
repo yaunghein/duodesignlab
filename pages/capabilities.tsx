@@ -247,7 +247,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             )}
           >
             <motion.h1
-              className="text-center text-big-visual md:main-title text-ddl_dark"
+              className="text-center xs:text-4xl text-big-visual md:main-title text-ddl_dark"
               initial={{ y: 64, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
             >
@@ -286,7 +286,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
 
             {currentCapability === 'Web Development' && (
               <motion.p
-                className="max-w-[34rem] text-center text-body text-ddl_dark px-5 lg:px-0"
+                className="max-w-[34rem] text-center text-body text-ddl_dark"
                 initial={{ y: 64, opacity: 0 }}
                 animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
               >

@@ -42,7 +42,7 @@ const Capibility: React.FC<Props> = ({ title, description }) => {
       <div className="relative flex-1 my-12 lg:my-0">
         <p className="font-normal text-body text-ddl_offwhite lg:max-w-[26rem]">{description}</p>
       </div>
-      <div className="relative flex items-start flex-1 lg:justify-end">
+      <div className="relative flex items-start flex-1 xs:justify-center lg:justify-end">
         <Link href="/capabilities">
           <motion.a
             aria-label={`learn more about ${title}`}

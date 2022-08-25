@@ -75,7 +75,7 @@ const HomeHero: React.FC = () => {
           {mobileTexts.map((text, i) => (
             <motion.span
               key={text}
-              className="block main-title text-ddl_brand_light"
+              className="block xs:text-2xl main-title text-ddl_brand_light"
               aria-hidden
               initial={{ y: 64, opacity: 0 }}
               animate={{ y: 0, opacity: 1, transition: { duration: 0.6, delay: i * 0.05 } }}

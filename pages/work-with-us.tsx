@@ -61,7 +61,7 @@ const WorkWithUs: NextPageWithLayout = () => {
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
                   href="tel:09123456789"
-                  className="mr-12 font-normal lg:mr-auto text-body text-ddl_dark"
+                  className="mr-12 font-normal lg:mr-auto xs:text-base text-body text-ddl_dark"
                 >
                   09 123 456 789
                 </motion.a>
@@ -69,7 +69,7 @@ const WorkWithUs: NextPageWithLayout = () => {
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
                   href="tel:09123456789"
-                  className="font-normal text-body text-ddl_dark"
+                  className="font-normal xs:text-[1rem] text-body text-ddl_dark"
                 >
                   09 123 456 789
                 </motion.a>

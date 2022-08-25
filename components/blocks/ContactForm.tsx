@@ -216,7 +216,7 @@ const ContactForm: React.FC = () => {
             type="text"
             name="budget"
             id="budget"
-            className="w-3/4 px-6 pb-[0.1rem] lg:pb-[0.3rem] font-normal transition border-[0.175rem] rounded-full rounded-r-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
+            className="w-3/4 px-6 lg:pb-[0.2rem] font-normal transition border-[0.175rem] rounded-full rounded-r-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
             value={inputs.budget}
             onChange={handleInputChange}
           />
