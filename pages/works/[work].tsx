@@ -58,7 +58,7 @@ interface Props {
 
 const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
   const [isShowMore, setIsShowMore] = useState(false)
-  const { ref, animation, variants } = useFadeUp()
+  const [ref, animation, variants] = useFadeUp()
   const { changeCursorType, resetCursorType } = useCursorStore()
 
   return (

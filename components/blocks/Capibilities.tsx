@@ -18,7 +18,7 @@ interface Props {
 }
 
 const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
-  const { ref, animation, variants } = useFadeUp()
+  const [ref, animation, variants] = useFadeUp()
   const { changeCursorType, resetCursorType } = useCursorStore()
 
   return (

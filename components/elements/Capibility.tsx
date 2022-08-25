@@ -20,7 +20,7 @@ interface Props {
 }
 
 const Capibility: React.FC<Props> = ({ title, description }) => {
-  const { ref, animation, variants } = useFadeUp()
+  const [ref, animation, variants] = useFadeUp()
   const { changeCapability } = useCapabilityStore()
   const { changeCursorType } = useCursorStore()
 

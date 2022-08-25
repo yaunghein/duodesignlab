@@ -3,10 +3,11 @@ import { useRef, useEffect, useMemo } from 'react'
 // third-parties
 import { useInView, useAnimation } from 'framer-motion'
 
+/** @return [ref, animation, variants] */
 const useFadeIn = (delay?: number) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { margin: '-12%' })
-  const animation = useAnimation()
+  const animation: any = useAnimation()
 
   const variants = useMemo(
     () => ({
@@ -20,7 +21,7 @@ const useFadeIn = (delay?: number) => {
     isInView && animation.start('visible')
   }, [animation, isInView])
 
-  return { ref, animation, variants }
+  return [ref, animation, variants]
 }
 
 export default useFadeIn

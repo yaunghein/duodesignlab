@@ -23,7 +23,7 @@ interface Props {
 const WorksWithFilters: React.FC<Props> = ({ works }) => {
   const [currentFilter, setCurrentFilter] = useState<WorkFilterType>('All')
   const [filteredWorks, setFilteredWorks] = useState(works)
-  const { ref, animation, variants } = useFadeUp()
+  const [ref, animation, variants] = useFadeUp()
   const { changeCursorType, resetCursorType } = useCursorStore()
 
   useEffect(() => {

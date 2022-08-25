@@ -25,10 +25,10 @@ interface Props {
 }
 
 const FoundingMember: React.FC<Props> = ({ member, index }) => {
-  const { ref, animation, variants } = useFadeUp(index)
-  const { ref: ref2, animation: animation2, variants: variants2 } = useFadeUp(1)
-  const { ref: ref3, animation: animation3, variants: variants3 } = useFadeUp(2)
-  const { ref: ref4, animation: animation4, variants: variants4 } = useFadeIn()
+  const [ref, animation, variants] = useFadeUp(index)
+  const [ref2, animation2, variants2] = useFadeUp(1)
+  const [ref3, animation3, variants3] = useFadeUp(2)
+  const [ref4, animation4, variants4] = useFadeIn()
   const { changeCursorType } = useCursorStore()
 
   return (

@@ -20,9 +20,9 @@ interface Props {
 }
 
 const WorkHero: React.FC<Props> = ({ work, isShowMore, setIsShowMore }) => {
-  const { ref, animation, variants } = useFadeUp()
-  const { ref: ref2, animation: animation2, variants: variants2 } = useFadeUp(1)
-  const { ref: ref3, animation: animation3, variants: variants3 } = useFadeUp(2)
+  const [ref, animation, variants] = useFadeUp()
+  const [ref2, animation2, variants2] = useFadeUp(1)
+  const [ref3, animation3, variants3] = useFadeUp(2)
   const { changeCursorType, resetCursorType } = useCursorStore()
   const { width } = useWindowSize()
 

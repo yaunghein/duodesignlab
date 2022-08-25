@@ -20,7 +20,7 @@ interface Props {
 }
 
 const Members: React.FC<Props> = ({ members }) => {
-  const { ref, animation, variants } = useFadeUp()
+  const [ref, animation, variants] = useFadeUp()
   const { changeCursorType, resetCursorType } = useCursorStore()
 
   return (

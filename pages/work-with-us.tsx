@@ -19,8 +19,8 @@ import ContactForm from '$blocks/ContactForm'
 import useCursorStore from '$stores/CursorStore'
 
 const WorkWithUs: NextPageWithLayout = () => {
-  const { ref, animation, variants } = useFadeUp()
-  const { ref: ref2, animation: animation2, variants: variants2 } = useFadeUp(1)
+  const [ref, animation, variants] = useFadeUp()
+  const [ref2, animation2, variants2] = useFadeUp(1)
   const { changeCursorType, resetCursorType } = useCursorStore()
 
   return (
