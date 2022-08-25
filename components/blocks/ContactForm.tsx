@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
     }
 
     // check email format
-    const mailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    const mailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
     const isMailFormatValid = inputs.email?.match(mailRegex)
     if (!isMailFormatValid && !errors.email) errors.email = 'Please provide valid email.'
     setErrors(errors)

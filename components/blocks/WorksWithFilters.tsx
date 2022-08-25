@@ -47,7 +47,7 @@ const WorksWithFilters: React.FC<Props> = ({ works }) => {
           animate={animation}
           initial="hidden"
           variants={variants}
-          className="flex items-center gap-5 px-5 -mx-5 overflow-x-scroll sm:overflow-visible sm:px-0 sm:mx-0 hide-scrollbar"
+          className="flex items-center gap-3 px-5 -mx-5 overflow-x-scroll sm:gap-5 sm:overflow-visible sm:px-0 sm:mx-0 hide-scrollbar"
         >
           <FilterPill label="All" active={currentFilter === 'All'} setCurrentFilter={setCurrentFilter} />
           <FilterPill label="Branding" active={currentFilter === 'Branding'} setCurrentFilter={setCurrentFilter} />

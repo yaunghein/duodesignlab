@@ -63,6 +63,37 @@
         "slug": "paing-mentoring-family"
       },
       "prev": {
+        "name": "Tech Café",
+        "slug": "tech-cafe"
+      }
+    }
+  },
+  {
+    "name": "Tech Café",
+    "slug": "tech-cafe",
+    "description": "<p>Tech Café is Burmese technology podcast that covers a wide range of technology topics and breaks down the difficult techy subjects so that everyone can easily understand.</p><p>The goal of the project is to create a brand that produces quality contents and feels casual and simple.</p><p>The logomark is inspired from casual talk. The gradients represent the different topics that are covered during the casual talk.The dots represent the different starting points of the conversation and give more movement to the gradients.The speech bubble icon mark is integrated into the word mark itself. Yet, it is versatile enough to stand alone.</p>",
+    "scope": ["Branding"],
+    "year": "2021",
+    "website": null,
+    "owners": ["aung-pyae-kyaw"],
+    "thumbnail": "/assets/works/tech-cafe/thumbnail.jpg",
+    "images": [
+      { "path": "/assets/works/tech-cafe/1.jpg", "width": 3840, "height": 1280 },
+      { "path": "/assets/works/tech-cafe/2.jpg", "width": 3840, "height": 1280 },
+      { "path": "/assets/works/tech-cafe/3.jpg", "width": 3840, "height": 1280 },
+      { "path": "/assets/works/tech-cafe/4.jpg", "width": 3842, "height": 1920 },
+      { "path": "/assets/works/tech-cafe/5.jpg", "width": 3842, "height": 1920 },
+      { "path": "/assets/works/tech-cafe/6.jpg", "width": 2400, "height": 1080 },
+      { "path": "/assets/works/tech-cafe/7.jpg", "width": 2400, "height": 1350 },
+      { "path": "/assets/works/tech-cafe/8.jpg", "width": 2400, "height": 1800 },
+      { "path": "/assets/works/tech-cafe/9.jpg", "width": 2400, "height": 2400 }
+    ],
+    "more": {
+      "next": {
+        "name": "APM Help",
+        "slug": "apm-help"
+      },
+      "prev": {
         "name": "Kyaw San Htoo Pharmacy",
         "slug": "kyawsanhtoo-pharmacy"
       }
@@ -87,8 +118,35 @@
     ],
     "more": {
       "next": {
-        "name": "APM Help",
-        "slug": "apm-help"
+        "name": "Tech Café",
+        "slug": "tech-cafe"
+      },
+      "prev": {
+        "name": "Try Burmese",
+        "slug": "try-burmese"
+      }
+    }
+  },
+  {
+    "name": "Try Burmese",
+    "slug": "try-burmese",
+    "description": "<p>Try Burmese is a small online shop that sells Burmese foods in the UK.</p><p>We designed a simple emblem which can communicate Burmese aesthetics. The logo features Burmese traditional pedestal, which is mostly used for serving food to guests. We also created a simple ornament, inspired from traditional Burmese lacquerware ornaments, to tie down all the elements of the emblem.</p>",
+    "scope": ["Branding"],
+    "year": "2021",
+    "website": null,
+    "owners": ["aung-pyae-kyaw"],
+    "thumbnail": "/assets/works/try-burmese/thumbnail.jpg",
+    "images": [
+      { "path": "/assets/works/try-burmese/1.jpg", "width": 3840, "height": 1464 },
+      { "path": "/assets/works/try-burmese/2.jpg", "width": 3840, "height": 3840 },
+      { "path": "/assets/works/try-burmese/3.jpg", "width": 2160, "height": 2160 },
+      { "path": "/assets/works/try-burmese/4.jpg", "width": 2160, "height": 2160 },
+      { "path": "/assets/works/try-burmese/5.jpg", "width": 3840, "height": 2880 }
+    ],
+    "more": {
+      "next": {
+        "name": "Kyaw San Htoo Pharmacy",
+        "slug": "kyawsanhtoo-pharmacy"
       },
       "prev": null
     }

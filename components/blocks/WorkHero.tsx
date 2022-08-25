@@ -82,19 +82,21 @@ const WorkHero: React.FC<Props> = ({ work, isShowMore, setIsShowMore }) => {
               <span className="font-medium text-body">Scope:</span>
               <span className="font-medium text-body">{work.scope.join(', ')}</span>
             </motion.div>
-            <motion.div ref={ref3} animate={animation3} initial="hidden" variants={variants3} className="flex gap-2 pb-1">
-              <span className="font-medium text-body">Live at: </span>
-              <motion.a
-                onMouseEnter={() => changeCursorType('hover_brand')}
-                onMouseLeave={() => changeCursorType('normal_brand')}
-                href={`https://${work.website}`}
-                target="_blank"
-                rel="noreferrer"
-                className="font-medium underline text-body"
-              >
-                {work.website}
-              </motion.a>
-            </motion.div>
+            {work.website && (
+              <motion.div ref={ref3} animate={animation3} initial="hidden" variants={variants3} className="flex gap-2 pb-1">
+                <span className="font-medium text-body">Live at: </span>
+                <motion.a
+                  onMouseEnter={() => changeCursorType('hover_brand')}
+                  onMouseLeave={() => changeCursorType('normal_brand')}
+                  href={`https://${work.website}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium underline text-body"
+                >
+                  {work.website}
+                </motion.a>
+              </motion.div>
+            )}
           </div>
         </div>
       </div>

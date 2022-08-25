@@ -81,12 +81,14 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
           </div>
 
           <div className="grid gap-5 mt-8 font-medium md:mt-12 lg:hidden text-body">
-            <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex gap-2">
-              <span className="whitespace-nowrap">Live at: </span>
-              <a href={`https://${work.website}`} target="_blank" rel="noreferrer" className="underline">
-                {work.website}
-              </a>
-            </motion.div>
+            {work.website && (
+              <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex gap-2">
+                <span className="whitespace-nowrap">Live at: </span>
+                <a href={`https://${work.website}`} target="_blank" rel="noreferrer" className="underline">
+                  {work.website}
+                </a>
+              </motion.div>
+            )}
             <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex gap-2">
               <span>Scope:</span>
               <span>{work.scope.join(', ')}</span>
