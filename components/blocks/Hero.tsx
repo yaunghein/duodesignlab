@@ -40,7 +40,7 @@ const Hero: React.FC<Props> = ({ title }) => {
 
       <div
         className="relative flex items-center justify-center h-[55vh] md:h-screen ddl-container"
-        style={{ opacity: `${1 - scrollTrackByElement}` }}
+        style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translateY(${scrollTrackByElement * 150}px)` }}
       >
         <motion.h1
           className="text-center text-big-visual text-ddl_brand_light"

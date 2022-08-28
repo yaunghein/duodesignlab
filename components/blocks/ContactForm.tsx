@@ -278,8 +278,10 @@ const ContactForm: React.FC = () => {
       {serverError && <span className="block -mt-1 text-base text-right text-red-600 sm:text-xl lg:text-left lg:-mt-5">{serverError}</span>}
 
       {status.isSubmitted && (
-        <span className="block -mt-1 text-base text-right sm:text-xl lg:text-left lg:-mt-5 text-ddl_brand">
+        <span className="block -mt-1 text-base text-right xs:text-sm sm:text-xl lg:text-left lg:-mt-5 text-ddl_brand">
           {`Thanks, ${status.senderName.split(' ')[0]}! You submission has been received.`}
+          <br />
+          We will get back to you in 24 hours.
         </span>
       )}
 

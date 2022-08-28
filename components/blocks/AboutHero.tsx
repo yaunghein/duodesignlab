@@ -31,18 +31,16 @@ const AboutHero: React.FC = () => {
       <Image alt="" src={useTexture()} layout="fill" />
 
       <div
-        className="relative grid items-center h-screen grid-cols-1 pb-10 pt-28 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28"
-        style={{ opacity: `${1 - scrollTrackByElement}` }}
+        className="relative grid items-center h-screen grid-cols-1 pt-20 pb-20 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28"
+        style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translateY(${scrollTrackByElement * 150}px)` }}
       >
-        <div>
-          <motion.h1
-            initial={{ y: 64, opacity: 0 }}
-            animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
-            className="mt-0 lg:-mt-56 text-big-visual md:main-title text-ddl_brand_light"
-          >
-            <span className="sm:block">About</span> Duo Design Lab
-          </motion.h1>
-        </div>
+        <motion.h1
+          initial={{ y: 64, opacity: 0 }}
+          animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
+          className="mt-0 lg:-mt-56 text-big-visual md:main-title text-ddl_brand_light"
+        >
+          <span className="sm:block">About</span> Duo Design Lab
+        </motion.h1>
         <div className="grid gap-5 lg:gap-12">
           {p.map((text, i) => (
             <motion.p

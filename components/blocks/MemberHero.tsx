@@ -27,7 +27,7 @@ const MemberHero: React.FC<Props> = ({ member }) => {
 
   return (
     <motion.section className="bg-white text-ddl_dark" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 pt-36 md:pt-64 ddl-container">
+      <div className="grid grid-cols-1 pt-32 lg:grid-cols-2 md:pt-56 ddl-container">
         <div className="-mt-7">
           <motion.h1 ref={ref} animate={animation} initial="hidden" variants={variants} className="text-big-visual md:main-title">
             {member.name}
@@ -124,7 +124,7 @@ const MemberHero: React.FC<Props> = ({ member }) => {
           />
         </div>
         <div className="relative hidden lg:block px-28">
-          <div className="sticky top-24">
+          <div className="sticky top-32">
             <BlurImage alt={member.name} src={member.image} width={1294} height={1528} />
           </div>
         </div>

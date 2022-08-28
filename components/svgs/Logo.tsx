@@ -24,8 +24,8 @@ const Logo: React.FC<Props> = ({ className }) => {
         y: mousePosition.y - logoPosition.y,
       }
       setTrack({
-        x: Number((mousePositionToLogo.x / window.innerWidth).toFixed(1)),
-        y: Number((mousePositionToLogo.y / window.innerHeight).toFixed(1)),
+        x: mousePositionToLogo.x / window.innerWidth,
+        y: mousePositionToLogo.y / window.innerHeight,
       })
     }
   }, [mousePosition])
@@ -46,7 +46,6 @@ const Logo: React.FC<Props> = ({ className }) => {
       <path
         d="M61.3736 25.7142H54.3561V44.9999H61.5407C67.113 44.9999 71.0049 41.0502 71.0049 35.3931C71.0049 29.6999 67.0436 25.7142 61.3736 25.7142ZM59.1801 30.2978H61.0856C64.2163 30.2978 66.0124 32.1557 66.0124 35.3931C66.0124 38.5855 64.278 40.4164 61.2553 40.4164H59.1801V30.2978Z"
         fill="currentColor"
-        className="transition"
         style={{
           transform: `translate(${-track.x * 10}px, ${track.y * 10}px)`,
         }}
@@ -54,7 +53,6 @@ const Logo: React.FC<Props> = ({ className }) => {
       <path
         d="M26.3018 25.7142H19.2857V44.9999H26.4703C32.0413 44.9999 35.9331 41.0502 35.9331 35.3931C35.9331 29.6999 31.9731 25.7142 26.3018 25.7142ZM24.1084 40.4164V30.2978H26.0138C29.1458 30.2978 30.942 32.1557 30.942 35.3931C30.942 38.5855 29.2076 40.4164 26.1848 40.4164H24.1084Z"
         fill="currentColor"
-        className="transition"
         style={{
           transform: `translate(${-track.x * 10}px, ${track.y * 10}px)`,
         }}
@@ -62,7 +60,6 @@ const Logo: React.FC<Props> = ({ className }) => {
       <path
         d="M43.3941 51.4286H38.5714V70.7143H51.4286V66.132H43.3941V51.4286Z"
         fill="currentColor"
-        className="transition"
         style={{
           transform: `translate(${-track.x * 10}px, ${track.y * 10}px)`,
         }}

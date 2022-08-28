@@ -76,7 +76,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
     }
   }, [works, currentCapability])
 
-  useEffect(() => window.scrollTo({ top: 1, behavior: 'smooth' }), [currentCapability])
+  useEffect(() => window.scrollTo({ top: 1 }), [currentCapability])
 
   return (
     <>
@@ -238,7 +238,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             'relative flex items-start md:items-center justify-center ddl-container mix-blend-multiply pointer-events-none',
             currentCapability ? 'h-screen' : 'h-[calc(100vh-7rem)] lg:h-[calc(100vh-6rem)]'
           )}
-          style={{ opacity: `${1 - scrollTrackByElement}` }}
+          style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translateY(${scrollTrackByElement * 150}px)` }}
         >
           <div
             className={cn(
