@@ -32,7 +32,11 @@ export interface WorkType {
     }
   }
   personal?: boolean
-  testimonial?: string
+  testimonial?: {
+    text: string
+    client_name: string
+    client_position: string
+  }
 }
 
 export interface WorkThumbnailType {

@@ -46,7 +46,11 @@
         "slug": "kyawsanhtoo-pharmacy"
       }
     },
-    "testimonial": "There’s something about this studio that’s really connect with us."
+    "testimonial": {
+      "text": "Yan is a triple threat as he not only can design but he can also code. His third skill is his uncanny ability to understand disparate requirements and turn them into amazing user experiences.",
+      "client_name": "Taylor Hou",
+      "client_position": "Chief Happiness Officer @ APM Help"
+    }
   },
   {
     "name": "APM Help",
@@ -68,7 +72,11 @@
         "slug": "tech-cafe"
       }
     },
-    "testimonial": "There’s something about this studio that’s really connect with us. 2"
+    "testimonial": {
+      "text": "Yan is a triple threat as he not only can design but he can also code. His third skill is his uncanny ability to understand disparate requirements and turn them into amazing user experiences.",
+      "client_name": "Taylor Hou",
+      "client_position": "Chief Happiness Officer @ APM Help"
+    }
   },
   {
     "name": "Tech Café",

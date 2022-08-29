@@ -61,11 +61,14 @@ interface Props {
 
 const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
   const [isShowMore, setIsShowMore] = useState(false)
-  const [ref, animation, variants] = useFadeUp()
-  const [ref2, animation2, variants2] = useFadeUp()
   const { changeCursorType, resetCursorType } = useCursorStore()
   const projectImages = useMemo(() => (work.images.length > 1 ? work.images.slice(0, work.images.length - 1) : work.images), [work])
   const lastProjectImages = useMemo(() => (work.images.length > 1 ? work.images[work.images.length - 1] : null), [work])
+
+  const [ref, animation, variants] = useFadeUp()
+  const [ref2, animation2, variants2] = useFadeUp()
+  const [ref3, animation3, variants3] = useFadeUp()
+  const [ref4, animation4, variants4] = useFadeUp()
 
   return (
     <>
@@ -87,15 +90,29 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
           </div>
 
           {work.testimonial && (
-            <motion.p
-              ref={ref2}
-              animate={animation2}
-              initial="hidden"
-              variants={variants2}
-              className="mx-auto my-20 text-center lg:my-48 sm:px-20 lg:px-72 main-title text-ddl_brand"
-            >
-              “{work.testimonial}”
-            </motion.p>
+            <div className="mx-auto my-20 text-center lg:my-48 sm:px-20 lg:px-72 text-ddl_brand">
+              <motion.p ref={ref2} animate={animation2} initial="hidden" variants={variants2} className="text-2xl lg:secondary-title">
+                “{work.testimonial.text}”
+              </motion.p>
+              <motion.p
+                ref={ref3}
+                animate={animation3}
+                initial="hidden"
+                variants={variants3}
+                className="mt-10 text-lg font-bold lg:mt-20 lg:text-body"
+              >
+                {work.testimonial.client_name}
+              </motion.p>
+              <motion.p
+                ref={ref4}
+                animate={animation4}
+                initial="hidden"
+                variants={variants4}
+                className="mt-2 text-lg font-normal lg:mt-5 lg:text-body"
+              >
+                {work.testimonial.client_position}
+              </motion.p>
+            </div>
           )}
 
           {lastProjectImages && (
