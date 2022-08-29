@@ -207,7 +207,11 @@ const ContactForm: React.FC = () => {
             Budget
             <span className="text-xl text-red-600">*</span>
           </label>
-          <label htmlFor="budget" className="w-[30%] sm:w-1/4 font-normal text-body text-ddl_dark">
+          <label
+            htmlFor="currency-type"
+            className="w-[30%] sm:w-1/4 font-normal text-body text-ddl_dark"
+            onClick={() => setIsCurrencyMenuOpen(!isCurrencyMenuOpen)}
+          >
             Currency
           </label>
         </div>
@@ -222,6 +226,7 @@ const ContactForm: React.FC = () => {
           />
           <div
             role="button"
+            id="currency-type"
             aria-label="choose currency"
             className="w-[30%] sm:w-1/4 select-none lg:-mb-[0.5px] grid place-items-center lg:pb-[0.2rem] font-normal transition border-[0.175rem] border-l-0 rounded-full rounded-l-none outline-none text-ddl_dark border-ddl_dark h-12 sm:h-14 text-body focus:border-ddl_brand"
             onClick={() => setIsCurrencyMenuOpen(!isCurrencyMenuOpen)}

@@ -31,7 +31,8 @@ export interface WorkType {
       slug: string
     }
   }
-  personal: boolean
+  personal?: boolean
+  testimonial?: string
 }
 
 export interface WorkThumbnailType {

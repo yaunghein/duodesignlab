@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -34,6 +34,9 @@ import works from '$fixtures/works.json'
 // stores
 import useCursorStore from '$stores/CursorStore'
 
+// utils
+import cn from '$utils/cn'
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = works.map((work) => ({ params: { work: work.slug } }))
   return {
@@ -59,7 +62,10 @@ interface Props {
 const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
   const [isShowMore, setIsShowMore] = useState(false)
   const [ref, animation, variants] = useFadeUp()
+  const [ref2, animation2, variants2] = useFadeUp()
   const { changeCursorType, resetCursorType } = useCursorStore()
+  const projectImages = useMemo(() => (work.images.length > 1 ? work.images.slice(0, work.images.length - 1) : work.images), [work])
+  const lastProjectImages = useMemo(() => (work.images.length > 1 ? work.images[work.images.length - 1] : null), [work])
 
   return (
     <>
@@ -73,12 +79,35 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
       <motion.section className="bg-white" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
         <div className="py-8 ddl-container md:py-28">
           <div className="grid gap-2">
-            {work.images.map((image: ImageType) => (
+            {projectImages.map((image: ImageType) => (
               <div key={image.path} className="border border-ddl_brand border-opacity-5">
                 <BlurImage alt={`${work.name}`} src={image.path} width={image.width} height={image.height} />
               </div>
             ))}
           </div>
+
+          {work.testimonial && (
+            <motion.p
+              ref={ref2}
+              animate={animation2}
+              initial="hidden"
+              variants={variants2}
+              className="mx-auto my-20 text-center lg:my-48 sm:px-20 lg:px-72 main-title text-ddl_brand"
+            >
+              “{work.testimonial}”
+            </motion.p>
+          )}
+
+          {lastProjectImages && (
+            <div key={lastProjectImages.path} className={cn('border border-ddl_brand border-opacity-5', !work.testimonial ? 'mt-2' : '')}>
+              <BlurImage
+                alt={`${work.name}`}
+                src={lastProjectImages.path}
+                width={lastProjectImages.width}
+                height={lastProjectImages.height}
+              />
+            </div>
+          )}
 
           <div className="grid gap-5 mt-8 font-medium md:mt-12 lg:hidden text-body">
             {work.website && (
