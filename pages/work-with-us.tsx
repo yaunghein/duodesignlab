@@ -52,26 +52,26 @@ const WorkWithUs: NextPageWithLayout = () => {
                 <motion.a
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
-                  href="mailto:contact@duodesignlab.com"
+                  href="mailto:duodesignlab.mm@gmail.com"
                   className="w-full font-normal underline text-body text-ddl_dark"
                 >
-                  contact@duodesignlab.com
+                  duodesignlab.mm@gmail.com
                 </motion.a>
                 <motion.a
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
-                  href="tel:09123456789"
+                  href="tel:+959962323716"
                   className="mr-12 font-normal lg:mr-auto xs:text-base text-body text-ddl_dark"
                 >
-                  09 123 456 789
+                  +959 962 323 716
                 </motion.a>
                 <motion.a
                   onMouseEnter={() => changeCursorType('hover_brand')}
                   onMouseLeave={() => changeCursorType('normal_brand')}
-                  href="tel:09123456789"
+                  href="tel:+959785958846"
                   className="font-normal xs:text-[1rem] text-body text-ddl_dark"
                 >
-                  09 123 456 789
+                  +959 785 958 846
                 </motion.a>
               </div>
             </div>

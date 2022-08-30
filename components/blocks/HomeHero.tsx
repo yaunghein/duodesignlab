@@ -56,7 +56,7 @@ const HomeHero: React.FC = () => {
         </h1>
 
         {/* for desktop */}
-        <div className="hidden -mb-40 md:block" style={{ transform: `translateY(${scrollTrackByElement * 150}px)` }}>
+        <div className="hidden -mb-20 md:block" style={{ transform: `translateY(${scrollTrackByElement * 150}px)` }}>
           {desktopTexts.map((text, i) => (
             <motion.span
               key={text}

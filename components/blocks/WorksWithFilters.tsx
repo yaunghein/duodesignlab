@@ -50,7 +50,7 @@ const WorksWithFilters: React.FC<Props> = ({ works }) => {
           className="flex items-center gap-3 px-5 -mx-5 overflow-x-scroll sm:gap-5 sm:overflow-visible sm:px-0 sm:mx-0 hide-scrollbar"
         >
           <FilterPill label="All" active={currentFilter === 'All'} setCurrentFilter={setCurrentFilter} />
-          <FilterPill label="Branding" active={currentFilter === 'Branding'} setCurrentFilter={setCurrentFilter} />
+          <FilterPill label="Brand Identity" active={currentFilter === 'Brand Identity'} setCurrentFilter={setCurrentFilter} />
           <FilterPill label="Web Development" active={currentFilter === 'Web Development'} setCurrentFilter={setCurrentFilter} />
         </motion.div>
         <div className="grid grid-cols-1 gap-2 mt-5 lg:grid-cols-2 md:mt-12">

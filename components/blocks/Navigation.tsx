@@ -111,7 +111,7 @@ const Navigation: React.FC = () => {
           >
             <LogoWhite
               className={cn(
-                'w-[2.8rem] h-[2.925rem] md:w-[5.5rem] md:h-[5.5rem] relative z-10 transition cursor-pointer',
+                'w-[2.8rem] h-[2.925rem] md:w-[5.2rem] md:h-[5.2rem] relative z-10 transition cursor-pointer',
                 isMenuOpen
                   ? menuTheme === 'ddl_brand'
                     ? 'text-ddl_brand_light'

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
-type TextureType = 'one' | 'two' | 'three' | 'four' | 'five'
+type TextureType = 'one' | 'two' | 'three' | 'four'
 
-const textures: TextureType[] = ['one', 'two', 'three', 'four', 'five']
+const textures: TextureType[] = ['one', 'two', 'three', 'four']
 
 const useTexture = () => {
   const [texture, setTexture] = useState<TextureType>('one')

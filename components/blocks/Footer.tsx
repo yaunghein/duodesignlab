@@ -32,17 +32,17 @@ const Footer: React.FC = () => {
             href="https://www.facebook.com/duodesignlab/"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-normal md:text-link-size"
+            className="text-sm font-normal uppercase md:text-link-size"
           >
             Facebook
           </motion.a>
           <motion.a
             onMouseEnter={() => (isBgDark ? changeCursorType('hover_brand_light') : changeCursorType('hover_brand'))}
             onMouseLeave={() => (isBgDark ? changeCursorType('normal_brand_light') : changeCursorType('normal_brand'))}
-            href=""
+            href="https://www.linkedin.com/company/duodesignlab/"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-normal md:text-link-size"
+            className="text-sm font-normal uppercase md:text-link-size"
           >
             LinkedIn
           </motion.a>
@@ -52,13 +52,16 @@ const Footer: React.FC = () => {
             href="https://www.behance.net/duodesignlab"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-normal md:text-link-size"
+            className="text-sm font-normal uppercase md:text-link-size"
           >
             Behance
           </motion.a>
         </div>
         <span
-          className={cn('lg:ml-auto mt-5 lg:mt-0 font-normal text-sm md:text-link-size', isBgDark ? 'text-ddl_offwhite' : 'text-ddl_brand')}
+          className={cn(
+            'lg:ml-auto mt-5 lg:mt-0 font-normal text-sm md:text-link-size uppercase',
+            isBgDark ? 'text-ddl_offwhite' : 'text-ddl_brand'
+          )}
         >
           @{new Date().getFullYear()} All Rights Reserved
         </span>

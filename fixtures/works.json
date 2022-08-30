@@ -45,11 +45,6 @@
         "name": "Kyaw San Htoo Pharmacy",
         "slug": "kyawsanhtoo-pharmacy"
       }
-    },
-    "testimonial": {
-      "text": "Yan is a triple threat as he not only can design but he can also code. His third skill is his uncanny ability to understand disparate requirements and turn them into amazing user experiences.",
-      "client_name": "Taylor Hou",
-      "client_position": "Chief Happiness Officer @ APM Help"
     }
   },
   {
@@ -71,18 +66,13 @@
         "name": "Tech Café",
         "slug": "tech-cafe"
       }
-    },
-    "testimonial": {
-      "text": "Yan is a triple threat as he not only can design but he can also code. His third skill is his uncanny ability to understand disparate requirements and turn them into amazing user experiences.",
-      "client_name": "Taylor Hou",
-      "client_position": "Chief Happiness Officer @ APM Help"
     }
   },
   {
     "name": "Tech Café",
     "slug": "tech-cafe",
     "description": "<p>Tech Café is Burmese technology podcast that covers a wide range of technology topics and breaks down the difficult techy subjects so that everyone can easily understand.</p><p>The goal of the project is to create a brand that produces quality contents and feels casual and simple.</p><p>The logomark is inspired from casual talk. The gradients represent the different topics that are covered during the casual talk.The dots represent the different starting points of the conversation and give more movement to the gradients.The speech bubble icon mark is integrated into the word mark itself. Yet, it is versatile enough to stand alone.</p>",
-    "scope": ["Branding"],
+    "scope": ["Brand Identity"],
     "year": "2021",
     "website": null,
     "owners": ["aung-pyae-kyaw"],
@@ -113,7 +103,7 @@
     "name": "Kyaw San Htoo Pharmacy",
     "slug": "kyawsanhtoo-pharmacy",
     "description": "<p>Kyaw San Htoo is a pharmacy that has been running for over a decade in Pathein.</p><p>We designed a reliable logo which stands out among the competitions. For the next part, we designed a website that can provide accurate information about medicines, ensure availability for the customers and offer a contentful and representative digital experience for the residents of Pathein.</p><p>We also collaborated with Bro <a target='_blank' href='https://www.linkedin.com/in/ye-min-htun-464622175/' class='underline'>Ye Min Htun</a>, who is current working as a ux designer @ <a target='_blank' href='https://www.codigo.co/' class='underline'>Codigo</a>.</p>",
-    "scope": ["Branding", "Web Design", "Web Development"],
+    "scope": ["Brand Identity", "Web Design", "Web Development"],
     "year": "2021",
     "website": "kyawsanhtoo-pharmacy.vercel.app",
     "owners": ["aung-pyae-kyaw", "yan-aung-hein"],
@@ -141,7 +131,7 @@
     "name": "Try Burmese",
     "slug": "try-burmese",
     "description": "<p>Try Burmese is a small online shop that sells Burmese foods in the UK.</p><p>We designed a simple emblem which can communicate Burmese aesthetics. The logo features Burmese traditional pedestal, which is mostly used for serving food to guests. We also created a simple ornament, inspired from traditional Burmese lacquerware ornaments, to tie down all the elements of the emblem.</p>",
-    "scope": ["Branding"],
+    "scope": ["Brand Identity"],
     "year": "2021",
     "website": null,
     "owners": ["aung-pyae-kyaw"],

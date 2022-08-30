@@ -106,8 +106,8 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             onMouseLeave={() => changeCursorType('normal_brand')}
             className={cn(
               'absolute group',
-              currentCapability === 'Branding'
-                ? 'bottom-[45rem] lg:bottom-[30rem] right-20 lg:right-40'
+              currentCapability === 'Brand Identity'
+                ? 'bottom-[45rem] lg:bottom-[16rem] right-20 lg:right-44'
                 : currentCapability === 'Web Design'
                 ? 'bottom-[45rem] lg:bottom-32 right-20 lg:right-64'
                 : 'bottom-[32rem] lg:bottom-72 right-20 lg:right-96'
@@ -134,7 +134,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
             onMouseLeave={() => changeCursorType('normal_brand')}
             className={cn(
               'absolute group',
-              currentCapability === 'Branding' ? 'bottom-40 lg:bottom-28 left-20 lg:left-[20rem]' : '',
+              currentCapability === 'Brand Identity' ? 'bottom-40 lg:bottom-28 left-20 lg:left-[20rem]' : '',
               currentCapability === 'Web Development' ? 'bottom-[50rem] lg:bottom-[14rem] left-96 lg:left-[75rem]' : '',
               !currentCapability ? 'bottom-[36rem] lg:bottom-[24rem] left-24 lg:left-[24rem]' : ''
             )}
@@ -153,9 +153,9 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
           </motion.button>
         )}
 
-        {currentCapability !== 'Branding' && width > 639 && (
+        {currentCapability !== 'Brand Identity' && width > 639 && (
           <motion.button
-            onClick={() => changeCapability('Branding')}
+            onClick={() => changeCapability('Brand Identity')}
             onMouseEnter={() => changeCursorType('bubble')}
             onMouseLeave={() => changeCursorType('normal_brand')}
             className={cn(
@@ -163,7 +163,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               currentCapability === 'Web Development'
                 ? 'bottom-40 lg:bottom-28 left-40 lg:left-[20rem]'
                 : currentCapability === 'Web Design'
-                ? 'bottom-40 lg:bottom-[35rem] left-40 lg:left-[16rem]'
+                ? 'bottom-40 lg:bottom-[18rem] left-40 lg:left-[16rem]'
                 : 'bottom-56 lg:bottom-28 left-40 lg:left-[32rem]'
             )}
             style={{
@@ -175,7 +175,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
               <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
               <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
-                Branding
+                Brand Identity
               </div>
             </motion.div>
           </motion.button>
@@ -219,14 +219,14 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, type: 'spring', delay: 0.2 }}
-              onClick={() => changeCapability('Branding')}
+              onClick={() => changeCapability('Brand Identity')}
               className="absolute group bottom-10 right-44"
             >
               <div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.12] transition delay-[50ms] border border-ddl_brand border-opacity-10"></div>
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 w-36 h-36 md:w-[13rem] md:h-[13rem] rounded-full bg-ddl_brand bg-opacity-10 group-hover:scale-[1.06] transition delay-[50ms]"></div>
                 <div className="relative grid w-36 h-36 md:w-[13rem] md:h-[13rem] font-normal rounded-full bg-ddl_brand text-ddl_brand_light text-body place-items-center">
-                  Branding
+                  Brand Identity
                 </div>
               </div>
             </motion.button>
@@ -242,7 +242,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
         >
           <div
             className={cn(
-              currentCapability ? 'mt-48 lg:-mb-20' : 'mt-32',
+              currentCapability ? 'mt-48 lg:mb-0' : 'mt-32',
               'flex flex-col items-center justify-center gap-8 lg:gap-16 md:mt-0 transition-all'
             )}
           >
@@ -272,14 +272,14 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
                   Web Design
                 </motion.span>
               )}
-              {currentCapability === 'Branding' && (
+              {currentCapability === 'Brand Identity' && (
                 <motion.span
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
                   className="inline-block text-ddl_brand"
                 >
-                  Branding
+                  Brand Identity
                 </motion.span>
               )}
             </motion.h1>
@@ -307,7 +307,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
               </motion.p>
             )}
 
-            {currentCapability === 'Branding' && (
+            {currentCapability === 'Brand Identity' && (
               <motion.p
                 className="max-w-[26.5rem] text-center text-body text-ddl_dark"
                 initial={{ y: 64, opacity: 0 }}
@@ -324,15 +324,15 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
           <div className="absolute left-5 bottom-20">
             <div className="text-ddl_dark text-link-size">See Also</div>
             <div className="flex items-center gap-3 mt-5">
-              {currentCapability !== 'Branding' && (
+              {currentCapability !== 'Brand Identity' && (
                 <motion.button
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.2 }}
                   className="py-3 text-sm font-normal transition-colors border-2 rounded-full px-7 border-ddl_dark whitespace-nowrap"
-                  onClick={() => changeCapability('Branding')}
+                  onClick={() => changeCapability('Brand Identity')}
                 >
-                  Branding
+                  Brand Identity
                 </motion.button>
               )}
               {currentCapability !== 'Web Design' && (

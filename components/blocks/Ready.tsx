@@ -54,7 +54,7 @@ const Ready: React.FC<Props> = ({ children }) => {
                   </motion.a>
                 </Link>
                 <motion.a
-                  href="mailto:duodesignlab.com"
+                  href="mailto:duodesignlab.mm@gmail.com"
                   className="flex items-center"
                   onMouseEnter={() => changeCursorType('hover_brand_light')}
                   onMouseLeave={() => changeCursorType('normal_brand_light')}
@@ -69,20 +69,20 @@ const Ready: React.FC<Props> = ({ children }) => {
               <span className="ml-3 font-normal lg:ml-4 text-body text-ddl_offwhite">Call</span>
               <div className="flex flex-col items-center gap-5 lg:gap-12 md:flex-row">
                 <motion.a
-                  href="tel:+959 123 456 789"
+                  href="tel:+959 962 323 716"
                   className="flex items-center"
                   onMouseEnter={() => changeCursorType('hover_brand_light')}
                   onMouseLeave={() => changeCursorType('normal_brand_light')}
                 >
-                  <span className="font-normal text-body text-ddl_offwhite whitespace-nowrap">+959 123 456 789</span>
+                  <span className="font-normal text-body text-ddl_offwhite whitespace-nowrap">+959 962 323 716</span>
                 </motion.a>
                 <motion.a
-                  href="tel:+959 123 456 789"
+                  href="tel:+959 785 958 846"
                   className="flex items-center"
                   onMouseEnter={() => changeCursorType('hover_brand_light')}
                   onMouseLeave={() => changeCursorType('normal_brand_light')}
                 >
-                  <span className="font-normal text-body text-ddl_offwhite whitespace-nowrap">+959 123 456 789</span>
+                  <span className="font-normal text-body text-ddl_offwhite whitespace-nowrap">+959 785 958 846</span>
                 </motion.a>
               </div>
             </div>

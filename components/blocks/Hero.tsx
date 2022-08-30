@@ -57,7 +57,7 @@ const Hero: React.FC<Props> = ({ title }) => {
         onMouseLeave={() => changeCursorType('normal_brand_light')}
         style={{ opacity: `${1 - scrollTrackByElement}` }}
       >
-        <ScrollArrow className="hidden md:block w-[3.125rem] h-[3.125rem] text-ddl_brand absolute bottom-14 right-1/2 transform translate-x-1/2" />
+        <ScrollArrow className="hidden md:block w-[3.125rem] h-[3.125rem] text-ddl_brand absolute bottom-16 right-1/2 transform translate-x-1/2" />
       </motion.button>
     </motion.section>
   )

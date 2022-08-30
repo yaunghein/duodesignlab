@@ -1,4 +1,4 @@
-export type WorkScopeType = 'Branding' | 'Web Design' | 'Web Development' | 'Webflow Development'
+export type WorkScopeType = 'Brand Identity' | 'Web Design' | 'Web Development' | 'Webflow Development'
 
 export type WorkFilterType = 'All' | WorkScopeType
 
