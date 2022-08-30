@@ -68,7 +68,7 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
   const [ref, animation, variants] = useFadeUp()
   const [ref2, animation2, variants2] = useFadeUp()
   const [ref3, animation3, variants3] = useFadeUp()
-  const [ref4, animation4, variants4] = useFadeUp()
+  const [ref4, animation4, variants4] = useFadeUp(1)
 
   return (
     <>

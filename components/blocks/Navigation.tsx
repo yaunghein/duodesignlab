@@ -62,7 +62,7 @@ const Navigation: React.FC = () => {
       onMouseEnter={() => (isBgLight ? changeCursorType('normal_brand') : changeCursorType('normal_brand_light'))}
       onMouseLeave={resetCursorType}
       className={cn(
-        'fixed top-0 z-50 w-full transform duration-200 ease-out',
+        'fixed top-0 z-50 w-full transform transition duration-300 ease-out',
         scrollValue > height - 400 && scrollDirection === 'down' && !isReachBottom
           ? 'opacity-0 pointer-events-none'
           : 'opacity-100 pointer-events-auto',
@@ -76,7 +76,7 @@ const Navigation: React.FC = () => {
               ? 'bg-ddl_brand_light bg-opacity-70 backdrop-blur-md py-4'
               : 'bg-white bg-opacity-70 backdrop-blur-md py-4'
             : 'bg-ddl_brand bg-opacity-90 backdrop-blur-md py-4'
-          : 'py-4'
+          : 'py-6 lg:py-12'
       )}
       style={{ transitionProperty: 'padding, opacity' }}
     >
@@ -111,7 +111,7 @@ const Navigation: React.FC = () => {
           >
             <LogoWhite
               className={cn(
-                'w-[2.8rem] h-[2.925rem] md:w-[5.625rem] md:h-[5.625rem] relative z-10 transition cursor-pointer',
+                'w-[2.8rem] h-[2.925rem] md:w-[5.5rem] md:h-[5.5rem] relative z-10 transition cursor-pointer',
                 isMenuOpen
                   ? menuTheme === 'ddl_brand'
                     ? 'text-ddl_brand_light'
