@@ -30,7 +30,7 @@ const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
     >
       <div className="ddl-container">
         <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex items-end">
-          <h2 className="mr-auto main-title text-ddl_dark">Our Capibilities</h2>
+          <h2 className="mr-auto main-title text-ddl_dark">Our Capabilities</h2>
           <Link href="/capibilities">
             <motion.a
               onMouseEnter={() => changeCursorType('hover_brand')}
@@ -45,7 +45,7 @@ const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
         <div className="grid gap-2 mt-5 md:mt-12">
           <Capibility
             title="Brand Identity"
-            description="To effectively communicate your purpose and your business to your customers,a good brand identity is a must-have. We can craft you an effective brand identity based on what you stand for and what makes you unique."
+            description="To effectively communicate your purpose and your business to your customers, a good brand identity is a must-have. We can craft you an effective brand identity based on what you stand for and what makes you unique."
           />
           <Capibility
             title="Web Development"

@@ -27,7 +27,7 @@
   {
     "name": "Paing Mentoring Family",
     "slug": "paing-mentoring-family",
-    "description": "<p>Ko Aung Myo Paing is a venture capitalist and financial advisor. His mission is to help families achieve financial freedom by sharing his experiences and knowledge as a family advisor.</p><p>The goal of this project is to develop a credible website that reflects the mission of Ko Aung Myo Paing. The website needs to showcase the experiences of Ko Aung Myo Paing, Catalog his webinars and function as a blog.</p><p>In partnership with <a target='_blank' href='https://ideakhit.com/' class='underline'>IDEA Khit</a>, we defined the brand image of Ko Aung Myo Paing, designed and developed the website within 2 months using Figma, Adobe Suite, Webflow and Webflow CMS.</p>",
+    "description": "<p>Ko Aung Myo Paing is a venture capitalist and financial advisor. His mission is to help families achieve financial freedom by sharing his experiences and knowledge as a family advisor.</p><p>The goal of this project is to develop a credible website that reflects the mission of Ko Aung Myo Paing. The website needs to showcase the experiences of Ko Aung Myo Paing, Catalog his webinars and function as a blog.</p><p>In partnership with IDEA Khit, we defined the brand image of Ko Aung Myo Paing, designed and developed the website within 2 months using Figma, Adobe Suite, Webflow and Webflow CMS.</p>",
     "scope": ["Web Development", "Web Design"],
     "year": "2022",
     "website": "www.paingmentoringfamily.com",
@@ -50,13 +50,16 @@
   {
     "name": "APM Help",
     "slug": "apm-help",
-    "description": "<p>APM Help is your go-to place for property management accounting and maintenance experts. Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies - they got you cover. They also offer 30-minute FREE consultation.</p><p>We, proudly, designed and development a fully responsive and modern-looking business website for AMP Help using Webflow. Unlike WordPress, Webflow Hosting is pretty strong - the website still performs well even with over 12 pages, and over hundreds of blog posts. Again, with the help of easy-to-use Webflow CMS, they can update the content, and maintain blog posts quickly whenever they want without relying on any developer.</p><p>And special thanks to <a target='_blank' href='https://www.linkedin.com/in/hh-lynn-naing-7040b372/' class='underline'>Ma Htet Htet Lynn Naing</a> who is taking part in current rebranding process for new logo, colors, and layout designs.</p>",
+    "description": "<p>APM Help is your go-to place for property management accounting and maintenance experts. Whether it's rental property management, bookkeeping support, training, bank reconciliations, or emergencies - they got you cover. They also offer 30-minute FREE consultation.</p><p>We, proudly, designed and developed a fully responsive and modern-looking business website for APM Help using Webflow. Unlike WordPress, Webflow Hosting is pretty strong - the website still performs well even with over 12 pages, and over hundreds of blog posts. Again, with the help of easy-to-use Webflow CMS, they can update the content, and maintain blog posts quickly whenever they want without relying on any developer.</p><p>And special thanks to <a target='_blank' href='https://www.linkedin.com/in/hh-lynn-naing-7040b372/' class='underline'>Ma Htet Htet Lynn Naing</a> who is taking part in current rebranding process for new logo, colors, and layout designs.</p>",
     "scope": ["Web Development", "Web Design"],
     "year": "2021",
     "website": "www.apmhelp.com",
     "owners": ["yan-aung-hein"],
     "thumbnail": "/assets/works/apm-help/thumbnail.jpg",
-    "images": [{ "path": "/assets/works/apm-help/1.png", "width": 1920, "height": 9412 }],
+    "images": [
+      { "path": "/assets/works/apm-help/1.jpg", "width": 2180, "height": 3000 },
+      { "path": "/assets/works/apm-help/2.jpg", "width": 2030, "height": 1354 }
+    ],
     "more": {
       "next": {
         "name": "Paing Mentoring Family",
@@ -71,7 +74,7 @@
   {
     "name": "Tech Café",
     "slug": "tech-cafe",
-    "description": "<p>Tech Café is Burmese technology podcast that covers a wide range of technology topics and breaks down the difficult techy subjects so that everyone can easily understand.</p><p>The goal of the project is to create a brand that produces quality contents and feels casual and simple.</p><p>The logomark is inspired from casual talk. The gradients represent the different topics that are covered during the casual talk.The dots represent the different starting points of the conversation and give more movement to the gradients.The speech bubble icon mark is integrated into the word mark itself. Yet, it is versatile enough to stand alone.</p>",
+    "description": "<p>Tech Café is Burmese technology podcast that covers a wide range of technology topics and breaks down the difficult techy subjects so that everyone can easily understand.</p><p>The goal of the project is to create a brand that produces quality contents and feels casual and simple.</p><p>The logomark is inspired from casual talk. The gradients represent the different topics that are covered during the casual talk. The dots represent the different starting points of the conversation and give more movement to the gradients. The speech bubble icon mark is integrated into the word mark itself. Yet, it is versatile enough to stand alone.</p>",
     "scope": ["Brand Identity"],
     "year": "2021",
     "website": null,

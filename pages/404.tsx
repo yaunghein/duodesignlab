@@ -14,6 +14,7 @@ import useCursorStore from '$stores/CursorStore'
 // hooks
 import useFadeUp from '$hooks/useFadeUp'
 import useWindowSize from '$hooks/useWindowSize'
+import useMousePosition from '$hooks/useMousePosition'
 
 // svgs
 import Four from '$svgs/Four'
@@ -42,10 +43,11 @@ const number = {
 const NotFound: NextPageWithLayout = () => {
   const router = useRouter()
   const { changeCursorType, resetCursorType } = useCursorStore()
-  const { width } = useWindowSize()
   const [ref, animation, variants] = useFadeUp()
   const [ref2, animation2, variants2] = useFadeUp(1)
   const [ref3, animation3, variants3] = useFadeUp(2)
+  const { width } = useWindowSize()
+  const { mouseTrack } = useMousePosition()
 
   return (
     <>
@@ -64,13 +66,28 @@ const NotFound: NextPageWithLayout = () => {
             animate="animate"
             className="absolute inset-0 flex items-end justify-center overflow-hidden -mr-7 text-ddl_brand_light"
           >
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${20 - mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)`,
+              }}
+            >
               <Four className="w-28 h-auto transform rotate-[125deg] -mb-10" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${20 - mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)`,
+              }}
+            >
               <Zero className="h-auto w-36 transform rotate-[150deg] mb-1 ml-4" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)`,
+              }}
+            >
               <Four className="h-auto -mb-1 w-28" />
             </motion.div>
           </motion.div>
@@ -82,31 +99,76 @@ const NotFound: NextPageWithLayout = () => {
             animate="animate"
             className="absolute inset-0 flex items-end justify-center overflow-hidden text-ddl_brand_light"
           >
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${20 - mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)`,
+              }}
+            >
               <Four className="w-40 h-auto transform rotate-[125deg] -mb-10" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)`,
+              }}
+            >
               <Zero className="h-auto w-60 transform rotate-[150deg] mb-4 ml-4" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${20 - mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)`,
+              }}
+            >
               <Four className="w-40 h-auto" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)`,
+              }}
+            >
               <Zero className="h-auto mb-4 w-60" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${20 - mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)`,
+              }}
+            >
               <Four className="w-40 h-auto transform -rotate-[105deg] -mb-12" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)`,
+              }}
+            >
               <Zero className="h-auto w-60 transform rotate-[65deg] mb-6" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${20 - mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)`,
+              }}
+            >
               <Four className="w-40 h-auto" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${mouseTrack.x * 20}px, ${mouseTrack.y * 20}px)`,
+              }}
+            >
               <Zero className="h-auto mb-4 w-60" />
             </motion.div>
-            <motion.div variants={number}>
+            <motion.div
+              variants={number}
+              style={{
+                transform: `translate(${20 - mouseTrack.x * 20}px, ${20 - mouseTrack.y * 20}px)`,
+              }}
+            >
               <Four className="w-40 h-auto transform -rotate-[125deg] -mb-4" />
             </motion.div>
           </motion.div>

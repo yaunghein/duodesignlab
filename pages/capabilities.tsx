@@ -313,7 +313,7 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
                 initial={{ y: 64, opacity: 0 }}
                 animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
               >
-                To effectively communicate your purpose and your business to your customers,a good brand identity is a must-have. We can
+                To effectively communicate your purpose and your business to your customers, a good brand identity is a must-have. We can
                 craft you an effective brand identity based on what you stand for and what makes you unique.
               </motion.p>
             )}

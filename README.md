@@ -9,7 +9,7 @@ pnpm dev
 To build the app:
 
 ```bash
-pnpm build
+pnpm build && pnpm sitemap
 ```
 
 To run the production server:
