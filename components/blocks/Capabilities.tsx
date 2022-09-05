@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 // elements
-import Capibility from '$elements/Capibility'
+import Capability from '$elements/Capability'
 
 // hooks
 import useFadeUp from '$hooks/useFadeUp'
@@ -43,11 +43,11 @@ const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
         </motion.div>
 
         <div className="grid gap-2 mt-5 md:mt-12">
-          <Capibility
+          <Capability
             title="Brand Identity"
             description="To effectively communicate your purpose and your business to your customers, a good brand identity is a must-have. We can craft you an effective brand identity based on what you stand for and what makes you unique."
           />
-          <Capibility
+          <Capability
             title="Web Development"
             description="No search engine loves slow and old-fashioned websites. We’re sure you won’t either. Here in Duo Design Lab, we build fast and modern Jamstack websites which align with your business needs as well. Looking for an example? You are browsing one of the examples right now…"
           />

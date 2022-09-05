@@ -14,7 +14,7 @@ import MainLayout from '$layouts/MainLayout'
 
 // blocks
 import HomeHero from '$blocks/HomeHero'
-import Capibilities from '$blocks/Capibilities'
+import Capabilities from '$blocks/Capabilities'
 import Works from '$blocks/Works'
 import Ready from '$blocks/Ready'
 
@@ -64,7 +64,7 @@ const HomePage: NextPageWithLayout<Props> = ({ works }) => {
         />
       </Head>
       <HomeHero />
-      <Capibilities bgColor="bg-ddl_offwhite" />
+      <Capabilities bgColor="bg-ddl_offwhite" />
       <Works bgColor="bg-ddl_offwhite" title="Our Works" works={works} />
       <Ready>
         <ReadyVisualOne className="w-full sm:max-w-xl text-ddl_offwhite" />

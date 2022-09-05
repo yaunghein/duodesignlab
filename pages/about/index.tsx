@@ -14,7 +14,7 @@ import MainLayout from '$layouts/MainLayout'
 
 // blocks
 import AboutHero from '$blocks/AboutHero'
-import Capibilities from '$blocks/Capibilities'
+import Capabilities from '$blocks/Capabilities'
 import Members from '$blocks/Members'
 import Ready from '$blocks/Ready'
 
@@ -58,7 +58,7 @@ const AboutPage: NextPageWithLayout<Props> = ({ members }) => {
         />
       </Head>
       <AboutHero />
-      <Capibilities />
+      <Capabilities />
       <Members members={members} />
       <Ready>
         <ReadyVisualThree className="w-full sm:max-w-xl text-ddl_offwhite" />
