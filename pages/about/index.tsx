@@ -48,7 +48,7 @@ const AboutPage: NextPageWithLayout<Props> = ({ members }) => {
       <Head>
         <title>About - Duo Design Lab</title>
         <meta
-          content="We are a boutique web design studio based in Yangon, Myanmar. We create high performing websites that are safe and easy to maintain. We also make sure that the websites we created are aligned with the client business needs as well as the audience’s."
+          content="We are a boutique web design studio based in Yangon, Myanmar. We create high performing websites that are unique and easy to maintain. We also make sure that the websites we created are aligned with the client business needs as well as the audience’s."
           name="description"
         />
         <meta content="About - Duo Design Lab" property="og:title" />
