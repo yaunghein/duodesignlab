@@ -45,18 +45,34 @@ const HomeHero: React.FC = () => {
       ref={ref}
       onMouseEnter={() => changeCursorType('normal_brand_light')}
       onMouseLeave={resetCursorType}
-      className="sticky top-0 transition-transform duration-300 ease-out bg-ddl_brand"
-      style={{ transform: `translateY(-${scrollTrackByElement * 150}px)` }}
+      className="sticky top-0 bg-ddl_brand"
     >
-      <Image alt="" src={useTexture()} layout="fill" />
+      <div
+        className="absolute inset-0 z-10 transition duration-300 ease-out bg-opacity-60 bg-ddl_dark"
+        style={{ opacity: scrollTrackByElement }}
+      />
 
-      <div className="relative flex items-center h-[60vh] md:h-screen ddl-container" style={{ opacity: `${1 - scrollTrackByElement}` }}>
+      <Image
+        alt=""
+        src={useTexture()}
+        layout="fill"
+        className="transition duration-300 ease-out transform"
+        style={{ transform: `scale(${1.1 - scrollTrackByElement / 10})` }}
+      />
+
+      <div
+        className="relative flex items-center h-[60vh] md:h-screen ddl-container transition duration-300 ease-out"
+        style={{ opacity: `${1 - scrollTrackByElement}` }}
+      >
         <h1 className="sr-only">
           We are a humble boutique web design studio, led by a group of young people with design and development background.
         </h1>
 
         {/* for desktop */}
-        <div className="hidden -mb-20 md:block" style={{ transform: `translateY(${scrollTrackByElement * 150}px)` }}>
+        <div
+          className="hidden -mb-20 transition duration-300 ease-out transform md:block"
+          style={{ transform: `scale(${1 - scrollTrackByElement / 10})` }}
+        >
           {desktopTexts.map((text, i) => (
             <motion.span
               key={text}
@@ -71,7 +87,10 @@ const HomeHero: React.FC = () => {
         </div>
 
         {/* for mobile */}
-        <div className="-mb-[4rem] md:hidden" style={{ transform: `translateY(${scrollTrackByElement * 150}px)` }}>
+        <div
+          className="-mb-[4rem] md:hidden transition duration-300 ease-out transform"
+          style={{ transform: `scale(${1 - scrollTrackByElement / 10})` }}
+        >
           {mobileTexts.map((text, i) => (
             <motion.span
               key={text}

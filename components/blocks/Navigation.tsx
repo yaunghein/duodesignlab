@@ -39,7 +39,7 @@ const Navigation: React.FC = () => {
 
   const isBgLight =
     (width < 1024
-      ? /\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname)
+      ? /\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname) || router.pathname === '/capabilities'
       : !isReachBottom && (/\/about\/.*/.test(router.pathname) || /\/works\/.*/.test(router.pathname))) ||
     (currentCapability ? router.pathname === '/capabilities' && !isReachBottom : router.pathname === '/capabilities')
 
@@ -62,23 +62,16 @@ const Navigation: React.FC = () => {
       onMouseEnter={() => (isBgLight ? changeCursorType('normal_brand') : changeCursorType('normal_brand_light'))}
       onMouseLeave={resetCursorType}
       className={cn(
-        'fixed top-0 z-50 w-full transform transition duration-300 ease-out',
-        scrollValue > height - 400 && scrollDirection === 'down' && !isReachBottom
-          ? 'opacity-0 pointer-events-none'
-          : 'opacity-100 pointer-events-auto',
-        scrollValue > (isShortNavTransitionPage ? 1 : width > 1023 ? height : 500)
-          ? isReachBottom && width > 1023
-            ? router.pathname === '/work-with-us'
-              ? 'bg-ddl_brand bg-opacity-90 backdrop-blur-md py-4'
-              : 'py-4'
-            : isBgLight
-            ? router.pathname === '/capabilities' && scrollDirection === 'up'
+        'fixed top-0 z-50 w-full duration-500 ease-out',
+        scrollValue > (isShortNavTransitionPage ? 0 : width < 640 ? 400 : height)
+          ? isBgLight
+            ? router.pathname === '/capabilities'
               ? 'bg-ddl_brand_light bg-opacity-70 backdrop-blur-md py-4'
               : 'bg-white bg-opacity-70 backdrop-blur-md py-4'
             : 'bg-ddl_brand bg-opacity-90 backdrop-blur-md py-4'
           : 'py-6 lg:py-12'
       )}
-      style={{ transitionProperty: 'padding, opacity' }}
+      style={{ transitionProperty: 'padding' }}
     >
       <div className="flex items-center ddl-container">
         <div className="hidden mr-auto lg:items-center lg:gap-20 lg:flex">
