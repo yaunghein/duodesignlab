@@ -5,7 +5,7 @@ import { GetStaticProps } from 'next'
 
 // third-parties
 import { v4 as uuid } from 'uuid'
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 // types
 import { WorkThumbnailType } from '$types/workTypes'
@@ -96,9 +96,14 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
         ref={ref}
         onMouseEnter={() => changeCursorType('normal_brand')}
         onMouseLeave={resetCursorType}
-        className="sticky top-0 overflow-hidden transition-transform duration-300 ease-out bg-ddl_brand_light"
-        style={{ transform: `translateY(-${scrollTrackByElement * 150}px)` }}
+        className="sticky top-0 overflow-hidden bg-ddl_brand_light"
       >
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-10 transition duration-300 ease-out pointer-events-none bg-opacity-60 bg-ddl_dark"
+          style={{ opacity: scrollTrackByElement }}
+        />
+
         {currentCapability !== 'Web Development' && width > 639 && (
           <motion.button
             onClick={() => changeCapability('Web Development')}
@@ -235,10 +240,10 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
 
         <div
           className={cn(
-            'relative flex items-start md:items-center justify-center ddl-container mix-blend-multiply pointer-events-none',
+            'relative flex items-start md:items-center justify-center ddl-container mix-blend-multiply pointer-events-none transition duration-300 ease-out transform',
             currentCapability ? 'h-screen' : 'h-[calc(100vh-7rem)] lg:h-[calc(100vh-6rem)]'
           )}
-          style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translateY(${scrollTrackByElement * 150}px)` }}
+          style={{ transform: `scale(${1 - scrollTrackByElement / 10})` }}
         >
           <div
             className={cn(

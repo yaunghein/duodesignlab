@@ -25,14 +25,25 @@ const AboutHero: React.FC = () => {
       ref={ref}
       onMouseEnter={() => changeCursorType('normal_brand_light')}
       onMouseLeave={resetCursorType}
-      className="sticky top-0 transition-transform duration-300 ease-out bg-ddl_brand"
-      style={{ transform: `translateY(-${scrollTrackByElement * 150}px)` }}
+      className="sticky top-0 bg-ddl_brand"
     >
-      <Image alt="" src={useTexture()} layout="fill" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-10 transition duration-300 ease-out pointer-events-none bg-opacity-60 bg-ddl_dark"
+        style={{ opacity: scrollTrackByElement }}
+      />
+
+      <Image
+        alt=""
+        src={useTexture()}
+        layout="fill"
+        className="transition duration-300 ease-out transform"
+        style={{ transform: `scale(${1.1 - scrollTrackByElement / 10})` }}
+      />
 
       <div
-        className="relative grid items-center h-screen grid-cols-1 pt-24 pb-24 md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28"
-        style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translateY(${scrollTrackByElement * 150}px)` }}
+        className="relative grid items-center h-screen grid-cols-1 pt-24 pb-24 transition duration-300 ease-out md:pt-64 ddl-container lg:grid-cols-2 lg:pb-28"
+        style={{ transform: `scale(${1 - scrollTrackByElement / 10})` }}
       >
         <motion.h1
           initial={{ y: 64, opacity: 0 }}

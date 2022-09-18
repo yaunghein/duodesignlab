@@ -33,17 +33,28 @@ const Hero: React.FC<Props> = ({ title }) => {
       ref={ref}
       onMouseEnter={() => changeCursorType('normal_brand_light')}
       onMouseLeave={resetCursorType}
-      className="sticky top-0 transition-transform duration-300 ease-out bg-ddl_brand"
-      style={{ transform: `translateY(-${scrollTrackByElement * 150}px)` }}
+      className="sticky top-0 bg-ddl_brand"
     >
-      <Image alt="" src={useTexture()} layout="fill" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-10 transition duration-300 ease-out pointer-events-none bg-opacity-60 bg-ddl_dark"
+        style={{ opacity: scrollTrackByElement }}
+      />
+
+      <Image
+        alt=""
+        src={useTexture()}
+        layout="fill"
+        className="transition duration-300 ease-out transform"
+        style={{ transform: `scale(${1.1 - scrollTrackByElement / 10})` }}
+      />
 
       <div
-        className="relative flex items-center justify-center h-[55vh] md:h-screen ddl-container"
-        style={{ opacity: `${1 - scrollTrackByElement}`, transform: `translateY(${scrollTrackByElement * 150}px)` }}
+        className="relative flex items-center justify-center h-[55vh] md:h-screen ddl-container transition duration-300 ease-out"
+        style={{ transform: `scale(${1 - scrollTrackByElement / 10})` }}
       >
         <motion.h1
-          className="text-center text-big-visual text-ddl_brand_light"
+          className="text-center text-big-visual text-ddl_brand_light "
           initial={{ y: 64, opacity: 0 }}
           animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
         >

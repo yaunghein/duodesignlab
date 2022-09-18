@@ -48,7 +48,8 @@ const HomeHero: React.FC = () => {
       className="sticky top-0 bg-ddl_brand"
     >
       <div
-        className="absolute inset-0 z-10 transition duration-300 ease-out bg-opacity-60 bg-ddl_dark"
+        aria-hidden="true"
+        className="absolute inset-0 z-10 transition duration-300 ease-out pointer-events-none bg-opacity-60 bg-ddl_dark"
         style={{ opacity: scrollTrackByElement }}
       />
 
