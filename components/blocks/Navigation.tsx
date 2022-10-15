@@ -63,7 +63,7 @@ const Navigation: React.FC = () => {
       onMouseLeave={resetCursorType}
       style={{
         transitionProperty: 'padding, opacity',
-        WebkitTransform: 'translate3d(0,0,0)',
+        WebkitTransform: 'translate3d(0,0,20px)',
       }}
       className={cn(
         'fixed top-0 z-30 w-full transform duration-200 ease-out',
