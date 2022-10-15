@@ -17,7 +17,7 @@ const useDDLScroll = () => {
 
       setScrollValue(window.scrollY)
 
-      const reachBottom = Math.ceil(window.scrollY) >= document.body.offsetHeight - window.innerHeight
+      const reachBottom = Math.ceil(window.scrollY) + 1 >= document.body.offsetHeight - window.innerHeight // +1 is needed for a little offset for some reasons
       reachBottom ? setIsReachBottom(true) : setIsReachBottom(false)
 
       if (ref.current) {
