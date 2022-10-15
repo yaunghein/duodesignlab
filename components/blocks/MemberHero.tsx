@@ -26,7 +26,12 @@ const MemberHero: React.FC<Props> = ({ member }) => {
   const { changeCursorType, resetCursorType } = useCursorStore()
 
   return (
-    <motion.section className="bg-white text-ddl_dark" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
+    <motion.section
+      className="relative z-20 bg-white text-ddl_dark"
+      style={{ WebkitTransform: 'translate3d(0,0,0)' }}
+      onMouseEnter={() => changeCursorType('normal_brand')}
+      onMouseLeave={resetCursorType}
+    >
       <div className="grid grid-cols-1 pt-32 lg:grid-cols-2 md:pt-56 ddl-container">
         <div className="-mt-7">
           <motion.h1 ref={ref} animate={animation} initial="hidden" variants={variants} className="text-big-visual md:main-title">

@@ -96,7 +96,8 @@ const CapabilitiesPage: NextPageWithLayout<Props> = ({ works }) => {
         ref={ref}
         onMouseEnter={() => changeCursorType('normal_brand')}
         onMouseLeave={resetCursorType}
-        className="sticky top-0 overflow-hidden bg-ddl_brand_light"
+        className="sticky top-0 z-10 overflow-hidden bg-ddl_brand_light"
+        style={{ WebkitTransform: 'translate3d(0,0,0)' }}
       >
         <div
           aria-hidden="true"

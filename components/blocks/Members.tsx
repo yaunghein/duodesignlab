@@ -25,7 +25,8 @@ const Members: React.FC<Props> = ({ members }) => {
 
   return (
     <motion.section
-      className="relative py-8 bg-white md:py-28"
+      className="relative z-20 py-8 bg-white md:py-28"
+      style={{ WebkitTransform: 'translate3d(0,0,0)' }}
       onMouseEnter={() => changeCursorType('normal_brand')}
       onMouseLeave={resetCursorType}
     >

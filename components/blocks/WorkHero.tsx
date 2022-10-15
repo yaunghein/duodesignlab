@@ -27,7 +27,12 @@ const WorkHero: React.FC<Props> = ({ work, isShowMore, setIsShowMore }) => {
   const { width } = useWindowSize()
 
   return (
-    <motion.section className="bg-white text-ddl_dark" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
+    <motion.section
+      className="relative z-20 bg-white text-ddl_dark"
+      style={{ WebkitTransform: 'translate3d(0,0,0)' }}
+      onMouseEnter={() => changeCursorType('normal_brand')}
+      onMouseLeave={resetCursorType}
+    >
       <div className="grid grid-cols-1 pt-28 md:pt-56 ddl-container lg:grid-cols-2">
         <div>
           <motion.h1

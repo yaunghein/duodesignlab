@@ -77,9 +77,15 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
         <meta content={work.description} name="description" />
         <meta content={`${work.name} - Duo Design Lab`} property="og:title" />
         <meta content={work.description} property="og:description" />
+        <meta content={work.thumbnail} property="og:image" />
       </Head>
       <WorkHero work={work} isShowMore={isShowMore} setIsShowMore={setIsShowMore} />
-      <motion.section className="bg-white" onMouseEnter={() => changeCursorType('normal_brand')} onMouseLeave={resetCursorType}>
+      <motion.section
+        className="relative z-20 bg-white"
+        style={{ WebkitTransform: 'translate3d(0,0,0)' }}
+        onMouseEnter={() => changeCursorType('normal_brand')}
+        onMouseLeave={resetCursorType}
+      >
         <div className="py-8 ddl-container md:py-28">
           <div className="grid gap-2">
             {projectImages.map((image: ImageType) => (

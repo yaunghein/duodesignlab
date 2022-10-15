@@ -40,7 +40,8 @@ const WorkWithUs: NextPageWithLayout = () => {
       <Hero title="Start A Project" />
       <motion.section
         id="next-section"
-        className="relative py-8 bg-white md:py-28"
+        className="relative z-20 py-8 overflow-hidden bg-white md:py-28"
+        style={{ WebkitTransform: 'translate3d(0,0,0)' }}
         onMouseEnter={() => changeCursorType('normal_brand')}
         onMouseLeave={resetCursorType}
       >
@@ -76,13 +77,7 @@ const WorkWithUs: NextPageWithLayout = () => {
               </div>
             </div>
           </motion.div>
-          <motion.div
-            ref={ref2}
-            animate={animation2}
-            initial="hidden"
-            variants={variants2}
-            className="mt-20 -mb-4 overflow-hidden lg:-mb-12 lg:mt-0"
-          >
+          <motion.div ref={ref2} animate={animation2} initial="hidden" variants={variants2} className="mt-20 -mb-4 lg:-mb-12 lg:mt-0">
             <h2 className="mb-5 lg:mb-20 secondary-title text-ddl_dark">Write Brief</h2>
             <ContactForm />
           </motion.div>

@@ -45,7 +45,8 @@ const HomeHero: React.FC = () => {
       ref={ref}
       onMouseEnter={() => changeCursorType('normal_brand_light')}
       onMouseLeave={resetCursorType}
-      className="sticky top-0 bg-ddl_brand"
+      className="sticky top-0 z-10 bg-ddl_brand"
+      style={{ WebkitTransform: 'translate3d(0,0,0)' }}
     >
       <div
         aria-hidden="true"

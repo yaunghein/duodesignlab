@@ -26,7 +26,8 @@ const Ready: React.FC<Props> = ({ children }) => {
 
   return (
     <motion.section
-      className="relative bg-ddl_brand"
+      className="relative z-20 bg-ddl_brand"
+      style={{ WebkitTransform: 'translate3d(0,0,0)' }}
       onMouseEnter={() => changeCursorType('normal_brand_light')}
       onMouseLeave={resetCursorType}
     >

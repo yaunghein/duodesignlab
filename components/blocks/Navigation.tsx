@@ -66,7 +66,7 @@ const Navigation: React.FC = () => {
         WebkitTransform: 'translate3d(0,0,0)',
       }}
       className={cn(
-        'fixed top-0 z-10 w-full transform duration-200 ease-out',
+        'fixed top-0 z-30 w-full transform duration-200 ease-out',
         scrollValue > height - 400 && scrollDirection === 'down' && !isReachBottom
           ? 'opacity-0 pointer-events-none'
           : 'opacity-100 pointer-events-auto',
@@ -114,7 +114,7 @@ const Navigation: React.FC = () => {
           >
             <LogoWhite
               className={cn(
-                'w-[2.8rem] h-[2.925rem] md:w-[5.625rem] md:h-[5.625rem] relative z-10 transition cursor-pointer',
+                'w-[2.8rem] h-[2.925rem] md:w-[5.2rem] md:h-[5.2rem] relative z-10 transition cursor-pointer',
                 isMenuOpen
                   ? menuTheme === 'ddl_brand'
                     ? 'text-ddl_brand_light'
@@ -129,6 +129,7 @@ const Navigation: React.FC = () => {
 
         {/* mobile menu */}
         <motion.button
+          aria-label="menu"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 0.1 } }}
           className={cn(
@@ -156,13 +157,13 @@ const Navigation: React.FC = () => {
                   initial={{ width: '0%' }}
                   animate={{ width: '100%', transition: { duration: 0.3 } }}
                   exit={{ width: '0%', transition: { duration: 0.3, delay: 0.4 } }}
-                  className={cn('absolute left-0 top-0 w-full h-1/2', `bg-${menuTheme}`)}
+                  className={cn('absolute left-0 top-0 w-full h-[50.2%]', `bg-${menuTheme}`)}
                 ></motion.div>
                 <motion.div
                   initial={{ width: '0%' }}
                   animate={{ width: '100%', transition: { duration: 0.3 } }}
                   exit={{ width: '0%', transition: { duration: 0.3, delay: 0.4 } }}
-                  className={cn('absolute right-0 bottom-0 w-full h-1/2', `bg-${menuTheme}`)}
+                  className={cn('absolute right-0 bottom-0 w-full h-[50.2%]', `bg-${menuTheme}`)}
                 ></motion.div>
               </div>
               <div className="grid gap-8 mt-auto">
