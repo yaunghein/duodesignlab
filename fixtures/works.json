@@ -1,5 +1,30 @@
 [
   {
+    "name": "KPI Media",
+    "slug": "kpi-media",
+    "description": "<p>KPI Media is the #1 Performance Marketing Agency for Startups in Asia Pacific! They are the only agency confident enough to guarantee results.</p><p>In partnership with <a target='_blank' href='https://www.otterdev.io/' class='underline'>Otterdev</a> (design & development house based in Singapore-Australia), they designed the website with stunning 3D elements and layouts, and we proudly developed the entire website with appealing animations, and custom-code solutions within about a month using <a target='_blank' href='https://webflow.com/' class='underline'>Webflow</a>. The highlighted features are multiple CMS-driven sliders, custom-code solution for filters and advanced price calculation, and eye-catching parallax animations across the site.</p>",
+    "scope": ["Web Development"],
+    "year": "2022",
+    "website": "www.kpimedia.co",
+    "owners": ["yan-aung-hein"],
+    "thumbnail": "/assets/works/kpi-media/thumbnail.jpg",
+    "images": [
+      { "path": "/assets/works/kpi-media/thumbnail.jpg", "width": 2160, "height": 2160 },
+      { "path": "/assets/works/kpi-media/1.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/kpi-media/2.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/kpi-media/3.svg", "width": 1920, "height": 940 },
+      { "path": "/assets/works/kpi-media/4.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/kpi-media/5.svg", "width": 1920, "height": 880 }
+    ],
+    "more": {
+      "next": {
+        "name": "Joby",
+        "slug": "joby"
+      },
+      "prev": null
+    }
+  },
+  {
     "name": "Joby",
     "slug": "joby",
     "description": "<p>Joby is a web app that can help you track your applied jobs, and record your career timeline. Although I am a frontend developer, it is always good to know other fields, isn't it? That is why I gave the backend world a try. Joby is my first ever app handling both frontend and backend on my own using SvelteKit, Tailwind, Express and MongoDB.</p>",
@@ -16,36 +41,16 @@
       { "path": "/assets/works/joby/4.svg", "width": 1440, "height": 896 }
     ],
     "more": {
-      "next": null,
+      "next": {
+        "name": "APM Help",
+        "slug": "apm-help"
+      },
       "prev": {
-        "name": "Paing Mentoring Family",
-        "slug": "paing-mentoring-family"
+        "name": "KPI Media",
+        "slug": "kpi-media"
       }
     },
     "personal": true
-  },
-  {
-    "name": "Paing Mentoring Family",
-    "slug": "paing-mentoring-family",
-    "description": "<p>Ko Aung Myo Paing is a venture capitalist and financial advisor. His mission is to help families achieve financial freedom by sharing his experiences and knowledge as a financial advisor.</p><p>The goal of this project is to develop a credible website that reflects the mission of Ko Aung Myo Paing. The website needs to showcase the experiences of Ko Aung Myo Paing, Catalog his webinars and function as a blog.</p><p>In partnership with IDEA Khit, we defined the brand image of Ko Aung Myo Paing, designed and developed the website within 2 months using Figma, Adobe Suite, Webflow and Webflow CMS.</p>",
-    "scope": ["Web Development", "Web Design"],
-    "year": "2022",
-    "website": "www.paingmentoringfamily.com",
-    "owners": ["aung-pyae-kyaw", "yan-aung-hein"],
-    "thumbnail": "/assets/works/paing-mentoring-family/thumbnail.jpg",
-    "images": [
-      { "path": "/assets/works/paing-mentoring-family/2.jpg", "width": 1740, "height": 5200 },
-      { "path": "/assets/works/paing-mentoring-family/3.jpg", "width": 1740, "height": 6976 },
-      { "path": "/assets/works/paing-mentoring-family/4.jpg", "width": 1740, "height": 4424 },
-      { "path": "/assets/works/paing-mentoring-family/5.jpg", "width": 1740, "height": 1197 }
-    ],
-    "more": {
-      "next": null,
-      "prev": {
-        "name": "Kyaw San Htoo Pharmacy",
-        "slug": "kyawsanhtoo-pharmacy"
-      }
-    }
   },
   {
     "name": "APM Help",
@@ -68,6 +73,29 @@
       "prev": {
         "name": "Tech Café",
         "slug": "tech-cafe"
+      }
+    }
+  },
+  {
+    "name": "Paing Mentoring Family",
+    "slug": "paing-mentoring-family",
+    "description": "<p>Ko Aung Myo Paing is a venture capitalist and financial advisor. His mission is to help families achieve financial freedom by sharing his experiences and knowledge as a financial advisor.</p><p>The goal of this project is to develop a credible website that reflects the mission of Ko Aung Myo Paing. The website needs to showcase the experiences of Ko Aung Myo Paing, Catalog his webinars and function as a blog.</p><p>In partnership with IDEA Khit, we defined the brand image of Ko Aung Myo Paing, designed and developed the website within 2 months using Figma, Adobe Suite, Webflow and Webflow CMS.</p>",
+    "scope": ["Web Development", "Web Design"],
+    "year": "2022",
+    "website": "www.paingmentoringfamily.com",
+    "owners": ["aung-pyae-kyaw", "yan-aung-hein"],
+    "thumbnail": "/assets/works/paing-mentoring-family/thumbnail.jpg",
+    "images": [
+      { "path": "/assets/works/paing-mentoring-family/2.jpg", "width": 1740, "height": 5200 },
+      { "path": "/assets/works/paing-mentoring-family/3.jpg", "width": 1740, "height": 6976 },
+      { "path": "/assets/works/paing-mentoring-family/4.jpg", "width": 1740, "height": 4424 },
+      { "path": "/assets/works/paing-mentoring-family/5.jpg", "width": 1740, "height": 1197 }
+    ],
+    "more": {
+      "next": null,
+      "prev": {
+        "name": "Kyaw San Htoo Pharmacy",
+        "slug": "kyawsanhtoo-pharmacy"
       }
     }
   },
