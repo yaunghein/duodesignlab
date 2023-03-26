@@ -1,5 +1,37 @@
 [
   {
+    "name": "Hillspeed Group",
+    "slug": "hillspeed",
+    "description": "<p>Hillspeed Group was founded by Coach Leighroy with a vision to empower startups with performance technology and business coaching that is on par with elite sports.</p><p>In partnership with <a target='_blank' href='https://www.otterdev.io/' class='underline'>Otterdev</a>, a design and development house based in Singapore and Australia, they designed a website that reflected the company's values and aspirations. We had the pleasure of developing the entire website, leveraging our expertise in <a target='_blank' href='https://webflow.com/' class='underline'>Webflow</a> development to create an engaging user experience.</p><p>The website featured stunning layouts and elements that showcased the company's unique brand and message. With custom-coded solutions, complex CMS structures, and appealing animations, we delivered a website that was both aesthetically pleasing and functional. We worked tirelessly to ensure that the website was optimized for speed and responsiveness, meeting the client's requirements and expectations.</p>",
+    "scope": ["Web Development"],
+    "year": "2023",
+    "website": "www.hillspeed.com",
+    "owners": ["yan-aung-hein"],
+    "thumbnail": "/assets/works/hillspeed/thumbnail.jpg",
+    "images": [
+      { "path": "/assets/works/hillspeed/1.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/2.svg", "width": 1920, "height": 1683 },
+      { "path": "/assets/works/hillspeed/3.svg", "width": 1920, "height": 1736 },
+      { "path": "/assets/works/hillspeed/4.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/5.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/6.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/7.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/8.svg", "width": 1920, "height": 1357 },
+      { "path": "/assets/works/hillspeed/9.svg", "width": 1920, "height": 1710 },
+      { "path": "/assets/works/hillspeed/10.svg", "width": 1920, "height": 1298 },
+      { "path": "/assets/works/hillspeed/11.svg", "width": 1920, "height": 1186 },
+      { "path": "/assets/works/hillspeed/12.svg", "width": 1920, "height": 790 },
+      { "path": "/assets/works/hillspeed/13.svg", "width": 1920, "height": 998 }
+    ],
+    "more": {
+      "next": {
+        "name": "KPI Media",
+        "slug": "kpi-media"
+      },
+      "prev": null
+    }
+  },
+  {
     "name": "KPI Media",
     "slug": "kpi-media",
     "description": "<p>KPI Media is the #1 Performance Marketing Agency for Startups in Asia Pacific! They are the only agency confident enough to guarantee results.</p><p>In partnership with <a target='_blank' href='https://www.otterdev.io/' class='underline'>Otterdev</a> (design & development house based in Singapore-Australia), they designed the website with stunning 3D elements and layouts, and we proudly developed the entire website with appealing animations, and custom-code solutions within about a month using <a target='_blank' href='https://webflow.com/' class='underline'>Webflow</a>. The highlighted features are multiple CMS-driven sliders, custom-code solution for filters and advanced price calculation, and eye-catching parallax animations across the site.</p>",
@@ -21,7 +53,10 @@
         "name": "Joby",
         "slug": "joby"
       },
-      "prev": null
+      "prev": {
+        "name": "Hillspeed Group",
+        "slug": "hillspeed"
+      }
     }
   },
   {
