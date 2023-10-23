@@ -32,7 +32,7 @@ const Capibilities: React.FC<Props> = ({ bgColor = 'bg-white' }) => {
       <div className="ddl-container">
         <motion.div ref={ref} animate={animation} initial="hidden" variants={variants} className="flex items-end">
           <h2 className="mr-auto main-title text-ddl_dark">Our Capabilities</h2>
-          <Link href="/capibilities">
+          <Link href="/capabilities">
             <motion.a
               onMouseEnter={() => changeCursorType('hover_brand')}
               onMouseLeave={() => changeCursorType('normal_brand')}
