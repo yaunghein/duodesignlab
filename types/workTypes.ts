@@ -8,6 +8,7 @@ export type ImageType = {
   path: string
   width: number
   height: number
+  isVideo?: boolean
 }
 
 export interface WorkType {

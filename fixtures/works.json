@@ -1,27 +1,22 @@
 [
   {
-    "name": "Hillspeed Group",
-    "slug": "hillspeed",
-    "description": "<p>Hillspeed Group was founded by Coach Leighroy with a vision to empower startups with performance technology and business coaching that is on par with elite sports.</p><p>In partnership with <a target='_blank' href='https://www.otterdev.io/' class='underline'>Otterdev</a>, a design and development house based in Singapore and Australia, they designed a website that reflected the company's values and aspirations. We had the pleasure of developing the entire website, leveraging our expertise in <a target='_blank' href='https://webflow.com/' class='underline'>Webflow</a> development to create an engaging user experience.</p><p>The website featured stunning layouts and elements that showcased the company's unique brand and message. With custom-coded solutions, complex CMS structures, and appealing animations, we delivered a website that was both aesthetically pleasing and functional. We worked tirelessly to ensure that the website was optimized for speed and responsiveness, meeting the client's requirements and expectations.</p>",
-    "scope": ["Web Development"],
+    "name": "Sortstay",
+    "slug": "sortstay",
+    "description": "<p>SortStay is a purpose-driven booking platform connecting councils to reliable, sustainable housing options for those facing homelessness.</p><p>SortStay is transforming temporary housing by connecting councils with private, secure, and supportive short-term stays in the UK. As homelessness continues to rise, traditional solutions have proven insufficient, often placing vulnerable individuals and families in unsuitable accommodations. Guests will also benefit from access to various training programs, learning resources, and job assistance to help them get back on their feet.</p><p>Sortstay approach us to craft their landing page which will essentially help them in spreading awareness about the rise of UK homelessness and in fundraising.</p>",
+    "scope": ["Web Design", "Web Development"],
     "year": "2023",
-    "website": "www.hillspeed.com",
-    "owners": ["yan-aung-hein"],
-    "thumbnail": "/assets/works/hillspeed/thumbnail.jpg",
+    "website": "www.sortstay.com",
+    "owners": ["yan-aung-hein", "aung-pyae-kyaw"],
+    "thumbnail": "/assets/works/sortstay/1.svg",
     "images": [
-      { "path": "/assets/works/hillspeed/1.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/hillspeed/2.svg", "width": 1920, "height": 1683 },
-      { "path": "/assets/works/hillspeed/3.svg", "width": 1920, "height": 1736 },
-      { "path": "/assets/works/hillspeed/4.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/hillspeed/5.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/hillspeed/6.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/hillspeed/7.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/hillspeed/8.svg", "width": 1920, "height": 1357 },
-      { "path": "/assets/works/hillspeed/9.svg", "width": 1920, "height": 1710 },
-      { "path": "/assets/works/hillspeed/10.svg", "width": 1920, "height": 1298 },
-      { "path": "/assets/works/hillspeed/11.svg", "width": 1920, "height": 1186 },
-      { "path": "/assets/works/hillspeed/12.svg", "width": 1920, "height": 790 },
-      { "path": "/assets/works/hillspeed/13.svg", "width": 1920, "height": 998 }
+      { "path": "/assets/works/sortstay/thumbnail.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/sortstay/1.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/sortstay/2.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/sortstay/3.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/sortstay/4.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/sortstay/5.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/sortstay/1.mov", "width": 1920, "height": 1080, "isVideo": true },
+      { "path": "/assets/works/sortstay/2.mov", "width": 1920, "height": 1080, "isVideo": true }
     ],
     "more": {
       "next": {
@@ -50,12 +45,47 @@
     ],
     "more": {
       "next": {
+        "name": "Hillspeed Group",
+        "slug": "hillspeed"
+      },
+      "prev": {
+        "name": "Sortstay",
+        "slug": "sortstay"
+      }
+    }
+  },
+  {
+    "name": "Hillspeed Group",
+    "slug": "hillspeed",
+    "description": "<p>Hillspeed Group was founded by Coach Leighroy with a vision to empower startups with performance technology and business coaching that is on par with elite sports.</p><p>In partnership with <a target='_blank' href='https://www.otterdev.io/' class='underline'>Otterdev</a>, a design and development house based in Singapore and Australia, they designed a website that reflected the company's values and aspirations. We had the pleasure of developing the entire website, leveraging our expertise in <a target='_blank' href='https://webflow.com/' class='underline'>Webflow</a> development to create an engaging user experience.</p><p>The website featured stunning layouts and elements that showcased the company's unique brand and message. With custom-coded solutions, complex CMS structures, and appealing animations, we delivered a website that was both aesthetically pleasing and functional. We worked tirelessly to ensure that the website was optimized for speed and responsiveness, meeting the client's requirements and expectations.</p>",
+    "scope": ["Web Development"],
+    "year": "2023",
+    "website": "www.hillspeed.com",
+    "owners": ["yan-aung-hein"],
+    "thumbnail": "/assets/works/hillspeed/thumbnail.jpg",
+    "images": [
+      { "path": "/assets/works/hillspeed/1.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/2.svg", "width": 1920, "height": 1683 },
+      { "path": "/assets/works/hillspeed/3.svg", "width": 1920, "height": 1736 },
+      { "path": "/assets/works/hillspeed/4.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/5.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/6.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/7.svg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/hillspeed/8.svg", "width": 1920, "height": 1357 },
+      { "path": "/assets/works/hillspeed/9.svg", "width": 1920, "height": 1710 },
+      { "path": "/assets/works/hillspeed/10.svg", "width": 1920, "height": 1298 },
+      { "path": "/assets/works/hillspeed/11.svg", "width": 1920, "height": 1186 },
+      { "path": "/assets/works/hillspeed/12.svg", "width": 1920, "height": 790 },
+      { "path": "/assets/works/hillspeed/13.svg", "width": 1920, "height": 998 }
+    ],
+    "more": {
+      "next": {
         "name": "Joby",
         "slug": "joby"
       },
       "prev": {
-        "name": "Hillspeed Group",
-        "slug": "hillspeed"
+        "name": "KPI Media",
+        "slug": "kpi-media"
       }
     }
   },

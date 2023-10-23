@@ -90,7 +90,12 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
           <div className="grid gap-2">
             {projectImages.map((image: ImageType) => (
               <div key={image.path} className="border border-ddl_brand border-opacity-5">
-                <BlurImage alt={`${work.name}`} src={image.path} width={image.width} height={image.height} />
+                {image.isVideo && (
+                  <video width={image.width} autoPlay muted loop>
+                    <source src={image.path} type="video/mp4" />
+                  </video>
+                )}
+                {!image.isVideo && <BlurImage alt={`${work.name}`} src={image.path} width={image.width} height={image.height} />}
               </div>
             ))}
           </div>
@@ -123,12 +128,19 @@ const WorkPage: NextPageWithLayout<Props> = ({ work }) => {
 
           {lastProjectImages && (
             <div key={lastProjectImages.path} className={cn('border border-ddl_brand border-opacity-5', !work.testimonial ? 'mt-2' : '')}>
-              <BlurImage
-                alt={`${work.name}`}
-                src={lastProjectImages.path}
-                width={lastProjectImages.width}
-                height={lastProjectImages.height}
-              />
+              {lastProjectImages.isVideo && (
+                <video width={lastProjectImages.width} autoPlay muted loop>
+                  <source src={lastProjectImages.path} type="video/mp4" />
+                </video>
+              )}
+              {!lastProjectImages.isVideo && (
+                <BlurImage
+                  alt={`${work.name}`}
+                  src={lastProjectImages.path}
+                  width={lastProjectImages.width}
+                  height={lastProjectImages.height}
+                />
+              )}
             </div>
           )}
 
