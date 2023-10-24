@@ -1,8 +1,8 @@
 [
   {
-    "name": "Sortstay",
+    "name": "SortStay",
     "slug": "sortstay",
-    "description": "<p>SortStay is a purpose-driven booking platform connecting councils to reliable, sustainable housing options for those facing homelessness.</p><p>SortStay is transforming temporary housing by connecting councils with private, secure, and supportive short-term stays in the UK. As homelessness continues to rise, traditional solutions have proven insufficient, often placing vulnerable individuals and families in unsuitable accommodations. Guests will also benefit from access to various training programs, learning resources, and job assistance to help them get back on their feet.</p><p>Sortstay approach us to craft their landing page which will essentially help them in spreading awareness about the rise of UK homelessness and in fundraising.</p>",
+    "description": "<p>SortStay is a purpose-driven booking platform connecting councils to reliable, sustainable housing options for those facing homelessness.</p><p>SortStay is transforming temporary housing by connecting councils with private, secure, and supportive short-term stays in the UK. As homelessness continues to rise, traditional solutions have proven insufficient, often placing vulnerable individuals and families in unsuitable accommodations. Guests will also benefit from access to various training programs, learning resources, and job assistance to help them get back on their feet.</p><p>SortStay approach us to craft their landing page which will essentially help them in spreading awareness about the rise of UK homelessness and in fundraising.</p>",
     "scope": ["Web Design", "Web Development"],
     "year": "2023",
     "website": "www.sortstay.com",
@@ -15,8 +15,8 @@
       { "path": "/assets/works/sortstay/3.svg", "width": 1920, "height": 1080 },
       { "path": "/assets/works/sortstay/4.svg", "width": 1920, "height": 1080 },
       { "path": "/assets/works/sortstay/5.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/sortstay/1.mov", "width": 1920, "height": 1080, "isVideo": true },
-      { "path": "/assets/works/sortstay/2.mov", "width": 1920, "height": 1080, "isVideo": true }
+      { "path": "/assets/works/sortstay/2.mov", "width": 1920, "height": 1080, "isVideo": true },
+      { "path": "/assets/works/sortstay/1.mov", "width": 1920, "height": 1080, "isVideo": true }
     ],
     "more": {
       "next": {
