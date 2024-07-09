@@ -1,23 +1,14 @@
 [
   {
-    "name": "SortStay",
-    "slug": "sortstay",
-    "description": "<p>SortStay is a purpose-driven booking platform connecting councils to reliable, sustainable housing options for those facing homelessness.</p><p>SortStay is transforming temporary housing by connecting councils with private, secure, and supportive short-term stays in the UK. As homelessness continues to rise, traditional solutions have proven insufficient, often placing vulnerable individuals and families in unsuitable accommodations. Guests will also benefit from access to various training programs, learning resources, and job assistance to help them get back on their feet.</p><p>SortStay approach us to craft their landing page which will essentially help them in spreading awareness about the rise of UK homelessness and in fundraising.</p>",
-    "scope": ["Web Design", "Web Development"],
-    "year": "2023",
-    "website": "www.sortstay.com",
-    "owners": ["yan-aung-hein", "aung-pyae-kyaw"],
-    "thumbnail": "/assets/works/sortstay/1.svg",
-    "images": [
-      { "path": "/assets/works/sortstay/thumbnail.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/sortstay/1.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/sortstay/2.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/sortstay/3.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/sortstay/4.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/sortstay/5.svg", "width": 1920, "height": 1080 },
-      { "path": "/assets/works/sortstay/2.mov", "width": 1920, "height": 1080, "isVideo": true },
-      { "path": "/assets/works/sortstay/1.mov", "width": 1920, "height": 1080, "isVideo": true }
-    ],
+    "name": "WRO Myanmar",
+    "slug": "wro-mm",
+    "description": "<p>WRO Myanmar 2024 is the very first World Robot Olympiad Competitions in Myanmar</p><p>The site is one of the communications channels for WRO Myanmar. Visitor can see what WRO Myanmar is all about, see the timeline of competitions and events, browse materials and order, read up-to-date news, register for competitions, and contact for multiple purpose (general inquiry, partners, sponsorships, etc).</p><p>We skipped Webflow this time to reduce some costs, opting for SvelteKit for development and integrating Sanity.io for seamless and easy data updates for the client.</p>",
+    "scope": ["Web Design, Web Development"],
+    "year": "2024",
+    "website": "www.wro-mm.com",
+    "owners": ["yan-aung-hein", "aung-pyaw-kyaw"],
+    "thumbnail": "/assets/works/wro-mm/thumbnail.jpg",
+    "images": [{ "path": "/assets/works/wro-mm/1.jpg", "width": 1920, "height": 1080 }],
     "more": {
       "next": {
         "name": "KPI Media",
@@ -196,6 +187,30 @@
     }
   },
   {
+    "name": "Try Burmese",
+    "slug": "try-burmese",
+    "description": "<p>Try Burmese is a small online shop that sells Burmese foods in the UK.</p><p>We designed a simple emblem which can communicate Burmese aesthetics. The logo features Burmese traditional pedestal, which is mostly used for serving food to guests. We also created a simple ornament, inspired from traditional Burmese lacquerware ornaments, to tie down all the elements of the emblem.</p>",
+    "scope": ["Brand Identity"],
+    "year": "2021",
+    "website": null,
+    "owners": ["aung-pyae-kyaw"],
+    "thumbnail": "/assets/works/try-burmese/thumbnail.jpg",
+    "images": [
+      { "path": "/assets/works/try-burmese/1.jpg", "width": 3840, "height": 1464 },
+      { "path": "/assets/works/try-burmese/2.jpg", "width": 3840, "height": 3840 },
+      { "path": "/assets/works/try-burmese/3.jpg", "width": 2160, "height": 2160 },
+      { "path": "/assets/works/try-burmese/4.jpg", "width": 2160, "height": 2160 },
+      { "path": "/assets/works/try-burmese/5.jpg", "width": 3840, "height": 2880 }
+    ],
+    "more": {
+      "next": null,
+      "prev": {
+        "name": "Kyaw San Htoo Pharmacy",
+        "slug": "kyawsanhtoo-pharmacy"
+      }
+    }
+  },
+  {
     "name": "Kyaw San Htoo Pharmacy",
     "slug": "kyawsanhtoo-pharmacy",
     "description": "<p>Kyaw San Htoo is a pharmacy that has been running for over a decade in Pathein.</p><p>We designed a reliable logo which stands out among the competitions. For the next part, we designed a website that can provide accurate information about medicines, ensure availability for the customers and offer a contentful and representative digital experience for the residents of Pathein.</p><p>We also collaborated with Bro <a target='_blank' href='https://www.linkedin.com/in/ye-min-htun-464622175/' class='underline'>Ye Min Htun</a>, who is current working as a ux designer @ <a target='_blank' href='https://www.codigo.co/' class='underline'>Codigo</a>.</p>",
@@ -221,30 +236,6 @@
         "name": "Try Burmese",
         "slug": "try-burmese"
       }
-    }
-  },
-  {
-    "name": "Try Burmese",
-    "slug": "try-burmese",
-    "description": "<p>Try Burmese is a small online shop that sells Burmese foods in the UK.</p><p>We designed a simple emblem which can communicate Burmese aesthetics. The logo features Burmese traditional pedestal, which is mostly used for serving food to guests. We also created a simple ornament, inspired from traditional Burmese lacquerware ornaments, to tie down all the elements of the emblem.</p>",
-    "scope": ["Brand Identity"],
-    "year": "2021",
-    "website": null,
-    "owners": ["aung-pyae-kyaw"],
-    "thumbnail": "/assets/works/try-burmese/thumbnail.jpg",
-    "images": [
-      { "path": "/assets/works/try-burmese/1.jpg", "width": 3840, "height": 1464 },
-      { "path": "/assets/works/try-burmese/2.jpg", "width": 3840, "height": 3840 },
-      { "path": "/assets/works/try-burmese/3.jpg", "width": 2160, "height": 2160 },
-      { "path": "/assets/works/try-burmese/4.jpg", "width": 2160, "height": 2160 },
-      { "path": "/assets/works/try-burmese/5.jpg", "width": 3840, "height": 2880 }
-    ],
-    "more": {
-      "next": {
-        "name": "Kyaw San Htoo Pharmacy",
-        "slug": "kyawsanhtoo-pharmacy"
-      },
-      "prev": null
     }
   }
 ]
