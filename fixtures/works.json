@@ -8,7 +8,11 @@
     "website": "www.wro-mm.com",
     "owners": ["yan-aung-hein", "aung-pyaw-kyaw"],
     "thumbnail": "/assets/works/wro-mm/thumbnail.jpg",
-    "images": [{ "path": "/assets/works/wro-mm/1.jpg", "width": 1920, "height": 1080 }],
+    "images": [
+      { "path": "/assets/works/wro-mm/1.jpg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/wro-mm/2.jpg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/wro-mm/3.jpg", "width": 1920, "height": 1080 }
+    ],
     "more": {
       "next": {
         "name": "KPI Media",
