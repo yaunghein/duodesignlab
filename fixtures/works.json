@@ -1,9 +1,31 @@
 [
   {
+    "name": "Playnvoice",
+    "slug": "playnvoice",
+    "description": "<p>PlaynVoice revolutionizes clinical documentation by transcribing patient conversations in real-time, automatically generating accurate medical records. This ensures healthcare professionals can focus more on patient care and less on paperwork.</p> <p>We designed and developed a clean and minimal website with a focus on PlaynVoice’s brand values using Webflow and Webflow CMS, leveraging the platform's capabilities to deliver a seamless user experience. Additionally, we implemented dual-language support, offering content in both German and English to cater to a wider audience.</p>",
+    "scope": ["Web Design", "Web Development"],
+    "year": "2024",
+    "website": "www.playnvoice.ai",
+    "owners": ["yan-aung-hein", "aung-pyaw-kyaw"],
+    "thumbnail": "/assets/works/playnvoice/thumbnail.jpg",
+    "images": [
+      { "path": "/assets/works/playnvoice/1.jpg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/playnvoice/2.jpg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/playnvoice/3.jpg", "width": 1920, "height": 1080 }
+    ],
+    "more": {
+      "next": {
+        "name": "WRO Myanmar",
+        "slug": "wro-mm"
+      },
+      "prev": null
+    }
+  },
+  {
     "name": "WRO Myanmar",
     "slug": "wro-mm",
     "description": "<p>WRO Myanmar 2024 is the very first World Robot Olympiad Competitions in Myanmar</p><p>The site is one of the communications channels for WRO Myanmar. Visitor can see what WRO Myanmar is all about, see the timeline of competitions and events, browse materials and order, read up-to-date news, register for competitions, and contact for multiple purpose (general inquiry, partners, sponsorships, etc).</p><p>We skipped Webflow this time to reduce some costs, opting for SvelteKit for development and integrating Sanity.io for seamless and easy data updates for the client.</p>",
-    "scope": ["Web Design, Web Development"],
+    "scope": ["Web Design", "Web Development"],
     "year": "2024",
     "website": "www.wro-mm.com",
     "owners": ["yan-aung-hein", "aung-pyaw-kyaw"],
@@ -18,7 +40,35 @@
         "name": "KPI Media",
         "slug": "kpi-media"
       },
-      "prev": null
+      "prev": {
+        "name": "Playnvoice",
+        "slug": "playnvoice"
+      }
+    }
+  },
+  {
+    "name": "The Sand Studio",
+    "slug": "the-sand-studio",
+    "description": "<p>SAND is a Bangkok-based collective with a serious mix of talent in Architecture, Design, Motion, and Code. We’re part of the crew too, and we got the chance to build their website, making sure it screams their brand and vision.</p> <p>We went with SvelteKit for the development to keep things lightning-fast, and we didn’t hold back on the animations, using GSAP to keep it lively. The cherry on top? We landed an Honorable Mention on Awwwards.com for it. Not too shabby!</p>",
+    "scope": ["Web Development", "Spline 3D Scene Development"],
+    "year": "2024",
+    "website": "www.thesandstudio.com",
+    "owners": ["yan-aung-hein", "aung-pyaw-kyaw"],
+    "thumbnail": "/assets/works/the-sand-studio/thumbnail.jpg",
+    "images": [
+      { "path": "/assets/works/the-sand-studio/1.jpg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/the-sand-studio/2.jpg", "width": 1920, "height": 1080 },
+      { "path": "/assets/works/the-sand-studio/3.jpg", "width": 1920, "height": 1080 }
+    ],
+    "more": {
+      "next": {
+        "name": "KPI Media",
+        "slug": "kpi-media"
+      },
+      "prev": {
+        "name": "WRO Myanmar",
+        "slug": "wro-mm"
+      }
     }
   },
   {
@@ -44,8 +94,8 @@
         "slug": "hillspeed"
       },
       "prev": {
-        "name": "Sortstay",
-        "slug": "sortstay"
+        "name": "The Sand Studio",
+        "slug": "the-sand-studio"
       }
     }
   },
