@@ -6,7 +6,7 @@
     "scope": ["Web Design", "Web Development"],
     "year": "2024",
     "website": "www.playnvoice.ai",
-    "owners": ["yan-aung-hein", "aung-pyaw-kyaw"],
+    "owners": ["yan-aung-hein", "aung-pyae-kyaw"],
     "thumbnail": "/assets/works/playnvoice/thumbnail.jpg",
     "images": [
       { "path": "/assets/works/playnvoice/1.jpg", "width": 1920, "height": 1080 },
@@ -28,7 +28,7 @@
     "scope": ["Web Design", "Web Development"],
     "year": "2024",
     "website": "www.wro-mm.com",
-    "owners": ["yan-aung-hein", "aung-pyaw-kyaw"],
+    "owners": ["yan-aung-hein", "aung-pyae-kyaw"],
     "thumbnail": "/assets/works/wro-mm/thumbnail.jpg",
     "images": [
       { "path": "/assets/works/wro-mm/1.jpg", "width": 1920, "height": 1080 },
@@ -53,7 +53,7 @@
     "scope": ["Web Development", "Spline 3D Scene Development"],
     "year": "2024",
     "website": "www.thesandstudio.com",
-    "owners": ["yan-aung-hein", "aung-pyaw-kyaw"],
+    "owners": ["yan-aung-hein", "aung-pyae-kyaw"],
     "thumbnail": "/assets/works/the-sand-studio/thumbnail.jpg",
     "images": [
       { "path": "/assets/works/the-sand-studio/1.jpg", "width": 1920, "height": 1080 },
